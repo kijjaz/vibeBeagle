@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vibeBeagle - Olfactory Spectrum Simulator</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Local Chart.js for offline-first speed and reliability -->
+    <script src="chart.js"></script>
+    <!-- Local Vis.js Network for offline-first spatial graph -->
+    <script src="vis-network.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-text">vibeBeagle</span>
+                <span class="subtitle">Vibration Theory of Olfaction & IR Spectrum Simulator</span>
+            </div>
+            <div class="header-metadata">
+                <span class="meta-badge">SYSTEM: ACTIVE</span>
+                <span class="owner-badge">BY KIJJAZ</span>
+            </div>
+            <div class="header-decor"></div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="app-tabs">
+            <button class="tab-btn active" id="tab-btn-analyzer">📊 Spectral Analyzer</button>
+            <button class="tab-btn" id="tab-btn-network">🕸️ Olfactory Node Network</button>
+        </nav>
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+            
+            <!-- Sidebar: Chemical Directory -->
+            <aside class="sidebar card">
+                <div class="sidebar-header">
+                    <h2>Directory</h2>
+                    <p id="total-count-label">Loading compounds...</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search & Add Molecule A or B..." autocomplete="off">
+                    <span class="search-icon">🔍</span>
+                    <div id="search-suggestions" class="search-suggestions hidden"></div>
+                    <div id="active-filters-container" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;"></div>
+                </div>
+                <div class="list-wrapper">
+                    <ul id="compound-list" class="compound-list">
+                        <!-- Populated dynamically via JS -->
+                        <div class="spinner"></div>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Panel -->
+            <main class="main-panel">
+                
+                <!-- Tab Content 1: Spectral Analyzer -->
+                <div class="tab-content active" id="tab-content-analyzer">
+                    
+                    <!-- Quick Info & Stats Row -->
+                    <section class="info-row">
+                        <!-- Molecule A (Active) Card -->
+                        <div class="molecule-card card active-molecule-card" id="molecule-a-card">
+                            <div class="card-glow"></div>
+                            <div class="badge">MOLECULE A</div>
+                            <h2 id="mol-a-name" class="mol-title">Select a Molecule</h2>
+                            <div class="mol-meta">
+                                <div class="meta-item"><span class="label">CAS:</span> <span id="mol-a-cas" class="val-mono">-</span></div>
+                                <div class="meta-item"><span class="label">Formula:</span> <span id="mol-a-formula" class="val-mono">-</span></div>
+                                <div class="meta-item"><span class="label">Weight:</span> <span id="mol-a-weight">-</span></div>
+                                <div class="meta-item"><span class="label">PubChem CID:</span> <span id="mol-a-cid" class="val-mono">-</span></div>
+                            </div>
+                            <div class="mol-pricing">
+                                <span class="price-label">Cheapest Source:</span>
+                                <span id="mol-a-price" class="price-tag">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Molecule B (Comparison) Card -->
+                        <div class="molecule-card card comparison-molecule-card" id="molecule-b-card">
+                            <div class="card-glow"></div>
+                            <div class="badge badge-cyan">MOLECULE B</div>
+                            <button id="clear-b-btn" class="clear-btn hidden" title="Clear Molecule B" style="position: absolute; top: 16px; right: 16px; background: none; border: none; color: #606060; font-size: 0.85rem; cursor: pointer; transition: color 0.2s ease;">✕</button>
+                            <h2 id="mol-b-name" class="mol-title">None (Select from list)</h2>
+                            <div class="mol-meta">
+                                <div class="meta-item"><span class="label">CAS:</span> <span id="mol-b-cas" class="val-mono">-</span></div>
+                                <div class="meta-item"><span class="label">Formula:</span> <span id="mol-b-formula" class="val-mono">-</span></div>
+                                <div class="meta-item"><span class="label">Weight:</span> <span id="mol-b-weight">-</span></div>
+                                <div class="meta-item"><span class="label">PubChem CID:</span> <span id="mol-b-cid" class="val-mono">-</span></div>
+                            </div>
+                            <div class="mol-pricing">
+                                <span class="price-label">Cheapest Source:</span>
+                                <span id="mol-b-price" class="price-tag">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Comparison Stats & Match Score -->
+                        <div class="molecule-card card comparison-card" id="comparison-stats-card">
+                            <div class="badge badge-gold">SPECTRAL MATCH</div>
+                            <div class="overlap-display">
+                                <div class="overlap-gauge">
+                                    <svg viewBox="0 0 36 36" class="circular-chart">
+                                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path id="overlap-circle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text id="overlap-text" x="18" y="20.35" class="percentage">0%</text>
+                                    </svg>
+                                </div>
+                                <div class="overlap-info">
+                                    <h3>Spectral Overlap</h3>
+                                    <p id="overlap-desc">Select Molecule B to calculate similarity</p>
+                                </div>
+                            </div>
+                            <div class="shared-peaks-display hidden" id="shared-peaks-display">
+                                <h4>Shared Resonance Peaks (Click to filter):</h4>
+                                <div class="shared-peaks-list" id="shared-peaks-list"></div>
+
+                                <h4 style="margin-top: 12px; color: #ff9f1c;">Vibrational Gaps / Missing in B (Click to find gap-fillers):</h4>
+                                <div class="shared-peaks-list" id="gap-peaks-list"></div>
+                            </div>
+                        </div>
+
+                        <!-- Lissajous Phase Orbital Card -->
+                        <div class="molecule-card card lissajous-card" id="lissajous-card">
+                            <div class="badge badge-gold">PHASE ORBITAL</div>
+                            <div class="lissajous-layout">
+                                <div class="lissajous-canvas-wrapper">
+                                    <canvas id="lissajousCanvas" width="120" height="120"></canvas>
+                                </div>
+                                <div class="lissajous-info">
+                                    <h3>Lissajous Orbit</h3>
+                                    <p id="lissajous-desc">Symmetric phase space representation of A vs B.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- IR Spectrum Chart Card -->
+                    <section class="chart-card card">
+                        <div class="card-header">
+                            <div class="card-header-title">
+                                <h3>Simulated Vibrational Spectrum</h3>
+                                <p>Infrared Range (400 - 4000 cm⁻¹)</p>
+                            </div>
+                            <div class="legend-indicators">
+                                <span class="legend-indicator leg-a"><span class="color-dot bg-gold"></span> Molecule A</span>
+                                <span class="legend-indicator leg-b hidden" id="legend-b"><span class="color-dot bg-cyan"></span> Molecule B</span>
+                                <span class="legend-indicator leg-delta hidden" id="legend-delta"><span class="color-dot bg-orange"></span> Vibrational Delta (A-B)</span>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="spectrumChart"></canvas>
+                        </div>
+                        <div class="chart-footer">
+                            <p class="footnote">Spectrum generated from UFF force field normal mode vibrational calculations (line-broadening σ = 25 cm⁻¹).</p>
+                        </div>
+                    </section>
+
+                    <!-- Active Peak Explanation Card (Visible only when filtering by a peak) -->
+                    <div class="card peak-active-explanation-card hidden" id="peak-active-explanation-card">
+                        <div class="card-glow"></div>
+                        <div class="badge badge-gold">RESONANCE ANALYSIS</div>
+                        <button class="close-explanation-btn" id="close-peak-exp-btn" title="Clear filter">✕</button>
+                        <div class="peak-explanation-layout">
+                            <div class="peak-info-badge">
+                                <span class="peak-wavenumber" id="peak-active-wavenumber">-</span>
+                                <span class="peak-unit">cm⁻¹</span>
+                            </div>
+                            <div class="peak-explanation-content">
+                                <h3 id="peak-active-title">Resonance Peak</h3>
+                                <p class="peak-chemical-description" id="peak-active-chem-desc">
+                                    Select a peak to display its chemical vibration characteristics.
+                                </p>
+                                <div class="olfactory-implication">
+                                    <strong>Olfactory Role:</strong> 
+                                    <span id="peak-active-olf-desc">-</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Scientific metrics grid -->
+                        <div class="peak-metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-label">Wavelength</span>
+                                <span class="metric-val" id="peak-metric-wavelength">-</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Vibrational Energy</span>
+                                <span class="metric-val" id="peak-metric-energy">-</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Oscillation Period</span>
+                                <span class="metric-val" id="peak-metric-period">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dual Columns: Frequencies & Similarity Explorer -->
+                    <div class="columns-grid">
+                        
+                        <!-- Vibrational Frequencies List -->
+                        <section class="column-card card">
+                            <div class="card-header">
+                                <h3>Vibrational Normal Modes</h3>
+                                <p>Frequencies in wavenumbers (cm⁻¹)</p>
+                            </div>
+                            <div id="modes-list-container" class="modes-list-container">
+                                <p class="empty-state">Select a molecule to view vibrational frequencies.</p>
+                            </div>
+                        </section>
+
+                        <!-- Similarity Hub -->
+                        <section class="column-card card">
+                            <div class="card-header">
+                                <h3>Vibrational Similarity Hub</h3>
+                                <p>Based on spectral overlap calculations</p>
+                            </div>
+                            <div class="similarity-hub-content">
+                                <div class="sub-column">
+                                    <h4>Closest Spectral Matches</h4>
+                                    <ul id="closest-list" class="match-list">
+                                        <li class="empty-state">No molecule selected</li>
+                                    </ul>
+                                </div>
+                                <div class="sub-column">
+                                    <h4>Farthest Spectral Matches</h4>
+                                    <ul id="farthest-list" class="match-list">
+                                        <li class="empty-state">No molecule selected</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Tab Content 2: Node Network -->
+                <div class="tab-content" id="tab-content-network">
+                    <div class="network-layout">
+                        <!-- Network Control Sidebar -->
+                        <div class="network-sidebar card">
+                            <div class="sidebar-section">
+                                <h3>Network Threshold</h3>
+                                <div class="control-group">
+                                    <div class="slider-header">
+                                        <label for="similarity-threshold">Min Similarity:</label>
+                                        <span id="threshold-val" class="mono-label">0.75</span>
+                                    </div>
+                                    <input type="range" id="similarity-threshold" min="0.50" max="0.98" step="0.02" value="0.75" class="slider">
+                                    <p class="help-text">Filters the connections drawn between compounds. Higher thresholds show only closely vibrationally-matched chemical groups.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-section">
+                                <h3>Olfactory Connections</h3>
+                                <div class="network-stats">
+                                    <div class="stat-item"><span class="label">Total Nodes:</span> <span id="net-stat-nodes" class="val">-</span></div>
+                                    <div class="stat-item"><span class="label">Total Edges:</span> <span id="net-stat-edges" class="val">-</span></div>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-section">
+                                <h3>Visual Legend</h3>
+                                <div class="cluster-legend">
+                                    <div class="legend-item"><span class="color-dot bg-active"></span> Active (Molecule A)</div>
+                                    <div class="legend-item"><span class="color-dot bg-match-high"></span> Overlap > 80%</div>
+                                    <div class="legend-item"><span class="color-dot bg-match-mid"></span> Overlap > 60%</div>
+                                    <div class="legend-item"><span class="color-dot bg-node-default"></span> Standard Nodes</div>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-section selected-node-details hidden" id="selected-node-details">
+                                <h3>Selected Compound</h3>
+                                <div class="details-box">
+                                    <h4 id="net-node-name">-</h4>
+                                    <div class="detail-row"><span class="label">CAS:</span> <span id="net-node-cas" class="val val-mono">-</span></div>
+                                    <div class="detail-row"><span class="label">Formula:</span> <span id="net-node-formula" class="val val-mono">-</span></div>
+                                    <div class="detail-row"><span class="label">Neighbors:</span> <span id="net-node-neighbors" class="val">-</span></div>
+                                    <button class="action-btn" id="net-select-main-btn">Select for Analysis</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Network Graph Container -->
+                        <div class="network-canvas-container card">
+                            <div id="network-canvas"></div>
+                            <div class="network-loading" id="network-loading">
+                                <div class="spinner"></div>
+                                <p>Computing MDS network topology...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.venv/
+venv/
+ENV/
+
+# Local cache / temporary files
+pubchem_cache.json
+.DS_Store
+Thumbs.db
