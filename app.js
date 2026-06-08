@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Similarity Hub Lists
     const closestList = document.getElementById('closest-list');
     const farthestList = document.getElementById('farthest-list');
+    const similarityLimitSelect = document.getElementById('similarity-limit');
 
     // DOM Elements - Tabs
     const tabBtnAnalyzer = document.getElementById('tab-btn-analyzer');
@@ -976,8 +977,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const limit = similarityLimitSelect ? parseInt(similarityLimitSelect.value) || 10 : 10;
+
         // Render Closest list
-        report.closest.forEach(item => {
+        const closestItems = report.closest.slice(0, limit);
+        closestItems.forEach(item => {
             const li = document.createElement('li');
             li.className = 'match-item';
             const scoreClass = item.similarity > 0.7 ? 'score-high' : '';
@@ -995,7 +999,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Render Farthest list
-        report.farthest.forEach(item => {
+        const farthestItems = report.farthest.slice(0, limit);
+        farthestItems.forEach(item => {
             const li = document.createElement('li');
             li.className = 'match-item';
             const scoreClass = item.similarity < 0.2 ? 'score-low' : '';
@@ -1460,6 +1465,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 150);
     });
+
+    if (similarityLimitSelect) {
+        similarityLimitSelect.addEventListener('change', () => {
+            if (selectedMolA) {
+                renderSimilarityHub(selectedMolA.cas);
+            }
+        });
+    }
 
     // Initialize Everything
     if (window.location.protocol === 'file:') {

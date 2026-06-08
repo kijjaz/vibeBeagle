@@ -70,8 +70,8 @@ def main():
         # Sort matches by similarity descending
         matches.sort(key=lambda x: x["similarity"], reverse=True)
         
-        closest = matches[:10]
-        farthest = sorted(matches, key=lambda x: x["similarity"])[:5]
+        closest = matches[:50]
+        farthest = sorted(matches, key=lambda x: x["similarity"])[:50]
         
         report[cas] = {
             "name": name,

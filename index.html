@@ -218,9 +218,22 @@
 
                         <!-- Similarity Hub -->
                         <section class="column-card card">
-                            <div class="card-header">
-                                <h3>Vibrational Similarity Hub</h3>
-                                <p>Based on spectral overlap calculations</p>
+                            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                                <div>
+                                    <h3>Vibrational Similarity Hub</h3>
+                                    <p>Based on spectral overlap calculations</p>
+                                </div>
+                                <div class="limit-selector-group" style="display: flex; align-items: center; gap: 6px;">
+                                    <label for="similarity-limit" style="font-size: 0.75rem; color: var(--text-secondary);">Show:</label>
+                                    <select id="similarity-limit" style="background: rgba(255, 255, 255, 0.05); color: var(--text-main); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 2px 6px; font-size: 0.75rem; font-family: 'Share Tech Mono', monospace; cursor: pointer; outline: none; transition: border-color 0.2s;">
+                                        <option value="5">5</option>
+                                        <option value="10" selected>10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="similarity-hub-content">
                                 <div class="sub-column">
