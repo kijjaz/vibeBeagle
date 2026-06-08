@@ -1,16 +1,17 @@
-import json
 import os
+import sys
 import time
 import subprocess
+import json
 
 CHEMICALS_FILE = 'aroma_chemicals.json'
 VIBRATIONS_FILE = 'aroma_vibrations.json'
 
-def get_compounds_count(filename):
-    if not os.path.exists(filename):
+def get_compounds_count(filepath):
+    if not os.path.exists(filepath):
         return 0
     try:
-        with open(filename, 'r', encoding='utf-8') as f:
+        with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
             return len(data)
     except Exception:
@@ -36,8 +37,8 @@ def main():
     while True:
         current_count = get_compounds_count(CHEMICALS_FILE)
         
-        if current_count > last_simulated_count:
-            print(f"\nNew compounds detected! Filtered: {current_count}, Simulated: {last_simulated_count}")
+        if current_count != last_simulated_count:
+            print(f"\nChange in compounds detected! Filtered: {current_count}, Simulated: {last_simulated_count}")
             print("Updating vibrations, similarities, and 2D coordinates...")
             
             # Run simulation
@@ -50,10 +51,7 @@ def main():
             last_simulated_count = current_count
             print(f"Update complete. Now showing {last_simulated_count} compounds on the dashboard.")
             
-        # Check if filter_compounds.py is still running
-        # In a simple check, we can just look for the process
-        # (or just sleep and run forever until stopped manually)
-        time.sleep(15)
+        time.sleep(5)
 
 if __name__ == '__main__':
     main()

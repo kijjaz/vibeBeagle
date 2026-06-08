@@ -42,7 +42,6 @@ def main():
     spectra = np.array(spectra)
     print(f"Comparing {len(valid_indices)} valid spectra...")
     
-    # Calculate similarity matrix
     similarity_matrix = np.zeros((len(valid_indices), len(valid_indices)))
     for i in range(len(valid_indices)):
         for j in range(i, len(valid_indices)):
@@ -50,38 +49,29 @@ def main():
             similarity_matrix[i, j] = sim
             similarity_matrix[j, i] = sim
             
-    # Generate closest and farthest lists for each compound
     report = {}
-    
     for i, idx in enumerate(valid_indices):
         comp = compounds[idx]
         cas = comp["cas"]
         name = comp["name"]
         
-        # Get similarities for current compound i
-        sims = similarity_matrix[i]
-        
-        # Pair with their valid compound indices
-        pairs = []
-        for j, sim_val in enumerate(sims):
-            if j == i:
-                continue  # skip self
-            other_comp = compounds[valid_indices[j]]
-            pairs.append({
+        # We need to sort matches
+        matches = []
+        for j, other_idx in enumerate(valid_indices):
+            if i == j:
+                continue
+            other_comp = compounds[other_idx]
+            matches.append({
                 "name": other_comp["name"],
                 "cas": other_comp["cas"],
-                "similarity": round(sim_val, 4)
+                "similarity": round(float(similarity_matrix[i, j]), 4)
             })
             
-        # Sort by similarity descending
-        pairs.sort(key=lambda x: x["similarity"], reverse=True)
+        # Sort matches by similarity descending
+        matches.sort(key=lambda x: x["similarity"], reverse=True)
         
-        # Top 10 closest
-        closest = pairs[:10]
-        
-        # Top 5 farthest (since list is sorted descending, farthest are at the end)
-        # Reverse them to show the absolute farthest first
-        farthest = list(reversed(pairs[-5:]))
+        closest = matches[:10]
+        farthest = sorted(matches, key=lambda x: x["similarity"])[:5]
         
         report[cas] = {
             "name": name,
@@ -92,7 +82,7 @@ def main():
     with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
         
-    print(f"Similarity calculations complete. Report saved to {OUTPUT_JSON}")
+    print(f"Similarity report written to {OUTPUT_JSON}")
 
 if __name__ == '__main__':
     main()

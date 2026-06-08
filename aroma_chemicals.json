@@ -43,7 +43,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33804-5e-3-methylcyclopentadec-5-en-1-one.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/3954-delta-muscenone.html",
     "cid": 57353762,
-    "smiles": "CC1=CCCCCCCCCCCCCC1=O",
+    "smiles": "CC1C/C=C/CCCCCCCCCC(=O)C1",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -55,7 +55,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33686-6r-6-pentyl-56-dihydropyran-2-one-fema-3744.html",
     "cid": 642793,
-    "smiles": "CCCCCC1CC=CC(=O)O1",
+    "smiles": "CCCCC[C@@H]1CC=CC(=O)O1",
     "formula": "C10H16O2",
     "weight": 168.23
   },
@@ -79,7 +79,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33801-e-1-266-trimethyl-1-cyclohexenylbut-2-en-1-one-fema-3243.html",
     "cid": 5374527,
-    "smiles": "CC=CC(=O)C1=C(CCCC1(C)C)C",
+    "smiles": "C/C=C/C(=O)C1=C(CCCC1(C)C)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -91,7 +91,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33661-e-2-hexen-1-yl-acetate-fema-2564.html",
     "cid": 2733294,
-    "smiles": "CCCC=CCOC(=O)C",
+    "smiles": "CCC/C=C/COC(=O)C",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -103,7 +103,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33805-e-oct-2-en-4-one-fema-3603.html",
     "cid": 5365891,
-    "smiles": "CCCCC(=O)C=CC",
+    "smiles": "CCCCC(=O)/C=C/C",
     "formula": "C8H14O",
     "weight": 126.2
   },
@@ -115,7 +115,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33755-ee-24-decadienal-fema-3135.html",
     "cid": 5283349,
-    "smiles": "CCCCCC=CC=CC=O",
+    "smiles": "CCCCC\\C=C\\C=C\\C=O",
     "formula": "C10H16O",
     "weight": 152.23
   },
@@ -127,7 +127,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/33756-ee-24-heptadienal-fema-3164.html",
     "cid": 5283321,
-    "smiles": "CCC=CC=CC=O",
+    "smiles": "CC/C=C/C=C/C=O",
     "formula": "C7H10O",
     "weight": 110.15
   },
@@ -139,7 +139,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33833-ne-n-6e-2447-tetramethylnona-68-dien-3-ylidene-hydroxylamine.html",
     "cid": 3019015,
-    "smiles": "CC(C)C(=NO)C(C)(C)CC=C(C)C=C",
+    "smiles": "CC(C)/C(=N\\O)/C(C)(C)C\\C=C(/C)\\C=C",
     "formula": "C13H23NO",
     "weight": 209.33
   },
@@ -163,7 +163,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33705-z-3-hexen-1-yl-hexanoate-fema-3403.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2608-cis-3-hexenyl-hexanoate-fema-3403.html",
     "cid": 5352543,
-    "smiles": "CCCCCC(=O)OCCC=CCC",
+    "smiles": "CCCCCC(=O)OCC/C=C\\CC",
     "formula": "C12H22O2",
     "weight": 198.3
   },
@@ -175,7 +175,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33708-z-3-hexen-1-yl-tiglate-fema-3931.html",
     "cid": 15461361,
-    "smiles": "CCC=CCCOC(=O)C(=CC)C",
+    "smiles": "CC/C=C\\CCOC(=O)/C(=C\\C)/C",
     "formula": "C11H18O2",
     "weight": 182.26
   },
@@ -199,7 +199,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33779-z-dec-4-enal-fema-3264.html",
     "cid": 5362620,
-    "smiles": "CCCCCC=CCCC=O",
+    "smiles": "CCCCC/C=C\\CCC=O",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -211,7 +211,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33728-z-hex-4-en-1-ol-fema-3430.html",
     "cid": 5365589,
-    "smiles": "CC=CCCCO",
+    "smiles": "C/C=C\\CCCO",
     "formula": "C6H12O",
     "weight": 100.16
   },
@@ -451,7 +451,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33734-26-dimethyl-10-methylene-2611-dodecatrienal-fema-3141.html",
     "cid": 5281535,
-    "smiles": "CC(=CCCC(=C)C=C)CCC=C(C)C=O",
+    "smiles": "C/C(=C\\CCC(=C)C=C)/CC/C=C(\\C)/C=O",
     "formula": "C15H22O",
     "weight": 218.33
   },
@@ -883,7 +883,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4FC07622",
     "cid": 5365909,
-    "smiles": "CCC=C(C)C(=O)O",
+    "smiles": "CC/C=C(\\C)/C(=O)O",
     "formula": "C6H10O2",
     "weight": 114.14
   },
@@ -1087,7 +1087,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/3632-2-octenal-fema-3215.html",
     "cid": 5283324,
-    "smiles": "CCCCCC=CC=O",
+    "smiles": "CCCCC/C=C/C=O",
     "formula": "C8H14O",
     "weight": 126.2
   },
@@ -1351,7 +1351,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33832-4-octahydro-47-methano-5h-inden-5-ylidenebutanal.html",
     "cid": 6438291,
-    "smiles": "C1CC2C(C1)C3CC2CC3=CCCC=O",
+    "smiles": "C1CC2C(C1)C\\3CC2C/C3=C\\CCC=O",
     "formula": "C14H20O",
     "weight": 204.31
   },
@@ -1411,7 +1411,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33785-4-methyl-2-e-pent-1-enyl-13-dioxolane-fema-4272.html",
     "cid": 5370364,
-    "smiles": "CCCC=CC1OCC(O1)C",
+    "smiles": "O1C(OC(C)C1)/C=C/CCC",
     "formula": "C9H16O2",
     "weight": 156.22
   },
@@ -1735,7 +1735,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33671--z-hex-3-enyl-2-methylbutanoate-fema-3497.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33636-z-hex-3-enyl-2-methylbutanoate-fema-3497.html",
     "cid": 5365069,
-    "smiles": "CCC=CCCOC(=O)C(C)CC",
+    "smiles": "CC/C=C\\CCOC(=O)C(C)CC",
     "formula": "C11H20O2",
     "weight": 184.27
   },
@@ -1759,7 +1759,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33709--z-hex-3-enyl-3-methylbutanoate-fema-3498.html",
     "cid": 5367681,
-    "smiles": "CCC=CCCOC(=O)CC(C)C",
+    "smiles": "O=C(OCC\\C=C/CC)CC(C)C",
     "formula": "C11H20O2",
     "weight": 184.27
   },
@@ -2059,7 +2059,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3IF00237",
     "cid": 5282108,
-    "smiles": "CC1=CCCC(C1C=CC(=O)C)(C)C",
+    "smiles": "CC1=CCCC(C1/C=C/C(=O)C)(C)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -2071,7 +2071,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=8II00243",
     "cid": 5371002,
-    "smiles": "CC1CC=C(C(C1(C)C)C=CC(=O)C)C",
+    "smiles": "CC1CC=C(C(C1(C)C)/C=C/C(=O)C)C",
     "formula": "C14H22O",
     "weight": 206.32
   },
@@ -2083,7 +2083,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=5II09179",
     "cid": 5371002,
-    "smiles": "CC1CC=C(C(C1(C)C)C=CC(=O)C)C",
+    "smiles": "CC1CC=C(C(C1(C)C)/C=C/C(=O)C)C",
     "formula": "C14H22O",
     "weight": 206.32
   },
@@ -2095,7 +2095,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3IW00300",
     "cid": 61073,
-    "smiles": "CC1=CCCC(C1C=C(C)C(=O)C)(C)C",
+    "smiles": "CC1=CCCC(C1/C=C(\\C)/C(=O)C)(C)C",
     "formula": "C14H22O",
     "weight": 206.32
   },
@@ -2143,7 +2143,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/2655-alpha-ionone.html",
     "cid": 5282108,
-    "smiles": "CC1=CCCC(C1C=CC(=O)C)(C)C",
+    "smiles": "CC1=CCCC(C1/C=C/C(=O)C)(C)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -2191,7 +2191,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2694-alpha-terpinyl-acetate-fema-3047.html",
     "cid": 111037,
-    "smiles": "CC1=CCC(CC1)C(C)(C)OC(=O)C",
+    "smiles": "CC1CCC(C=C1)(C(C)C)OC(=O)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -2251,7 +2251,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2898-ambretone-velvione.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2893-globanone.html",
     "cid": 162268,
-    "smiles": "C1CCCCCC(=O)CCCC=CCCCC1",
+    "smiles": "C1CCCCCC(=O)CCC\\C=C/CCCC1",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -2287,7 +2287,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1WU21632",
     "cid": 66731260,
-    "smiles": "CC1CCC2C13CC(C2(C)C)C4(C(C3)OC(O4)(C)C)C",
+    "smiles": "C[C@@H]1CC[C@@H]2[C@@]13C[C@H](C2(C)C)C4(C(C3)OC(O4)(C)C)C",
     "formula": "C18H30O2",
     "weight": 278.4
   },
@@ -2299,7 +2299,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1UW16861",
     "cid": 10857465,
-    "smiles": "CC1(CCCC2(C1CCC3(C2CCO3)C)C)C",
+    "smiles": "CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -2311,7 +2311,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1UW00036",
     "cid": 10857465,
-    "smiles": "CC1(CCCC2(C1CCC3(C2CCO3)C)C)C",
+    "smiles": "CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -2467,7 +2467,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3FD06779",
     "cid": 6437428,
-    "smiles": "CC(=CCCC(=CCC1CCCC1=O)C)C",
+    "smiles": "CC(=CCC/C(=C/CC1CCCC1=O)/C)C",
     "formula": "C15H24O",
     "weight": 220.35
   },
@@ -2743,7 +2743,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3IF00238",
     "cid": 638014,
-    "smiles": "CC1=C(C(CCC1)(C)C)C=CC(=O)C",
+    "smiles": "C[C@@H]1CCC=C(C1(C)C)/C=C/C(=O)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -2767,7 +2767,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2851-beta-caryophyllene-fema-2252.html",
     "cid": 5281515,
-    "smiles": "CC1=CCCC(=C)C2CC(C2CC1)(C)C",
+    "smiles": "C/C/1=C\\CCC(=C)[C@H]2CC([C@@H]2CC1)(C)C",
     "formula": "C15H24",
     "weight": 204.35
   },
@@ -2827,7 +2827,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1BW00064",
     "cid": 64685,
-    "smiles": "CC1(C2CCC1(C(C2)O)C)C",
+    "smiles": "O[C@H]1C[C@H]2CC[C@]1(C)C2(C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -2839,7 +2839,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-ice-cold-เย็น/2480-borneol-พิมเสน.html",
     "cid": 64685,
-    "smiles": "CC1(C2CCC1(C(C2)O)C)C",
+    "smiles": "O[C@H]1C[C@H]2CC[C@]1(C)C2(C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -3187,7 +3187,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3WW00097",
     "cid": 11085796,
-    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC",
+    "smiles": "C[C@@H]1CC[C@@H]2C13CC[C@@]([C@H](C3)C2(C)C)(C)OC",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -3247,7 +3247,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2853-cedrol-methyl-ether.html",
     "cid": 88288,
-    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC",
+    "smiles": "C[C@@H]1CC[C@@H]2[C@]13CC[C@]([C@H](C3)C2(C)C)(C)OC",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -3271,7 +3271,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=2WW00099",
     "cid": 13918856,
-    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
+    "smiles": "C[C@@H]1CC[C@@H]2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
     "formula": "C17H28O2",
     "weight": 264.4
   },
@@ -3283,7 +3283,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2850-cedryl-acetate.html",
     "cid": 13918856,
-    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
+    "smiles": "C[C@@H]1CC[C@@H]2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
     "formula": "C17H28O2",
     "weight": 264.4
   },
@@ -3295,7 +3295,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2891-celestolide.html",
     "cid": 61585,
-    "smiles": "CC(=O)C1=C2CCC(C2=CC(=C1)C(C)(C)C)(C)C",
+    "smiles": "CC(=O)C1=CC(=CC2=C1CCC2(C)C)C(C)(C)C",
     "formula": "C17H24O",
     "weight": 244.37
   },
@@ -3307,7 +3307,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1XY00101",
     "cid": 61585,
-    "smiles": "CC(=O)C1=C2CCC(C2=CC(=C1)C(C)(C)C)(C)C",
+    "smiles": "CC(=O)C1=CC(=CC2=C1CCC2(C)C)C(C)(C)C",
     "formula": "C17H24O",
     "weight": 244.37
   },
@@ -3487,7 +3487,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4GF00226",
     "cid": 5363388,
-    "smiles": "CCC=CCCOC(=O)C",
+    "smiles": "CC/C=C\\CCOC(=O)C",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -3499,7 +3499,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3GO00229",
     "cid": 6021887,
-    "smiles": "CCC=CCCOC(=O)C1=CC=CC=C1O",
+    "smiles": "CC/C=C\\CCOC(=O)C1=CC=CC=C1O",
     "formula": "C13H16O3",
     "weight": 220.26
   },
@@ -3511,7 +3511,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2623-cis-3-hexenyl-benzoate-fema-3688.html",
     "cid": 5367706,
-    "smiles": "CCC=CCCOC(=O)C1=CC=CC=C1",
+    "smiles": "CC/C=C\\CCOC(=O)C1=CC=CC=C1",
     "formula": "C13H16O2",
     "weight": 204.26
   },
@@ -3535,7 +3535,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4JN00257",
     "cid": 1549018,
-    "smiles": "CCC=CCC1=C(CCC1=O)C",
+    "smiles": "CC/C=C\\CC1=C(CCC1=O)C",
     "formula": "C11H16O",
     "weight": 164.24
   },
@@ -4495,7 +4495,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4WX07563",
     "cid": 6437266,
-    "smiles": "CC1=CCC(C1(C)C)C=CC(C)C(C)O",
+    "smiles": "CC1=CCC(C1(C)C)/C=C\\C(C)C(C)O",
     "formula": "C14H24O",
     "weight": 208.34
   },
@@ -4519,7 +4519,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/33648-ethyl-e-2-hexenoate.html",
     "cid": 5364778,
-    "smiles": "CCCC=CC(=O)OCC",
+    "smiles": "CCC/C=C/C(=O)OCC",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -4531,7 +4531,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33703-ethyl-e-2-methylbut-2-enoate-fema-2460.html",
     "cid": 108343,
-    "smiles": "CCOC(=O)C(=CC)C",
+    "smiles": "CCOC(=O)/C(=C/C)/C",
     "formula": "C7H12O2",
     "weight": 128.17
   },
@@ -4867,7 +4867,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2700-ethyl-linalool.html",
     "cid": 6433547,
-    "smiles": "CCC(=CCCC(C)(C=C)O)C",
+    "smiles": "CC/C(=C/CCC(C)(C=C)O)/C",
     "formula": "C11H20O",
     "weight": 168.28
   },
@@ -4879,7 +4879,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4LL11499",
     "cid": 6433547,
-    "smiles": "CCC(=CCCC(C)(C=C)O)C",
+    "smiles": "CC/C(=C/CCC(C)(C=C)O)/C",
     "formula": "C11H20O",
     "weight": 168.28
   },
@@ -4891,7 +4891,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2701-ethyl-linalyl-acetate.html",
     "cid": 43851,
-    "smiles": "CCC(=CCCC(C)(C=C)OC(=O)C)C",
+    "smiles": "CC/C(=C/CCC(C)(C=C)OC(=O)C)/C",
     "formula": "C13H22O2",
     "weight": 210.31
   },
@@ -5023,7 +5023,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/33677-ethyl-trans-2-butenoate-fema-3486.html",
     "cid": 429065,
-    "smiles": "CCOC(=O)C=CC",
+    "smiles": "CCOC(=O)\\C=C\\C",
     "formula": "C6H10O2",
     "weight": 114.14
   },
@@ -5203,7 +5203,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3332-fig-crotonate-datilat.html",
     "cid": 107073,
-    "smiles": "CC=CC(=O)OC(C)C1CCCCC1",
+    "smiles": "C/C=C/C(=O)OC(C)C1CCCCC1",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -5227,7 +5227,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2874-firsantol.html",
     "cid": 16063533,
-    "smiles": "CC1=CCC(C1(C)C)C(=C)CC(C)CO",
+    "smiles": "CC1(C)C(/C)=C\\CC1C(=C)CC(C)CO",
     "formula": "C14H24O",
     "weight": 208.34
   },
@@ -5275,7 +5275,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3544-floral-undecenone-tetrameran.html",
     "cid": 102604,
-    "smiles": "CC(CCCC(=O)C)CCC=C(C)C",
+    "smiles": "CC(C)CCCC(C)C/C=C/C(=O)C",
     "formula": "C13H24O",
     "weight": 196.33
   },
@@ -5323,7 +5323,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33690-fruity-carboxylate-.html",
     "cid": 157342,
-    "smiles": "CCOC(=O)C12CCCC1C3CCC2C3",
+    "smiles": "CCOC(=O)[C@@]12CCC[C@@H]1[C@H]3CC[C@@H]2C3",
     "formula": "C13H20O2",
     "weight": 208.3
   },
@@ -5551,7 +5551,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RL00204",
     "cid": 637566,
-    "smiles": "CC(=CCCC(=CCO)C)C",
+    "smiles": "CC(=CCC/C(=C/CO)/C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -5575,7 +5575,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RL00206",
     "cid": 1549026,
-    "smiles": "CC(=CCCC(=CCOC(=O)C)C)C",
+    "smiles": "CC(=CCC/C(=C/COC(=O)C)/C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -5587,7 +5587,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4RD00207",
     "cid": 5355856,
-    "smiles": "CCCC(=O)OCC=C(C)CCC=C(C)C",
+    "smiles": "CCCC(=O)OC/C=C(\\C)/CCC=C(C)C",
     "formula": "C14H24O2",
     "weight": 224.34
   },
@@ -5599,7 +5599,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4RW00208",
     "cid": 5282109,
-    "smiles": "CC(=CCCC(=CCOC=O)C)C",
+    "smiles": "CC(=CCC/C(=C/COC=O)/C)C",
     "formula": "C11H18O2",
     "weight": 182.26
   },
@@ -5611,7 +5611,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/3618-geranyl-isobutyrate-fema-2513.html",
     "cid": 6086514,
-    "smiles": "CC(C)C(=O)OCC=C(C)CCC=C(C)C",
+    "smiles": "CC(C)C(=O)OC/C=C(\\C)/CCC=C(C)C",
     "formula": "C14H24O2",
     "weight": 224.34
   },
@@ -5623,7 +5623,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3325-geranyl-isovalerate-fema-2518.html",
     "cid": 5362830,
-    "smiles": "CC(C)CC(=O)OCC=C(C)CCC=C(C)C",
+    "smiles": "CC(C)CC(=O)OCC/C(=C/CC=C(C)C)/C",
     "formula": "C15H26O2",
     "weight": 238.37
   },
@@ -5707,7 +5707,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2894-habanolide.html",
     "cid": 1549778,
-    "smiles": "CC(=CCCC(=CCCC(=O)C)C)C",
+    "smiles": "CC(=CCC/C(=C/CCC(=O)C)/C)C",
     "formula": "C13H22O",
     "weight": 194.31
   },
@@ -5851,7 +5851,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2614-hexenol-cis-3.html",
     "cid": 5281167,
-    "smiles": "CCC=CCCO",
+    "smiles": "CC/C=C\\CCO",
     "formula": "C6H12O",
     "weight": 100.16
   },
@@ -5863,7 +5863,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2604-hexenyl-cis-3-acetate.html",
     "cid": 5363388,
-    "smiles": "CCC=CCCOC(=O)C",
+    "smiles": "CC/C=C\\CCOC(=O)C",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -5875,7 +5875,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2610-hexenyl-salicylate-cis-3.html",
     "cid": 6021887,
-    "smiles": "CCC=CCCOC(=O)C1=CC=CC=C1O",
+    "smiles": "CC/C=C\\CCOC(=O)C1=CC=CC=C1O",
     "formula": "C13H16O3",
     "weight": 220.26
   },
@@ -6007,7 +6007,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/3654-hyacinth-acetals.html",
     "cid": 21895,
-    "smiles": "C1C(OC(O1)CC2=CC=CC=C2)CO",
+    "smiles": "C1C(COC(O1)CC2=CC=CC=C2)O",
     "formula": "C11H14O3",
     "weight": 194.23
   },
@@ -6259,7 +6259,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3KH00065",
     "cid": 637531,
-    "smiles": "CC(=O)OC1CC2CCC1(C2(C)C)C",
+    "smiles": "CC(=O)O[C@@H]1C[C@@H]2CC[C@@]1(C2(C)C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -6271,7 +6271,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/frankincense-กำยาน/2743-isobornyl-acetate-fema-2160.html",
     "cid": 637531,
-    "smiles": "CC(=O)OC1CC2CCC1(C2(C)C)C",
+    "smiles": "CC(=O)O[C@@H]1C[C@@H]2CC[C@@]1(C2(C)C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -6439,7 +6439,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3SP00250",
     "cid": 853433,
-    "smiles": "CC=CC1=CC(=C(C=C1)O)OC",
+    "smiles": "CC(=C)C1=CC(=C(C=C1)O)OC",
     "formula": "C10H12O2",
     "weight": 164.2
   },
@@ -6535,7 +6535,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-ice-cold-เย็น/2469-isopulegol.html",
     "cid": 170833,
-    "smiles": "CC1CCC(C(C1)O)C(=C)C",
+    "smiles": "C[C@H]1CC[C@@H]([C@@H](C1)O)C(=C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -6607,7 +6607,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2866-kohinool-amber-carbinol.html",
     "cid": 15219341,
-    "smiles": "CC(C(C)C(C)O)C(C)C(C)(C)C",
+    "smiles": "CC(C(C)C(C)C(C)(C)C)C(C)O",
     "formula": "C12H26O",
     "weight": 186.33
   },
@@ -6631,7 +6631,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/animal-สัตว์/252973-l-ambregrisox.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/animal-สัตว์/2810-ambroxan.html",
     "cid": 10857465,
-    "smiles": "CC1(CCCC2(C1CCC3(C2CCO3)C)C)C",
+    "smiles": "CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -6763,7 +6763,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3MA00273",
     "cid": 228987,
-    "smiles": "CC(CC1=CC=C(C=C1)C(C)(C)C)C=O",
+    "smiles": "CC(CC=O)C1=CC=C(C=C1)C(C)(C)C",
     "formula": "C14H20O",
     "weight": 204.31
   },
@@ -6823,7 +6823,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4LL00277",
     "cid": 22310,
-    "smiles": "CC1(CCC(O1)C(C)(C)O)C=C",
+    "smiles": "OC(C1OC(\\C=C)(CC1)C)(C)C",
     "formula": "C10H18O2",
     "weight": 170.25
   },
@@ -6835,7 +6835,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2695-linalool-oxide-fema-3746.html",
     "cid": 22310,
-    "smiles": "CC1(CCC(O1)C(C)(C)O)C=C",
+    "smiles": "OC(C1OC(\\C=C)(CC1)C)(C)C",
     "formula": "C10H18O2",
     "weight": 170.25
   },
@@ -6895,7 +6895,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2841-longifolene.html",
     "cid": 1796220,
-    "smiles": "CC1(CCCC2(C3C1C(C2=C)CC3)C)C",
+    "smiles": "C=C2[C@H]1CC[C@@H]3[C@H]1C(C)(C)CCC[C@]23C",
     "formula": "C15H24",
     "weight": 204.35
   },
@@ -6979,7 +6979,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/citrus-ส้ม-เปรี้ยว-สดชื่น/2500-mandarine-aldehyde-10.html",
     "cid": 5283361,
-    "smiles": "CCCCCCCCCC=CC=O",
+    "smiles": "CCCCCCCCC/C=C/C=O",
     "formula": "C12H22O",
     "weight": 182.3
   },
@@ -7159,7 +7159,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33698-methyl-z-5-octenoate-fema-4165.html",
     "cid": 6914062,
-    "smiles": "CCC=CCCCC(=O)OC",
+    "smiles": "CC/C=C\\CCCC(=O)OC",
     "formula": "C9H16O2",
     "weight": 156.22
   },
@@ -7303,7 +7303,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2843-methyl-cedryl-ketone.html",
     "cid": 16220111,
-    "smiles": "CC1CCC2C13CC(C2(C)C)C(=C(C3)C(=O)C)C",
+    "smiles": "C[C@@H]1CC[C@@H]2[C@@]13C[C@H](C2(C)C)C(=C(C3)C(=O)C)C",
     "formula": "C17H26O",
     "weight": 246.4
   },
@@ -7495,7 +7495,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4JN15333",
     "cid": 5281929,
-    "smiles": "CCC=CCC1C(CCC1=O)CC(=O)OC",
+    "smiles": "CC/C=C\\C[C@@H]1[C@H](CCC1=O)CC(=O)",
     "formula": "C13H20O3",
     "weight": 224.3
   },
@@ -7891,7 +7891,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3CR00317",
     "cid": 643820,
-    "smiles": "CC(=CCCC(=CCO)C)C",
+    "smiles": "CC(=CCC/C(=C\\CO)/C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -7903,7 +7903,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/citrus-ส้ม-เปรี้ยว-สดชื่น/2491-nerol-fema-2770.html",
     "cid": 643820,
-    "smiles": "CC(=CCCC(=CCO)C)C",
+    "smiles": "CC(=CCC/C(=C\\CO)/C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -7963,7 +7963,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RF05061",
     "cid": 1549025,
-    "smiles": "CC(=CCCC(=CCOC(=O)C)C)C",
+    "smiles": "CC(=CCC/C(=C\\COC(=O)C)/C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -8011,7 +8011,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/citrus-ส้ม-เปรี้ยว-สดชื่น/3713-nootkatone-fema-3166.html",
     "cid": 1268142,
-    "smiles": "CC1CC(=O)C=C2C1(CC(CC2)C(=C)C)C",
+    "smiles": "C[C@@H]1CC(=O)C=C2[C@]1(C[C@@H](CC2)C(=C)C)C",
     "formula": "C15H22O",
     "weight": 218.33
   },
@@ -8515,7 +8515,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33699-pentanoic-acid-3-methyl-2-oxo--ethyl-ester-fema-4903.html",
     "cid": 13129857,
-    "smiles": "CCC(C)C(=O)C(=O)OCC",
+    "smiles": "O=C(C(C)CC)C(=O)OCC",
     "formula": "C8H14O3",
     "weight": 158.19
   },
@@ -8755,7 +8755,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3335-pineapple-heptadienone-pharaone.html",
     "cid": 15897831,
-    "smiles": "C=CCCC(=O)C(=C)C1CCCCC1",
+    "smiles": "O=C(CCC=C)C(=C)C1CCCCC1",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -9223,7 +9223,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2847-sandal-pentenol-ebanol.html",
     "cid": 6437266,
-    "smiles": "CC1=CCC(C1(C)C)C=CC(C)C(C)O",
+    "smiles": "CC1=CCC(C1(C)C)/C=C\\C(C)C(C)O",
     "formula": "C14H24O",
     "weight": 208.34
   },
@@ -9259,7 +9259,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2873-santaliff-sandaxol-sandalmysore.html",
     "cid": 119897,
-    "smiles": "CC1=CCC(C1(C)C)CC=C(C)CO",
+    "smiles": "CC1=CCC(C1(C)C)C/C=C(\\C)/CO",
     "formula": "C13H22O",
     "weight": 194.31
   },
@@ -9271,7 +9271,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2855-santalol-fema-3006.html",
     "cid": 12315259,
-    "smiles": "CC(=CCCC1(C2CCC(C2)C1=C)C)CO",
+    "smiles": "C/C=C/C=C/C=C/C=C/CCCCCCO",
     "formula": "C15H24O",
     "weight": 220.35
   },
@@ -9283,7 +9283,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2854-santol-pentenol.html",
     "cid": 15984303,
-    "smiles": "CC1=CCC(C1(C)C)C=CC(C)(C)C(C)O",
+    "smiles": "CC1=CCC(C1(C)C)/C=C/C(C)(C)C(C)O",
     "formula": "C15H26O",
     "weight": 222.37
   },
@@ -9319,7 +9319,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/herb-สมุนไพร/33680-sclareolate-firmenich-.html",
     "cid": 16063805,
-    "smiles": "CCCOC(=O)C(C)OC(C)(C)CC",
+    "smiles": "O=C(OCCC)[C@@H](OC(C)(C)CC)C",
     "formula": "C11H22O3",
     "weight": 202.29
   },
@@ -9655,7 +9655,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2603-thiogeraniol.html",
     "cid": 6365572,
-    "smiles": "CC(=CCCC(=CCS)C)C",
+    "smiles": "CC(=CCC/C(=C/CS)/C)C",
     "formula": "C10H18S",
     "weight": 170.32
   },
@@ -10075,7 +10075,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/3583-violet-dienyne.html",
     "cid": 6433089,
-    "smiles": "CCCCCC#CC=CC=C",
+    "smiles": "CCCCCC#C/C=C/C=C",
     "formula": "C11H16",
     "weight": 148.24
   },
@@ -10123,7 +10123,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2865-woody-amylene-koavone.html",
     "cid": 20836197,
-    "smiles": "CC(C(=C(C)C(=O)C)C)C(C)(C)C",
+    "smiles": "CC(/C(=C(/C)\\C(=O)C)/C)C(C)(C)C",
     "formula": "C12H22O",
     "weight": 182.3
   },
