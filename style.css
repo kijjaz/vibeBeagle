@@ -1516,93 +1516,100 @@ body {
     color: var(--cyan) !important;
 }
 
-/* Compact Scent Bridge */
+/* Scent Bridge Finder List Layout */
 .bridge-card {
-    padding: 12px 16px !important;
-    margin-top: 0 !important;
-    margin-bottom: 16px;
+    padding: 24px !important;
 }
 
-.bridge-card h3 {
-    margin-bottom: 8px !important;
-    font-size: 1.1rem !important;
+.bridge-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-.bridge-flow-wrapper {
+.bridge-item-row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    overflow-x: auto;
-    padding: 4px 0;
-}
-
-.bridge-step {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 4px 12px;
-    white-space: nowrap;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.bridge-step:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(212, 175, 55, 0.3);
+.bridge-item-row:hover {
+    background: rgba(255, 255, 255, 0.02);
 }
 
-.bridge-step .step-progress {
+.bridge-item-row:last-child {
+    border-bottom: none;
+}
+
+.bridge-item-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.bridge-item-progress {
     font-family: 'Share Tech Mono', monospace;
     color: var(--gold);
     font-weight: bold;
-    font-size: 0.75rem;
-    background: rgba(212, 175, 55, 0.1);
-    padding: 2px 6px;
-    border-radius: 10px;
+    font-size: 0.85rem;
+    background: rgba(212, 175, 55, 0.08);
+    padding: 3px 8px;
+    border-radius: 6px;
+    width: 48px;
+    text-align: center;
 }
 
-.bridge-step .step-name {
-    font-size: 0.8rem;
+.bridge-item-name {
+    font-size: 0.85rem;
     color: #e0e0e0;
-    max-width: 140px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-weight: 500;
 }
 
-.bridge-step .step-actions {
+.bridge-item-meta {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
     display: flex;
-    gap: 4px;
+    gap: 16px;
+    margin-right: 24px;
 }
 
-.bridge-step .step-btn {
-    background: rgba(255, 255, 255, 0.05);
+.bridge-item-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.bridge-item-actions button {
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     color: #ccc;
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 2px 6px;
+    font-size: 0.75rem;
+    padding: 3px 10px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.15s ease;
 }
 
-.bridge-step .step-btn.a-btn:hover {
-    background: rgba(212, 175, 55, 0.2);
+.bridge-item-actions button.a-btn:hover {
+    background: rgba(212, 175, 55, 0.15);
     border-color: var(--gold);
     color: var(--gold);
 }
 
-.bridge-step .step-btn.b-btn:hover {
-    background: rgba(0, 242, 254, 0.2);
+.bridge-item-actions button.b-btn:hover {
+    background: rgba(0, 242, 254, 0.15);
     border-color: var(--cyan);
     color: var(--cyan);
-}
-
-.bridge-arrow {
-    color: rgba(255, 255, 255, 0.2);
-    font-weight: bold;
-    font-size: 0.85rem;
-    user-select: none;
 }

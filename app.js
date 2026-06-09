@@ -1155,25 +1155,42 @@ document.addEventListener('DOMContentLoaded', () => {
             bridgeCandidates.forEach((cand, idx) => {
                 const comp = cand.compound;
                 
-                // Create compact bridge pill step
-                const step = document.createElement('div');
-                step.className = 'bridge-step';
-                step.title = `${comp.name}\nCAS: ${comp.cas}\nOffset: ${Math.round(cand.d)}px`;
+                // Create compact bridge item row
+                const row = document.createElement('div');
+                row.className = 'bridge-item-row';
+
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'bridge-item-info';
 
                 const prog = document.createElement('span');
-                prog.className = 'step-progress';
+                prog.className = 'bridge-item-progress';
                 prog.textContent = `${Math.round(cand.t * 100)}%`;
 
                 const nameSpan = document.createElement('span');
-                nameSpan.className = 'step-name';
+                nameSpan.className = 'bridge-item-name';
                 nameSpan.textContent = comp.name;
 
+                infoDiv.appendChild(prog);
+                infoDiv.appendChild(nameSpan);
+
+                const metaDiv = document.createElement('div');
+                metaDiv.className = 'bridge-item-meta';
+
+                const casSpan = document.createElement('span');
+                casSpan.textContent = `CAS: ${comp.cas || 'N/A'}`;
+
+                const offsetSpan = document.createElement('span');
+                offsetSpan.textContent = `Offset: ${Math.round(cand.d)}px`;
+
+                metaDiv.appendChild(casSpan);
+                metaDiv.appendChild(offsetSpan);
+
                 const btnGroup = document.createElement('div');
-                btnGroup.className = 'step-actions';
+                btnGroup.className = 'bridge-item-actions';
 
                 const btnA = document.createElement('button');
-                btnA.className = 'step-btn a-btn';
-                btnA.textContent = 'A';
+                btnA.className = 'a-btn';
+                btnA.textContent = 'Set A';
                 btnA.title = 'Set as Molecule A';
                 btnA.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -1181,8 +1198,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 const btnB = document.createElement('button');
-                btnB.className = 'step-btn b-btn';
-                btnB.textContent = 'B';
+                btnB.className = 'b-btn';
+                btnB.textContent = 'Set B';
                 btnB.title = 'Set as Molecule B';
                 btnB.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -1191,26 +1208,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 btnGroup.appendChild(btnA);
                 btnGroup.appendChild(btnB);
-                
-                step.appendChild(prog);
-                step.appendChild(nameSpan);
-                step.appendChild(btnGroup);
 
-                // Allow step click to trigger main inspection
-                step.style.cursor = 'pointer';
-                step.addEventListener('click', () => {
+                row.appendChild(infoDiv);
+                row.appendChild(metaDiv);
+                row.appendChild(btnGroup);
+
+                // Allow row click to trigger main inspection
+                row.addEventListener('click', () => {
                     selectMoleculeA(comp);
                 });
 
-                bridgeList.appendChild(step);
-
-                // Add connecting arrow between steps (except the last one)
-                if (idx < bridgeCandidates.length - 1) {
-                    const arrow = document.createElement('span');
-                    arrow.className = 'bridge-arrow';
-                    arrow.textContent = '→';
-                    bridgeList.appendChild(arrow);
-                }
+                bridgeList.appendChild(row);
             });
         }
 
