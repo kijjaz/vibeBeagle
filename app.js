@@ -1303,67 +1303,203 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Sonification of Vibrations using Web Audio API Additive Synthesis
-    let audioCtx = null;
-    function getAudioContext() {
-        if (!audioCtx) {
-            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    // Helper function for FFT and IFFT
+    function bitReverse(real, imag, N) {
+        let limit = N - 1;
+        for (let i = 0; i < limit; i++) {
+            let rev = 0;
+            let temp = i;
+            for (let j = 1; j < N; j <<= 1) {
+                rev = (rev << 1) | (temp & 1);
+                temp >>= 1;
+            }
+            if (i < rev) {
+                let tr = real[i]; real[i] = real[rev]; real[rev] = tr;
+                let ti = imag[i]; imag[i] = imag[rev]; imag[rev] = ti;
+            }
         }
-        if (audioCtx.state === 'suspended') {
-            audioCtx.resume();
+    }
+
+    function fft(real, imag, N, inverse = false) {
+        bitReverse(real, imag, N);
+        for (let len = 2; len <= N; len <<= 1) {
+            let angle = (2 * Math.PI / len) * (inverse ? -1 : 1);
+            let wlen_r = Math.cos(angle);
+            let wlen_i = Math.sin(angle);
+            for (let i = 0; i < N; i += len) {
+                let w_r = 1.0;
+                let w_i = 0.0;
+                let half = len >> 1;
+                for (let j = 0; j < half; j++) {
+                    let u_r = real[i + j];
+                    let u_i = imag[i + j];
+                    let t_r = real[i + j + half] * w_r - imag[i + j + half] * w_i;
+                    let t_i = real[i + j + half] * w_i + imag[i + j + half] * w_r;
+                    real[i + j] = u_r + t_r;
+                    imag[i + j] = u_i + t_i;
+                    real[i + j + half] = u_r - t_r;
+                    imag[i + j + half] = u_i - t_i;
+                    let next_w_r = w_r * wlen_r - w_i * wlen_i;
+                    let next_w_i = w_r * wlen_i + w_i * wlen_r;
+                    w_r = next_w_r;
+                    w_i = next_w_i;
+                }
+            }
         }
-        return audioCtx;
+        if (inverse) {
+            for (let i = 0; i < N; i++) {
+                real[i] /= N;
+                imag[i] /= N;
+            }
+        }
+    }
+
+    function getSpectrumIntensity(comp, w) {
+        if (w < 400 || w > 4000) return 0;
+        const grid = comp.spectrum_grid;
+        const curve = comp.spectrum_curve;
+        if (!grid || !curve || grid.length === 0) return 0;
+        
+        const step = grid[1] - grid[0];
+        const idx = Math.floor((w - grid[0]) / step);
+        if (idx < 0) return curve[0];
+        if (idx >= curve.length - 1) return curve[curve.length - 1];
+        
+        const w0 = grid[idx];
+        const w1 = grid[idx + 1];
+        const val0 = curve[idx];
+        const val1 = curve[idx + 1];
+        
+        const t = (w - w0) / (w1 - w0);
+        return val0 + t * (val1 - val0);
     }
 
     function playMoleculeSound(comp) {
-        if (!comp || !comp.vibrational_frequencies || comp.vibrational_frequencies.length === 0) return;
+        if (!comp || !comp.spectrum_curve || comp.spectrum_curve.length === 0) return;
         
         try {
             const ctx = getAudioContext();
+            const sampleRate = ctx.sampleRate;
+            const duration = 2.0; // 2 seconds play time
+            const totalSamples = Math.floor(duration * sampleRate);
+            
+            const N = 4096;
+            const hopSize = 1024;
+            
+            const outputData = new Float32Array(totalSamples);
+            const windowSum = new Float32Array(totalSamples);
+            
+            // Generate phase array initialized to random phases
+            const phase = new Float32Array(N);
+            for (let k = 0; k < N; k++) {
+                phase[k] = Math.random() * 2 * Math.PI;
+            }
+            
+            // Logarithmic mapping bounds
+            const minF = 85;
+            const maxF = 9000;
+            
+            // Precompute Hanning window
+            const win = new Float32Array(N);
+            for (let n = 0; n < N; n++) {
+                win[n] = 0.5 * (1 - Math.cos((2 * Math.PI * n) / (N - 1)));
+            }
+            
+            // Loop through overlapping frames
+            const numFrames = Math.floor((totalSamples - N) / hopSize) + 1;
+            
+            for (let frameIdx = 0; frameIdx < numFrames; frameIdx++) {
+                const real = new Float32Array(N);
+                const imag = new Float32Array(N);
+                
+                // Advance the phase for all bins to maintain phase continuity
+                for (let k = 1; k < N / 2; k++) {
+                    const fk = k * (sampleRate / N);
+                    // Standard Phase Vocoder: Delta theta = 2 * pi * f * dt
+                    phase[k] = (phase[k] + 2 * Math.PI * k * (hopSize / N)) % (2 * Math.PI);
+                    
+                    // Map audio frequency fk to wavenumber logarithmically
+                    let wavenumber = 400;
+                    if (fk >= minF && fk <= maxF) {
+                        const ratio = Math.log(fk / minF) / Math.log(maxF / minF);
+                        wavenumber = 400 + ratio * (4000 - 400);
+                    } else if (fk > maxF) {
+                        wavenumber = 4000;
+                    }
+                    
+                    // Intensity scaling (magnitude)
+                    let mag = 0;
+                    if (wavenumber >= 400 && wavenumber <= 4000) {
+                        mag = getSpectrumIntensity(comp, wavenumber);
+                    }
+                    
+                    // Slightly reduce magnitude for high frequencies to sound more natural/less piercing
+                    if (fk > 2000) {
+                        const scale = Math.max(0.1, 1 - (fk - 2000) / (maxF - 2000) * 0.7);
+                        mag *= scale;
+                    }
+                    
+                    real[k] = mag * Math.cos(phase[k]);
+                    imag[k] = mag * Math.sin(phase[k]);
+                    
+                    // Conjugate symmetry for real time-domain signal
+                    real[N - k] = real[k];
+                    imag[N - k] = -imag[k];
+                }
+                
+                // Perform Inverse FFT
+                fft(real, imag, N, true);
+                
+                // Overlap-add windowed frame
+                const offset = frameIdx * hopSize;
+                for (let n = 0; n < N; n++) {
+                    if (offset + n < totalSamples) {
+                        outputData[offset + n] += real[n] * win[n];
+                        windowSum[offset + n] += win[n] * win[n];
+                    }
+                }
+            }
+            
+            // Normalize and divide by windowSum to reconstruct flat amplitude response
+            let maxVal = 0.0001;
+            for (let i = 0; i < totalSamples; i++) {
+                if (windowSum[i] > 0.01) {
+                    outputData[i] /= windowSum[i];
+                }
+                const absVal = Math.abs(outputData[i]);
+                if (absVal > maxVal) {
+                    maxVal = absVal;
+                }
+            }
+            
+            // Master level scale
+            const masterScale = 0.12; // limit to safe headroom
+            
+            // Apply scale and simple smooth fade in/out envelope
+            const fadeInSamples = Math.floor(sampleRate * 0.08); // 80ms fade in
+            const fadeOutSamples = Math.floor(sampleRate * 0.25); // 250ms fade out
+            
+            for (let i = 0; i < totalSamples; i++) {
+                let env = 1.0;
+                if (i < fadeInSamples) {
+                    env = i / fadeInSamples;
+                } else if (i > totalSamples - fadeOutSamples) {
+                    env = (totalSamples - i) / fadeOutSamples;
+                }
+                outputData[i] = (outputData[i] / maxVal) * env * masterScale;
+            }
+            
+            // Create AudioBuffer and copy data
+            const buffer = ctx.createBuffer(1, totalSamples, sampleRate);
+            buffer.copyToChannel(outputData, 0);
+            
+            // Play using AudioBufferSourceNode
+            const source = ctx.createBufferSource();
+            source.buffer = buffer;
+            source.connect(ctx.destination);
+            
             const now = ctx.currentTime;
-            
-            // Master gain node for overall volume limit at -18 dBFS (0.1259 linear amplitude)
-            const masterGain = ctx.createGain();
-            masterGain.gain.setValueAtTime(0.1259, now);
-            masterGain.connect(ctx.destination);
-            
-            const freqs = comp.vibrational_frequencies;
-            
-            // Map frequencies from [400, 4000] cm^-1 to [100, 15000] Hz
-            const mappedModes = freqs.map(wavenumber => {
-                const clamped = Math.max(400, Math.min(4000, wavenumber));
-                const audioFreq = 100 + (clamped - 400) * (15000 - 100) / (4000 - 400);
-                return audioFreq;
-            });
-            
-            // Limit to top 25 modes to avoid Web Audio thread congestion
-            const maxModes = 25;
-            const modesToPlay = mappedModes.slice(0, maxModes);
-            
-            modesToPlay.forEach(f => {
-                const osc = ctx.createOscillator();
-                const gainNode = ctx.createGain();
-                
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(f, now);
-                
-                // Distribute gain among active modes
-                const componentGain = 1.0 / modesToPlay.length;
-                
-                gainNode.gain.setValueAtTime(0.001, now);
-                // Short organic attack envelope (50ms)
-                gainNode.gain.linearRampToValueAtTime(componentGain, now + 0.05);
-                
-                // Exponential decay envelope (higher frequencies damp/decay faster)
-                const decayConst = 0.3 + ((15000 - f) / 15000) * 0.7; // 0.3s to 1.0s decay rate
-                gainNode.gain.exponentialRampToValueAtTime(0.0001, now + decayConst * 4);
-                
-                osc.connect(gainNode);
-                gainNode.connect(masterGain);
-                
-                osc.start(now);
-                osc.stop(now + decayConst * 4);
-            });
+            source.start(now);
         } catch (err) {
             console.error("Audio playback error: ", err);
         }
