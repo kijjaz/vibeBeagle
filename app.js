@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // State management
     let compoundsData = [];
     let similarityData = {};
+    let globalWeights = [];
     let selectedMolA = null;
     let selectedMolB = null;
     let spectrumChart = null;
@@ -47,8 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements - Tabs
     const tabBtnAnalyzer = document.getElementById('tab-btn-analyzer');
     const tabBtnNetwork = document.getElementById('tab-btn-network');
+    const tabBtnTheory = document.getElementById('tab-btn-theory');
     const tabContentAnalyzer = document.getElementById('tab-content-analyzer');
     const tabContentNetwork = document.getElementById('tab-content-network');
+    const tabContentTheory = document.getElementById('tab-content-theory');
 
     // DOM Elements - Network Graph
     const thresholdSlider = document.getElementById('similarity-threshold');
@@ -73,8 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
     tabBtnAnalyzer.addEventListener('click', () => {
         tabBtnAnalyzer.classList.add('active');
         tabBtnNetwork.classList.remove('active');
+        if (tabBtnTheory) tabBtnTheory.classList.remove('active');
         tabContentAnalyzer.classList.add('active');
         tabContentNetwork.classList.remove('active');
+        if (tabContentTheory) tabContentTheory.classList.remove('active');
         activeTab = 'analyzer';
         // Redraw canvas/chart when visible to prevent scaling errors
         if (spectrumChart) spectrumChart.resize();
@@ -84,13 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
     tabBtnNetwork.addEventListener('click', () => {
         tabBtnNetwork.classList.add('active');
         tabBtnAnalyzer.classList.remove('active');
+        if (tabBtnTheory) tabBtnTheory.classList.remove('active');
         tabContentNetwork.classList.add('active');
         tabContentAnalyzer.classList.remove('active');
+        if (tabContentTheory) tabContentTheory.classList.remove('active');
         activeTab = 'network';
         
         // Load the network graph once visible
         initNetworkGraph();
     });
+
+    if (tabBtnTheory) {
+        tabBtnTheory.addEventListener('click', () => {
+            tabBtnTheory.classList.add('active');
+            tabBtnAnalyzer.classList.remove('active');
+            tabBtnNetwork.classList.remove('active');
+            tabContentTheory.classList.add('active');
+            tabContentAnalyzer.classList.remove('active');
+            tabContentNetwork.classList.remove('active');
+            activeTab = 'theory';
+        });
+    }
 
     // Close button for Peak Explanation Card
     const closePeakExpBtn = document.getElementById('close-peak-exp-btn');
@@ -254,6 +273,41 @@ document.addEventListener('DOMContentLoaded', () => {
             ]);
             
             compoundsData = await respVibrations.json();
+            
+            // Dynamically generate and inject spectrum_grid since it was removed from the database for file-size optimization (saving 1.8MB)
+            const globalGrid = [];
+            for (let f = 400.0; f <= 4000.0; f += 10.0) {
+                globalGrid.push(f);
+            }
+            compoundsData.forEach(comp => {
+                comp.spectrum_grid = globalGrid;
+            });
+            
+            // Generate global weights vector for weighted cosine similarity
+            const BANDS = [
+                { name: "Fingerprint", start: 400.0, end: 1400.0, weight: 1.1924 },
+                { name: "Aromatic_Double", start: 1400.0, end: 1650.0, weight: 1.0231 },
+                { name: "Carbonyl", start: 1650.0, end: 1800.0, weight: 1.5616 },
+                { name: "Triple_Nitrile", start: 2100.0, end: 2260.0, weight: 15.0000 },
+                { name: "Thiol", start: 2500.0, end: 2600.0, weight: 0.1898 },
+                { name: "Aliphatic_CH", start: 2800.0, end: 3000.0, weight: 0.3528 },
+                { name: "Aromatic_CH", start: 3000.0, end: 3150.0, weight: 0.7438 },
+                { name: "Hydroxyl", start: 3150.0, end: 3650.0, weight: 0.0425 }
+            ];
+            
+            globalWeights = [];
+            for (let f = 400.0; f <= 4000.0; f += 10.0) {
+                let w = 1.0;
+                for (let b = 0; b < BANDS.length; b++) {
+                    const band = BANDS[b];
+                    if (f >= band.start && f <= band.end) {
+                        w = band.weight;
+                        break;
+                    }
+                }
+                globalWeights.push(w);
+            }
+            
             similarityData = await respSimilarity.json();
             
             totalCountLabel.textContent = `${compoundsData.length} pure aroma chemicals ready`;
@@ -1018,26 +1072,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Dynamic Spectral Overlap Calculation (Cosine Similarity of continuous curves)
+    // Dynamic Spectral Overlap Calculation (Weighted Cosine Similarity of continuous curves)
     function calculateAndDisplayOverlap() {
         if (!selectedMolA || !selectedMolB) return;
 
         const yA = selectedMolA.spectrum_curve;
         const yB = selectedMolB.spectrum_curve;
 
-        if (!yA || !yB || yA.length !== yB.length) {
+        if (!yA || !yB || yA.length !== yB.length || globalWeights.length !== yA.length) {
             resetOverlapGauge();
             return;
         }
 
-        // Vector dot product
+        // Vector dot product with weights applied
         let dotProduct = 0;
         let normASq = 0;
         let normBSq = 0;
         for (let i = 0; i < yA.length; i++) {
-            dotProduct += yA[i] * yB[i];
-            normASq += yA[i] * yA[i];
-            normBSq += yB[i] * yB[i];
+            const w = globalWeights[i];
+            const valA = yA[i] * w;
+            const valB = yB[i] * w;
+            dotProduct += valA * valB;
+            normASq += valA * valA;
+            normBSq += valB * valB;
         }
 
         const normA = Math.sqrt(normASq);
@@ -1048,6 +1105,8 @@ document.addEventListener('DOMContentLoaded', () => {
             overlap = dotProduct / (normA * normB);
         }
 
+        // Clamp overlap value between 0.0 and 1.0 to prevent numeric overflow/artifacts
+        overlap = Math.max(0.0, Math.min(1.0, overlap));
         const percentage = Math.round(overlap * 100);
 
         // Animate circular SVG gauge
@@ -1273,8 +1332,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const edges = [];
         const nodesLookup = {};
         
-        // Assemble nodes
+        // Assemble nodes (deduplicated by CAS to prevent Vis.js duplicate ID crash)
+        const seenCas = new Set();
         compoundsData.forEach(comp => {
+            if (seenCas.has(comp.cas)) return;
+            seenCas.add(comp.cas);
             let nodeColor = {
                 background: '#1a1a1a',
                 border: '#333333',

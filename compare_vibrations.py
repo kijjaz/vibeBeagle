@@ -6,13 +6,25 @@ import numpy as np
 INPUT_JSON = 'aroma_vibrations.json'
 OUTPUT_JSON = 'similarity_report.json'
 
-def cosine_similarity(u, v):
-    dot_product = np.dot(u, v)
-    norm_u = np.linalg.norm(u)
-    norm_v = np.linalg.norm(v)
-    if norm_u == 0.0 or norm_v == 0.0:
-        return 0.0
-    return float(dot_product / (norm_u * norm_v))
+# Optimal band weights for scent category separation
+BANDS = [
+    ("Fingerprint", 400.0, 1400.0, 1.1924),
+    ("Aromatic_Double", 1400.0, 1650.0, 1.0231),
+    ("Carbonyl", 1650.0, 1800.0, 1.5616),
+    ("Triple_Nitrile", 2100.0, 2260.0, 15.0000),
+    ("Thiol", 2500.0, 2600.0, 0.1898),
+    ("Aliphatic_CH", 2800.0, 3000.0, 0.3528),
+    ("Aromatic_CH", 3000.0, 3150.0, 0.7438),
+    ("Hydroxyl", 3150.0, 3650.0, 0.0425)
+]
+
+def build_weight_vector():
+    grid = np.arange(400.0, 4000.0 + 10.0, 10.0)
+    w_vec = np.ones_like(grid)
+    for name, start, end, w in BANDS:
+        mask = (grid >= start) & (grid <= end)
+        w_vec[mask] = w
+    return w_vec
 
 def main():
     if not os.path.exists(INPUT_JSON):
@@ -40,14 +52,19 @@ def main():
             valid_indices.append(i)
             
     spectra = np.array(spectra)
-    print(f"Comparing {len(valid_indices)} valid spectra...")
+    print(f"Comparing {len(valid_indices)} valid spectra using optimized band weighting...")
     
-    similarity_matrix = np.zeros((len(valid_indices), len(valid_indices)))
-    for i in range(len(valid_indices)):
-        for j in range(i, len(valid_indices)):
-            sim = cosine_similarity(spectra[i], spectra[j])
-            similarity_matrix[i, j] = sim
-            similarity_matrix[j, i] = sim
+    # Build the weight vector and apply to spectra
+    w_vec = build_weight_vector()
+    weighted_spectra = spectra * w_vec
+    
+    # Vectorized cosine similarity computation
+    norms = np.linalg.norm(weighted_spectra, axis=1, keepdims=True)
+    norms[norms == 0.0] = 1.0  # Avoid division by zero
+    
+    normalized_spectra = weighted_spectra / norms
+    similarity_matrix = np.dot(normalized_spectra, normalized_spectra.T)
+    similarity_matrix = np.clip(similarity_matrix, -1.0, 1.0)
             
     report = {}
     for i, idx in enumerate(valid_indices):

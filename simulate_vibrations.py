@@ -228,9 +228,7 @@ def main():
             c_data = c.copy()
             c_data.update({
                 "vibrational_frequencies": [round(f, 2) for f in freqs],
-                "spectrum_grid": grid.tolist(),
-                "spectrum_curve": [round(y, 4) for y in curve],
-                "spectrum_histogram": hist.tolist()
+                "spectrum_curve": [round(y, 4) for y in curve]
             })
             simulated_data.append(c_data)
             success_count += 1
@@ -239,9 +237,9 @@ def main():
         except Exception as e:
             print(f"ERROR: {e}")
             
-    # Save simulated vibrations
+    # Save simulated vibrations (minified to keep file size small for web performance)
     with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
-        json.dump(simulated_data, f, indent=2, ensure_ascii=False)
+        json.dump(simulated_data, f, ensure_ascii=False)
         
     print(f"\nSimulation complete: {success_count}/{len(compounds)} compounds successfully simulated.")
     print(f"Data saved to {OUTPUT_JSON}")
