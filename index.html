@@ -95,9 +95,14 @@
                                 <div class="meta-item"><span class="label">Weight:</span> <span id="mol-a-weight">-</span></div>
                                 <div class="meta-item"><span class="label">PubChem CID:</span> <span id="mol-a-cid" class="val-mono">-</span></div>
                             </div>
-                            <div class="mol-pricing">
-                                <span class="price-label">Cheapest Source:</span>
-                                <span id="mol-a-price" class="price-tag">-</span>
+                            <div class="mol-pricing" style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <span class="price-label">Cheapest Source:</span>
+                                    <span id="mol-a-price" class="price-tag">-</span>
+                                </div>
+                                <button id="play-sound-a-btn" class="sound-play-btn hidden" title="Play chemical vibration sound" style="background: rgba(212, 175, 55, 0.15); border: 1px solid var(--gold); color: var(--gold); border-radius: 4px; padding: 4px 10px; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
+                                    🔊 Play Sound
+                                </button>
                             </div>
                         </div>
 
@@ -113,9 +118,14 @@
                                 <div class="meta-item"><span class="label">Weight:</span> <span id="mol-b-weight">-</span></div>
                                 <div class="meta-item"><span class="label">PubChem CID:</span> <span id="mol-b-cid" class="val-mono">-</span></div>
                             </div>
-                            <div class="mol-pricing">
-                                <span class="price-label">Cheapest Source:</span>
-                                <span id="mol-b-price" class="price-tag">-</span>
+                            <div class="mol-pricing" style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <span class="price-label">Cheapest Source:</span>
+                                    <span id="mol-b-price" class="price-tag">-</span>
+                                </div>
+                                <button id="play-sound-b-btn" class="sound-play-btn hidden" title="Play chemical vibration sound" style="background: rgba(0, 242, 254, 0.15); border: 1px solid var(--cyan); color: var(--cyan); border-radius: 4px; padding: 4px 10px; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
+                                    🔊 Play Sound
+                                </button>
                             </div>
                         </div>
 
@@ -281,6 +291,16 @@
                         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0; margin-bottom: 12px;">
                             Below are the intermediate aroma chemicals located along the straight olfactory morphing path in 2D MDS space between <strong>Molecule A</strong> and <strong>Molecule B</strong>.
                         </p>
+                        
+                        <!-- Path Offset Slider -->
+                        <div class="bridge-controls" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px; background: rgba(255,255,255,0.02); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
+                            <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                                <label for="bridge-max-offset" style="font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap;">Max Path Offset:</label>
+                                <input type="range" id="bridge-max-offset" min="20" max="250" value="80" step="5" style="flex: 1; accent-color: var(--gold); cursor: pointer; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px;">
+                                <span id="bridge-max-offset-val" style="font-family: 'Share Tech Mono', monospace; font-size: 0.85rem; color: var(--gold); min-width: 54px; text-align: right;">80 px</span>
+                            </div>
+                        </div>
+
                         <div id="bridge-list" class="bridge-list-container">
                             <!-- Populated dynamically via JS -->
                         </div>

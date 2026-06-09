@@ -43,7 +43,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33804-5e-3-methylcyclopentadec-5-en-1-one.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/3954-delta-muscenone.html",
     "cid": 57353762,
-    "smiles": "CC1C/C=C/CCCCCCCCCC(=O)C1",
+    "smiles": "CC1=CCCCCCCCCCCCCC1=O",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -55,7 +55,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33686-6r-6-pentyl-56-dihydropyran-2-one-fema-3744.html",
     "cid": 642793,
-    "smiles": "CCCCC[C@@H]1CC=CC(=O)O1",
+    "smiles": "CCCCCC1CC=CC(=O)O1",
     "formula": "C10H16O2",
     "weight": 168.23
   },
@@ -79,7 +79,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33801-e-1-266-trimethyl-1-cyclohexenylbut-2-en-1-one-fema-3243.html",
     "cid": 5374527,
-    "smiles": "C/C=C/C(=O)C1=C(CCCC1(C)C)C",
+    "smiles": "CC=CC(=O)C1=C(CCCC1(C)C)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -91,7 +91,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33661-e-2-hexen-1-yl-acetate-fema-2564.html",
     "cid": 2733294,
-    "smiles": "CCC/C=C/COC(=O)C",
+    "smiles": "CCCC=CCOC(=O)C",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -103,7 +103,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33805-e-oct-2-en-4-one-fema-3603.html",
     "cid": 5365891,
-    "smiles": "CCCCC(=O)/C=C/C",
+    "smiles": "CCCCC(=O)C=CC",
     "formula": "C8H14O",
     "weight": 126.2
   },
@@ -115,7 +115,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33755-ee-24-decadienal-fema-3135.html",
     "cid": 5283349,
-    "smiles": "CCCCC\\C=C\\C=C\\C=O",
+    "smiles": "CCCCCC=CC=CC=O",
     "formula": "C10H16O",
     "weight": 152.23
   },
@@ -127,7 +127,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/33756-ee-24-heptadienal-fema-3164.html",
     "cid": 5283321,
-    "smiles": "CC/C=C/C=C/C=O",
+    "smiles": "CCC=CC=CC=O",
     "formula": "C7H10O",
     "weight": 110.15
   },
@@ -139,7 +139,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33833-ne-n-6e-2447-tetramethylnona-68-dien-3-ylidene-hydroxylamine.html",
     "cid": 3019015,
-    "smiles": "CC(C)/C(=N\\O)/C(C)(C)C\\C=C(/C)\\C=C",
+    "smiles": "CC(C)C(=NO)C(C)(C)CC=C(C)C=C",
     "formula": "C13H23NO",
     "weight": 209.33
   },
@@ -163,7 +163,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33705-z-3-hexen-1-yl-hexanoate-fema-3403.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2608-cis-3-hexenyl-hexanoate-fema-3403.html",
     "cid": 5352543,
-    "smiles": "CCCCCC(=O)OCC/C=C\\CC",
+    "smiles": "CCCCCC(=O)OCCC=CCC",
     "formula": "C12H22O2",
     "weight": 198.3
   },
@@ -175,7 +175,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33708-z-3-hexen-1-yl-tiglate-fema-3931.html",
     "cid": 15461361,
-    "smiles": "CC/C=C\\CCOC(=O)/C(=C\\C)/C",
+    "smiles": "CCC=CCCOC(=O)C(=CC)C",
     "formula": "C11H18O2",
     "weight": 182.26
   },
@@ -199,7 +199,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33779-z-dec-4-enal-fema-3264.html",
     "cid": 5362620,
-    "smiles": "CCCCC/C=C\\CCC=O",
+    "smiles": "CCCCCC=CCCC=O",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -211,7 +211,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33728-z-hex-4-en-1-ol-fema-3430.html",
     "cid": 5365589,
-    "smiles": "C/C=C\\CCCO",
+    "smiles": "CC=CCCCO",
     "formula": "C6H12O",
     "weight": 100.16
   },
@@ -276,6 +276,18 @@
     "weight": 192.3
   },
   {
+    "name": "1-octen-3-ol, Amyl Vinyl Carbinol, Mushroom Alcohol",
+    "cas": "3391-86-4",
+    "fema": "",
+    "price_thb_g": 10.26,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2554-1-octen-3-ol-amyl-vinyl-carbinol.html",
+    "cid": 18827,
+    "smiles": "CCCCCC(C=C)O",
+    "formula": "C8H16O",
+    "weight": 128.21
+  },
+  {
     "name": "1-Octen-3-yl Acetate (FEMA-3582)",
     "cas": "2442-10-6",
     "fema": "3582",
@@ -334,6 +346,18 @@
     "smiles": "CC1=C(SC(=N1)C)C",
     "formula": "C6H9NS",
     "weight": 127.21
+  },
+  {
+    "name": "2,4-decadienal (FEMA-3135)",
+    "cas": "CID-76548469",
+    "fema": "3135",
+    "price_thb_g": 93.6,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2433-24-decadienal-fema-3135.html",
+    "cid": 76548469,
+    "smiles": "CCCCC=CC(=O)CC=C",
+    "formula": "C10H16O",
+    "weight": 152.23
   },
   {
     "name": "2,4-Dimethyl-5-Acetyl Thiazole (Nutty Thiazole, FEMA-3267)",
@@ -451,7 +475,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33734-26-dimethyl-10-methylene-2611-dodecatrienal-fema-3141.html",
     "cid": 5281535,
-    "smiles": "C/C(=C\\CCC(=C)C=C)/CC/C=C(\\C)/C=O",
+    "smiles": "CC(=CCCC(=C)C=C)CCC=C(C)C=O",
     "formula": "C15H22O",
     "weight": 218.33
   },
@@ -514,6 +538,18 @@
     "smiles": "CC(=O)C1=NC=CN=C1",
     "formula": "C6H6N2O",
     "weight": 122.12
+  },
+  {
+    "name": "2-acetyl Pyridine (FEMA-3251)",
+    "cas": "1122-62-9",
+    "fema": "3251",
+    "price_thb_g": 15.35,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/2541-2-acetyl-pyridine-fema-3251.html",
+    "cid": 14286,
+    "smiles": "CC(=O)C1=CC=CC=N1",
+    "formula": "C7H7NO",
+    "weight": 121.14
   },
   {
     "name": "2-acetyl Pyrrole",
@@ -708,6 +744,18 @@
     "weight": 116.2
   },
   {
+    "name": "2-isobutyl Quinoline, Isobutylquinoline",
+    "cas": "93-19-6",
+    "fema": "",
+    "price_thb_g": 79.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/animal-สัตว์/4001-2-isobutyl-quinoline.html",
+    "cid": 7130,
+    "smiles": "CC(C)CC1=NC2=CC=CC=C2C=C1",
+    "formula": "C13H15N",
+    "weight": 185.26
+  },
+  {
     "name": "2-isobutyl-3-methoxypyrazine",
     "cas": "24683-00-9",
     "fema": "",
@@ -883,7 +931,19 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4FC07622",
     "cid": 5365909,
-    "smiles": "CC/C=C(\\C)/C(=O)O",
+    "smiles": "CCC=C(C)C(=O)O",
+    "formula": "C6H10O2",
+    "weight": 114.14
+  },
+  {
+    "name": "2-methyl-2-pentenoic Acid (FEMA-3195)",
+    "cas": "16957-70-3",
+    "fema": "3195",
+    "price_thb_g": 5.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2555-2-methyl-2-pentenoic-acid-fema-3195.html",
+    "cid": 5365909,
+    "smiles": "CCC=C(C)C(=O)O",
     "formula": "C6H10O2",
     "weight": 114.14
   },
@@ -1020,6 +1080,18 @@
     "weight": 158.24
   },
   {
+    "name": "2-Methylbutyl Butyrate (FEMA-3393)",
+    "cas": "51115-64-1",
+    "fema": "3393",
+    "price_thb_g": 995.0,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32353--2-methylbutyl-butyrate-fema-2934.html",
+    "cid": 162627,
+    "smiles": "CCCC(=O)OCC(C)CC",
+    "formula": "C9H18O2",
+    "weight": 158.24
+  },
+  {
     "name": "2-methyldecanal",
     "cas": "19009-56-4",
     "fema": "",
@@ -1087,9 +1159,21 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/3632-2-octenal-fema-3215.html",
     "cid": 5283324,
-    "smiles": "CCCCC/C=C/C=O",
+    "smiles": "CCCCCC=CC=O",
     "formula": "C8H14O",
     "weight": 126.2
+  },
+  {
+    "name": "2-pentanone, methyl propyl ketone (FEMA-2842)",
+    "cas": "107-87-9",
+    "fema": "2842",
+    "price_thb_g": 7.5,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/9235-2-pentanone-methyl-propyl-ketone-fema-2842.html",
+    "cid": 7895,
+    "smiles": "CCCC(=O)C",
+    "formula": "C5H10O",
+    "weight": 86.13
   },
   {
     "name": "2-pentyl Cyclopentanone, Delphone",
@@ -1248,6 +1332,30 @@
     "weight": 144.21
   },
   {
+    "name": "3-Methylbutyl Propanoate ,Isoamyl Propionate (FEMA-2082)",
+    "cas": "105-68-0",
+    "fema": "2082",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32350-3-methylbutyl-propanoate-isoamyl-propionate-fema-2082.html",
+    "cid": 7772,
+    "smiles": "CCC(=O)OCCC(C)C",
+    "formula": "C8H16O2",
+    "weight": 144.21
+  },
+  {
+    "name": "3-Methylcrotonic acid (FEMA-3187)",
+    "cas": "541-47-9",
+    "fema": "3187",
+    "price_thb_g": 4.65,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/phenolic-ยา/31027-3-methylcrotonic-acid-fema-3187.html",
+    "cid": 10931,
+    "smiles": "CC(=CC(=O)O)C",
+    "formula": "C5H8O2",
+    "weight": 100.12
+  },
+  {
     "name": "3-Methylthio Propanol (FEMA-3415)",
     "cas": "505-10-2",
     "fema": "3415",
@@ -1282,6 +1390,18 @@
     "smiles": "CSCCCN=C=S",
     "formula": "C5H9NS2",
     "weight": 147.3
+  },
+  {
+    "name": "3-Methylthio-1-Hexanol      (FEMA-3438)",
+    "cas": "51755-66-9",
+    "fema": "3438",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32461-3-methylthio-1-hexanol-fema-3438.html",
+    "cid": 65413,
+    "smiles": "CCCC(CCO)SC",
+    "formula": "C7H16OS",
+    "weight": 148.27
   },
   {
     "name": "3-Octanol (FEMA-3581)",
@@ -1351,7 +1471,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33832-4-octahydro-47-methano-5h-inden-5-ylidenebutanal.html",
     "cid": 6438291,
-    "smiles": "C1CC2C(C1)C\\3CC2C/C3=C\\CCC=O",
+    "smiles": "C1CC2C(C1)C3CC2CC3=CCCC=O",
     "formula": "C14H20O",
     "weight": 204.31
   },
@@ -1376,6 +1496,18 @@
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/3427-4-carvomenthenol-terpinen-4-ol-fema-2248.html",
     "cid": 11230,
     "smiles": "CC1=CCC(CC1)(C(C)C)O",
+    "formula": "C10H18O",
+    "weight": 154.25
+  },
+  {
+    "name": "4-decenal (FEMA-3264)",
+    "cas": "30390-50-2",
+    "fema": "3264",
+    "price_thb_g": 66.0,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2439-4-decenal-fema-3264.html",
+    "cid": 61875,
+    "smiles": "CCCCCC=CCCC=O",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -1411,7 +1543,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33785-4-methyl-2-e-pent-1-enyl-13-dioxolane-fema-4272.html",
     "cid": 5370364,
-    "smiles": "O1C(OC(C)C1)/C=C/CCC",
+    "smiles": "CCCC=CC1OCC(O1)C",
     "formula": "C9H16O2",
     "weight": 156.22
   },
@@ -1716,6 +1848,18 @@
     "weight": 178.18
   },
   {
+    "name": "9-decen-1-ol, rosalva",
+    "cas": "13019-22-2",
+    "fema": "",
+    "price_thb_g": 6.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2758-9-decen-1-ol.html",
+    "cid": 25612,
+    "smiles": "C=CCCCCCCCCO",
+    "formula": "C10H20O",
+    "weight": 156.26
+  },
+  {
     "name": "[(Z)-hex-3-enyl] 2-hydroxypropanoate (FEMA-3690)",
     "cas": "61931-81-5",
     "fema": "3690",
@@ -1735,7 +1879,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33671--z-hex-3-enyl-2-methylbutanoate-fema-3497.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33636-z-hex-3-enyl-2-methylbutanoate-fema-3497.html",
     "cid": 5365069,
-    "smiles": "CC/C=C\\CCOC(=O)C(C)CC",
+    "smiles": "CCC=CCCOC(=O)C(C)CC",
     "formula": "C11H20O2",
     "weight": 184.27
   },
@@ -1759,7 +1903,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33709--z-hex-3-enyl-3-methylbutanoate-fema-3498.html",
     "cid": 5367681,
-    "smiles": "O=C(OCC\\C=C/CC)CC(C)C",
+    "smiles": "CCC=CCCOC(=O)CC(C)C",
     "formula": "C11H20O2",
     "weight": 184.27
   },
@@ -1774,6 +1918,30 @@
     "smiles": "CC=O",
     "formula": "C2H4O",
     "weight": 44.05
+  },
+  {
+    "name": "Acetaldehyde Ethyl Linalyl Acetal (Elintaal)",
+    "cas": "40910-49-4",
+    "fema": "",
+    "price_thb_g": 27.546,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/herb-สมุนไพร/2652-acetaldehyde-ethyl-linalyl-acetal-elintaal.html",
+    "cid": 162027,
+    "smiles": "CCOC(C)OC(C)(CCC=C(C)C)C=C",
+    "formula": "C14H26O2",
+    "weight": 226.35
+  },
+  {
+    "name": "Acetaldehyde Ethyl Phenethyl Acetal, Hyacinth Body",
+    "cas": "2556-10-7",
+    "fema": "",
+    "price_thb_g": 2.35,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2644-acetaldehyde-ethyl-phenethyl-acetal.html",
+    "cid": 102849,
+    "smiles": "CCOC(C)OCCC1=CC=CC=C1",
+    "formula": "C12H18O2",
+    "weight": 194.27
   },
   {
     "name": "Acetic Acid",
@@ -2004,6 +2172,30 @@
     "weight": 196.29
   },
   {
+    "name": "Allyl Cyclohexyl Propionate (FEMA-2026)",
+    "cas": "CID-21862952",
+    "fema": "2026",
+    "price_thb_g": 2.07,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2558-allyl-cyclohexyl-propionate-fema-2026.html",
+    "cid": 21862952,
+    "smiles": "CCC(=O)OC1(CCCCC1)CC=C",
+    "formula": "C12H20O2",
+    "weight": 196.29
+  },
+  {
+    "name": "Allyl Heptanoate (FEMA-2031)",
+    "cas": "142-19-8",
+    "fema": "2031",
+    "price_thb_g": 0.9,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2566-allyl-heptanoate-fema-2031.html",
+    "cid": 8878,
+    "smiles": "CCCCCCC(=O)OCC=C",
+    "formula": "C10H18O2",
+    "weight": 170.25
+  },
+  {
     "name": "Allyl Hexanoate, Allyl Caproate (FEMA-2032)",
     "cas": "123-68-2",
     "fema": "2032",
@@ -2028,6 +2220,18 @@
     "weight": 99.16
   },
   {
+    "name": "Allyl Methyl Disulfide (FEMA-3127)",
+    "cas": "2179-58-0",
+    "fema": "3127",
+    "price_thb_g": 209.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32463-allyl-methyl-disulfide-fema-3127-.html",
+    "cid": 62434,
+    "smiles": "CSSCC=C",
+    "formula": "C4H8S2",
+    "weight": 120.2
+  },
+  {
     "name": "Allyl Phenoxyacetate (Pineapple Ether) (FEMA-2038)",
     "cas": "7493-74-5",
     "fema": "2038",
@@ -2038,6 +2242,18 @@
     "smiles": "C=CCOC(=O)COC1=CC=CC=C1",
     "formula": "C11H12O3",
     "weight": 192.21
+  },
+  {
+    "name": "Allyl Propyl Disulfide   (FEMA-4073)",
+    "cas": "2179-59-1",
+    "fema": "4073",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32464-allyl-propyl-disulfide-fema-4073.html",
+    "cid": 16591,
+    "smiles": "CCCSSCC=C",
+    "formula": "C6H12S2",
+    "weight": 148.3
   },
   {
     "name": "Alpha Damascone",
@@ -2059,7 +2275,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3IF00237",
     "cid": 5282108,
-    "smiles": "CC1=CCCC(C1/C=C/C(=O)C)(C)C",
+    "smiles": "CC1=CCCC(C1C=CC(=O)C)(C)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -2071,7 +2287,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=8II00243",
     "cid": 5371002,
-    "smiles": "CC1CC=C(C(C1(C)C)/C=C/C(=O)C)C",
+    "smiles": "CC1CC=C(C(C1(C)C)C=CC(=O)C)C",
     "formula": "C14H22O",
     "weight": 206.32
   },
@@ -2083,7 +2299,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=5II09179",
     "cid": 5371002,
-    "smiles": "CC1CC=C(C(C1(C)C)/C=C/C(=O)C)C",
+    "smiles": "CC1CC=C(C(C1(C)C)C=CC(=O)C)C",
     "formula": "C14H22O",
     "weight": 206.32
   },
@@ -2095,7 +2311,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3IW00300",
     "cid": 61073,
-    "smiles": "CC1=CCCC(C1/C=C(\\C)/C(=O)C)(C)C",
+    "smiles": "CC1=CCCC(C1C=C(C)C(=O)C)(C)C",
     "formula": "C14H22O",
     "weight": 206.32
   },
@@ -2136,6 +2352,18 @@
     "weight": 202.29
   },
   {
+    "name": "Alpha-damascone (FEMA 3659)",
+    "cas": "43052-87-5",
+    "fema": "3659",
+    "price_thb_g": 21.0,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2559-alpha-damascone-fema-3659.html",
+    "cid": 520506,
+    "smiles": "CC1=CCCC(C1C(=O)CC=C)(C)C",
+    "formula": "C13H20O",
+    "weight": 192.3
+  },
+  {
     "name": "Alpha-ionone",
     "cas": "127-41-3",
     "fema": "",
@@ -2143,7 +2371,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/2655-alpha-ionone.html",
     "cid": 5282108,
-    "smiles": "CC1=CCCC(C1/C=C/C(=O)C)(C)C",
+    "smiles": "CC1=CCCC(C1C=CC(=O)C)(C)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -2160,6 +2388,18 @@
     "weight": 146.19
   },
   {
+    "name": "Alpha-methyl Ionone (74-80%)",
+    "cas": "1335-46-2",
+    "fema": "",
+    "price_thb_g": 2.12,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2428-alpha-methyl-ionone-74-80.html",
+    "cid": 5371084,
+    "smiles": "CCC(=O)C=CC1C(=CCCC1(C)C)C",
+    "formula": "C14H22O",
+    "weight": 206.32
+  },
+  {
     "name": "Alpha-methylene Citronellal",
     "cas": "22418-66-2",
     "fema": "",
@@ -2170,6 +2410,18 @@
     "smiles": "CC(CCC=C(C)C)C(=C)C=O",
     "formula": "C11H18O",
     "weight": 166.26
+  },
+  {
+    "name": "Alpha-pinene (FEMA-2902)",
+    "cas": "80-56-8",
+    "fema": "2902",
+    "price_thb_g": 1.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/konifer-ต้นสน/2680-alpha-pinene-fema-2902.html",
+    "cid": 6654,
+    "smiles": "CC1=CCC2CC1C2(C)C",
+    "formula": "C10H16",
+    "weight": 136.23
   },
   {
     "name": "Alpha-terpinene",
@@ -2184,6 +2436,18 @@
     "weight": 136.23
   },
   {
+    "name": "Alpha-terpineol (FEMA-3045)",
+    "cas": "98-55-5",
+    "fema": "3045",
+    "price_thb_g": 1.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/konifer-ต้นสน/2681-alpha-terpineol-fema-3045-.html",
+    "cid": 17100,
+    "smiles": "CC1=CCC(CC1)C(C)(C)O",
+    "formula": "C10H18O",
+    "weight": 154.25
+  },
+  {
     "name": "Alpha-terpinyl Acetate (FEMA-3047)",
     "cas": "80-26-2",
     "fema": "3047",
@@ -2191,7 +2455,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2694-alpha-terpinyl-acetate-fema-3047.html",
     "cid": 111037,
-    "smiles": "CC1CCC(C=C1)(C(C)C)OC(=O)C",
+    "smiles": "CC1=CCC(CC1)C(C)(C)OC(=O)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -2251,7 +2515,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2898-ambretone-velvione.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2893-globanone.html",
     "cid": 162268,
-    "smiles": "C1CCCCCC(=O)CCC\\C=C/CCCC1",
+    "smiles": "C1CCCCCC(=O)CCCC=CCCCC1",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -2287,7 +2551,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1WU21632",
     "cid": 66731260,
-    "smiles": "C[C@@H]1CC[C@@H]2[C@@]13C[C@H](C2(C)C)C4(C(C3)OC(O4)(C)C)C",
+    "smiles": "CC1CCC2C13CC(C2(C)C)C4(C(C3)OC(O4)(C)C)C",
     "formula": "C18H30O2",
     "weight": 278.4
   },
@@ -2299,7 +2563,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1UW16861",
     "cid": 10857465,
-    "smiles": "CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C",
+    "smiles": "CC1(CCCC2(C1CCC3(C2CCO3)C)C)C",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -2311,7 +2575,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1UW00036",
     "cid": 10857465,
-    "smiles": "CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C",
+    "smiles": "CC1(CCCC2(C1CCC3(C2CCO3)C)C)C",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -2326,6 +2590,30 @@
     "smiles": "CCCCCOC(=O)C",
     "formula": "C7H14O2",
     "weight": 130.18
+  },
+  {
+    "name": "Amyl Butyrate (FEMA-2059)",
+    "cas": "540-18-1",
+    "fema": "2059",
+    "price_thb_g": 0.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2551-amyl-butyrate-fema-2059.html",
+    "cid": 10890,
+    "smiles": "CCCCCOC(=O)CCC",
+    "formula": "C9H18O2",
+    "weight": 158.24
+  },
+  {
+    "name": "Amyl Cinnamic Aldehyde (ACA)",
+    "cas": "101365-33-7",
+    "fema": "",
+    "price_thb_g": 6.8,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3JJ00005",
+    "cid": 1712058,
+    "smiles": "CCCCCC(=CC1=CC=CC=C1)C=O",
+    "formula": "C14H18O",
+    "weight": 202.29
   },
   {
     "name": "Amyl Hexanoate (FEMA-2074)",
@@ -2424,6 +2712,18 @@
     "weight": 180.2
   },
   {
+    "name": "Anisyl Acetate (FEMA-2098)",
+    "cas": "104-21-2",
+    "fema": "2098",
+    "price_thb_g": 3.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2425-anisyl-acetate-fema-2098.html",
+    "cid": 7695,
+    "smiles": "CC(=O)OCC1=CC=C(C=C1)OC",
+    "formula": "C10H12O3",
+    "weight": 180.2
+  },
+  {
     "name": "Anisyl Alcohol",
     "cas": "105-13-5",
     "fema": "",
@@ -2467,7 +2767,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3FD06779",
     "cid": 6437428,
-    "smiles": "CC(=CCC/C(=C/CC1CCCC1=O)/C)C",
+    "smiles": "CC(=CCCC(=CCC1CCCC1=O)C)C",
     "formula": "C15H24O",
     "weight": 220.35
   },
@@ -2544,6 +2844,30 @@
     "weight": 150.17
   },
   {
+    "name": "Benzyl Acetate (FEMA-2135)",
+    "cas": "140-11-4",
+    "fema": "2135",
+    "price_thb_g": 0.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2668-benzyl-acetate-fema-2135.html",
+    "cid": 8785,
+    "smiles": "CC(=O)OCC1=CC=CC=C1",
+    "formula": "C9H10O2",
+    "weight": 150.17
+  },
+  {
+    "name": "Benzyl Alcohol (BA)",
+    "cas": "100-51-6",
+    "fema": "",
+    "price_thb_g": 6.8,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=0ZN00053",
+    "cid": 244,
+    "smiles": "C1=CC=C(C=C1)CO",
+    "formula": "C7H8O",
+    "weight": 108.14
+  },
+  {
     "name": "Benzyl Benzoate (FEMA-2138)",
     "cas": "120-51-4",
     "fema": "2138",
@@ -2568,12 +2892,48 @@
     "weight": 178.23
   },
   {
+    "name": "Benzyl Butyrate (FEMA-2140)",
+    "cas": "103-37-7",
+    "fema": "2140",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32356-benzyl-butyrate-fema-2140-.html",
+    "cid": 7650,
+    "smiles": "CCCC(=O)OCC1=CC=CC=C1",
+    "formula": "C11H14O2",
+    "weight": 178.23
+  },
+  {
+    "name": "Benzyl Butyrate (FEMA-2140)",
+    "cas": "103-37-7",
+    "fema": "2140",
+    "price_thb_g": 1.5,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/8021-benzyl-butyrate-fema-2140.html",
+    "cid": 7650,
+    "smiles": "CCCC(=O)OCC1=CC=CC=C1",
+    "formula": "C11H14O2",
+    "weight": 178.23
+  },
+  {
     "name": "Benzyl Cinnamate",
     "cas": "103-41-3",
     "fema": "",
     "price_thb_g": 10.2,
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=2SQ00056",
+    "cid": 5273469,
+    "smiles": "C1=CC=C(C=C1)COC(=O)C=CC2=CC=CC=C2",
+    "formula": "C16H14O2",
+    "weight": 238.28
+  },
+  {
+    "name": "Benzyl Cinnamate (FEMA-2142)",
+    "cas": "103-41-3",
+    "fema": "2142",
+    "price_thb_g": 2.592,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/frankincense-กำยาน/2753-benzyl-cinnamate-fema-2142.html",
     "cid": 5273469,
     "smiles": "C1=CC=C(C=C1)COC(=O)C=CC2=CC=CC=C2",
     "formula": "C16H14O2",
@@ -2590,6 +2950,30 @@
     "smiles": "C1=CC=C(C=C1)COC=O",
     "formula": "C8H8O2",
     "weight": 136.15
+  },
+  {
+    "name": "Benzyl Formate (FEMA-2145)",
+    "cas": "104-57-4",
+    "fema": "2145",
+    "price_thb_g": 1.71,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2671-benzyl-formate-fema-2145.html",
+    "cid": 7708,
+    "smiles": "C1=CC=C(C=C1)COC=O",
+    "formula": "C8H8O2",
+    "weight": 136.15
+  },
+  {
+    "name": "Benzyl Isobutyrate (FEMA-2141)",
+    "cas": "103-28-6",
+    "fema": "2141",
+    "price_thb_g": 14.98,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2672-benzyl-isobutyrate-fema-2141.html",
+    "cid": 7646,
+    "smiles": "CC(C)C(=O)OCC1=CC=CC=C1",
+    "formula": "C11H14O2",
+    "weight": 178.23
   },
   {
     "name": "Benzyl Isoeugenol",
@@ -2626,6 +3010,18 @@
     "smiles": "CC(C)CC(=O)OCC1=CC=CC=C1",
     "formula": "C12H16O2",
     "weight": 192.25
+  },
+  {
+    "name": "Benzyl Methyl Disulfide    (FEMA-3504)",
+    "cas": "699-10-5",
+    "fema": "3504",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32465-benzyl-methyl-disulfide-fema-3504.html",
+    "cid": 12779,
+    "smiles": "CSSCC1=CC=CC=C1",
+    "formula": "C8H10S2",
+    "weight": 170.3
   },
   {
     "name": "Benzyl Methyl Sulfide (FEMA-3597)",
@@ -2700,6 +3096,18 @@
     "weight": 228.24
   },
   {
+    "name": "Berry Hexanoate (BerryFlor)",
+    "cas": "104986-28-9",
+    "fema": "",
+    "price_thb_g": 37.4,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3FG19149",
+    "cid": 113640,
+    "smiles": "CCOC(=O)CCCCCOC(=O)C",
+    "formula": "C10H18O4",
+    "weight": 202.25
+  },
+  {
     "name": "Berry Hexanoate, Berryflor",
     "cas": "104986-28-9",
     "fema": "",
@@ -2743,7 +3151,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3IF00238",
     "cid": 638014,
-    "smiles": "C[C@@H]1CCC=C(C1(C)C)/C=C/C(=O)C",
+    "smiles": "CC1=C(C(CCC1)(C)C)C=CC(=O)C",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -2767,9 +3175,33 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2851-beta-caryophyllene-fema-2252.html",
     "cid": 5281515,
-    "smiles": "C/C/1=C\\CCC(=C)[C@H]2CC([C@@H]2CC1)(C)C",
+    "smiles": "CC1=CCCC(=C)C2CC(C2CC1)(C)C",
     "formula": "C15H24",
     "weight": 204.35
+  },
+  {
+    "name": "beta-homocyclocitral (FEMA-3474)",
+    "cas": "472-66-2",
+    "fema": "3474",
+    "price_thb_g": 143.19,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-ice-cold-เย็น/2481-beta-homocyclocitral-fema-3474.html",
+    "cid": 61124,
+    "smiles": "CC1=C(C(CCC1)(C)C)CC=O",
+    "formula": "C11H18O",
+    "weight": 166.26
+  },
+  {
+    "name": "Beta-ionone (FEMA-2595)",
+    "cas": "79-77-6",
+    "fema": "2595",
+    "price_thb_g": 3.5,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/2657-beta-ionone-fema-2595.html",
+    "cid": 638014,
+    "smiles": "CC1=C(C(CCC1)(C)C)C=CC(=O)C",
+    "formula": "C13H20O",
+    "weight": 192.3
   },
   {
     "name": "Beta-naphthyl Ethyl Ether",
@@ -2794,6 +3226,18 @@
     "smiles": "COC1=CC2=CC=CC=C2C=C1",
     "formula": "C11H10O",
     "weight": 158.2
+  },
+  {
+    "name": "Beta-pinene (FEMA-2903)",
+    "cas": "127-91-3",
+    "fema": "2903",
+    "price_thb_g": 1.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/konifer-ต้นสน/2676-beta-pinene-fema-2903.html",
+    "cid": 14896,
+    "smiles": "CC1(C2CCC(=C)C1C2)C",
+    "formula": "C10H16",
+    "weight": 136.23
   },
   {
     "name": "Bis-(Methylthio)Methane (Truffle Sulfide) (FEMA-3878)",
@@ -2827,7 +3271,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1BW00064",
     "cid": 64685,
-    "smiles": "O[C@H]1C[C@H]2CC[C@]1(C)C2(C)C",
+    "smiles": "CC1(C2CCC1(C(C2)O)C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -2839,7 +3283,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-ice-cold-เย็น/2480-borneol-พิมเสน.html",
     "cid": 64685,
-    "smiles": "O[C@H]1C[C@H]2CC[C@]1(C)C2(C)C",
+    "smiles": "CC1(C2CCC1(C(C2)O)C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -3012,6 +3456,18 @@
     "weight": 192.25
   },
   {
+    "name": "Butyl Propionate (FEMA-2212)",
+    "cas": "590-01-2",
+    "fema": "2212",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/32347-natural-butyl-propionate-fema-2212-.html",
+    "cid": 11529,
+    "smiles": "CCCCOC(=O)CC",
+    "formula": "C7H14O2",
+    "weight": 130.18
+  },
+  {
     "name": "Butyl Salicylate",
     "cas": "2052-14-4",
     "fema": "",
@@ -3034,6 +3490,30 @@
     "smiles": "CCCCOC(=O)C1=CC=CC=C1O",
     "formula": "C11H14O3",
     "weight": 194.23
+  },
+  {
+    "name": "Butyraldehyde, FEMA 2219",
+    "cas": "123-72-8",
+    "fema": "2219",
+    "price_thb_g": 1.48,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/3535-butyraldehyde.html",
+    "cid": 261,
+    "smiles": "CCCC=O",
+    "formula": "C4H8O",
+    "weight": 72.11
+  },
+  {
+    "name": "Butyric Acid (FEMA-2221)",
+    "cas": "107-92-6",
+    "fema": "2221",
+    "price_thb_g": 0.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fatty-acids-fatty-alcohols/2766-butyric-acid-fema-2221.html",
+    "cid": 264,
+    "smiles": "CCCC(=O)O",
+    "formula": "C4H8O2",
+    "weight": 88.11
   },
   {
     "name": "Calone",
@@ -3156,6 +3636,18 @@
     "weight": 264.4
   },
   {
+    "name": "Caryophyllene Oxide (FEMA-4085)",
+    "cas": "1139-30-6",
+    "fema": "4085",
+    "price_thb_g": 244.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2875-caryophyllene-oxide-fema-4085.html",
+    "cid": 1742210,
+    "smiles": "CC1(CC2C1CCC3(C(O3)CCC2=C)C)C",
+    "formula": "C15H24O",
+    "weight": 220.35
+  },
+  {
     "name": "Cashmeran",
     "cas": "33704-61-9",
     "fema": "",
@@ -3187,7 +3679,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3WW00097",
     "cid": 11085796,
-    "smiles": "C[C@@H]1CC[C@@H]2C13CC[C@@]([C@H](C3)C2(C)C)(C)OC",
+    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -3247,7 +3739,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2853-cedrol-methyl-ether.html",
     "cid": 88288,
-    "smiles": "C[C@@H]1CC[C@@H]2[C@]13CC[C@]([C@H](C3)C2(C)C)(C)OC",
+    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -3271,7 +3763,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=2WW00099",
     "cid": 13918856,
-    "smiles": "C[C@@H]1CC[C@@H]2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
+    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
     "formula": "C17H28O2",
     "weight": 264.4
   },
@@ -3283,7 +3775,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2850-cedryl-acetate.html",
     "cid": 13918856,
-    "smiles": "C[C@@H]1CC[C@@H]2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
+    "smiles": "CC1CCC2C13CCC(C(C3)C2(C)C)(C)OC(=O)C",
     "formula": "C17H28O2",
     "weight": 264.4
   },
@@ -3295,7 +3787,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2891-celestolide.html",
     "cid": 61585,
-    "smiles": "CC(=O)C1=CC(=CC2=C1CCC2(C)C)C(C)(C)C",
+    "smiles": "CC(=O)C1=C2CCC(C2=CC(=C1)C(C)(C)C)(C)C",
     "formula": "C17H24O",
     "weight": 244.37
   },
@@ -3307,7 +3799,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=1XY00101",
     "cid": 61585,
-    "smiles": "CC(=O)C1=CC(=CC2=C1CCC2(C)C)C(C)(C)C",
+    "smiles": "CC(=O)C1=C2CCC(C2=CC(=C1)C(C)(C)C)(C)C",
     "formula": "C17H24O",
     "weight": 244.37
   },
@@ -3487,9 +3979,21 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4GF00226",
     "cid": 5363388,
-    "smiles": "CC/C=C\\CCOC(=O)C",
+    "smiles": "CCC=CCCOC(=O)C",
     "formula": "C8H14O2",
     "weight": 142.2
+  },
+  {
+    "name": "Cis-3 Hexenyl Propionate",
+    "cas": "33467-74-2",
+    "fema": "",
+    "price_thb_g": 7.74,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2607-cis-3-hexenyl-propionate.html",
+    "cid": 5365049,
+    "smiles": "CCC=CCCOC(=O)CC",
+    "formula": "C9H16O2",
+    "weight": 156.22
   },
   {
     "name": "cis-3 Hexenyl Salicylate",
@@ -3499,7 +4003,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3GO00229",
     "cid": 6021887,
-    "smiles": "CC/C=C\\CCOC(=O)C1=CC=CC=C1O",
+    "smiles": "CCC=CCCOC(=O)C1=CC=CC=C1O",
     "formula": "C13H16O3",
     "weight": 220.26
   },
@@ -3511,9 +4015,21 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2623-cis-3-hexenyl-benzoate-fema-3688.html",
     "cid": 5367706,
-    "smiles": "CC/C=C\\CCOC(=O)C1=CC=CC=C1",
+    "smiles": "CCC=CCCOC(=O)C1=CC=CC=C1",
     "formula": "C13H16O2",
     "weight": 204.26
+  },
+  {
+    "name": "Cis-3-hexenyl Isobutyrate (FEMA-3929)",
+    "cas": "41519-23-7",
+    "fema": "3929",
+    "price_thb_g": 24.98,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2552-cis-3-hexenyl-isobutyrate-fema-3929.html",
+    "cid": 5352539,
+    "smiles": "CCC=CCCOC(=O)C(C)C",
+    "formula": "C10H18O2",
+    "weight": 170.25
   },
   {
     "name": "Cis-6-nonenol",
@@ -3528,6 +4044,18 @@
     "weight": 142.24
   },
   {
+    "name": "Cis-galbanum Oxathiane, Oxane (FEMA-3578)",
+    "cas": "142-68-7",
+    "fema": "3578",
+    "price_thb_g": 45.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/3769-cis-galbanum-oxathiane-oxane-fema-3578.html",
+    "cid": 8894,
+    "smiles": "C1CCOCC1",
+    "formula": "C5H10O",
+    "weight": 86.13
+  },
+  {
     "name": "cis-Jasmone",
     "cas": "488-10-8",
     "fema": "",
@@ -3535,7 +4063,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4JN00257",
     "cid": 1549018,
-    "smiles": "CC/C=C\\CC1=C(CCC1=O)C",
+    "smiles": "CCC=CCC1=C(CCC1=O)C",
     "formula": "C11H16O",
     "weight": 164.24
   },
@@ -3562,6 +4090,18 @@
     "smiles": "CC(=CCCC(=CC=O)C)C",
     "formula": "C10H16O",
     "weight": 152.23
+  },
+  {
+    "name": "Citral diethyl acetal (FEMA-2304)",
+    "cas": "7492-66-2",
+    "fema": "2304",
+    "price_thb_g": 6.3,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/33773-citral-diethyl-acetal-fema-2304.html",
+    "cid": 5365794,
+    "smiles": "CCOC(C=C(C)CCC=C(C)C)OCC",
+    "formula": "C14H26O2",
+    "weight": 226.35
   },
   {
     "name": "Citrathal",
@@ -3636,12 +4176,36 @@
     "weight": 156.26
   },
   {
+    "name": "Citronellol (96%, DL-) (FEMA-2309)",
+    "cas": "106-22-9",
+    "fema": "2309",
+    "price_thb_g": 2.25,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2768-citronellol-96-dl-fema-2309.html",
+    "cid": 8842,
+    "smiles": "CC(CCC=C(C)C)CCO",
+    "formula": "C10H20O",
+    "weight": 156.26
+  },
+  {
     "name": "Citronellyl Acetate",
     "cas": "150-84-5",
     "fema": "",
     "price_thb_g": 6.12,
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RL00118",
+    "cid": 9017,
+    "smiles": "CC(CCC=C(C)C)CCOC(=O)C",
+    "formula": "C12H22O2",
+    "weight": 198.3
+  },
+  {
+    "name": "Citronellyl Acetate (FEMA-2311)",
+    "cas": "150-84-5",
+    "fema": "2311",
+    "price_thb_g": 2.628,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2761-citronellyl-acetate-fema-2311.html",
     "cid": 9017,
     "smiles": "CC(CCC=C(C)C)CCOC(=O)C",
     "formula": "C12H22O2",
@@ -3670,6 +4234,30 @@
     "smiles": "CC(CCC=C(C)C)CCOC=O",
     "formula": "C11H20O2",
     "weight": 184.27
+  },
+  {
+    "name": "Citronellyl Formate (FEMA-2314)",
+    "cas": "105-85-1",
+    "fema": "2314",
+    "price_thb_g": 2.61,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2594-citronellyl-formate-fema-2314.html",
+    "cid": 7778,
+    "smiles": "CC(CCC=C(C)C)CCOC=O",
+    "formula": "C11H20O2",
+    "weight": 184.27
+  },
+  {
+    "name": "Citronellyl Isobutyrate (FEMA-2313)",
+    "cas": "97-89-2",
+    "fema": "2313",
+    "price_thb_g": 4.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/31959-citronellyl-isobutyrate-fema-2313.html",
+    "cid": 60985,
+    "smiles": "CC(C)C(=O)OCCC(C)CCC=C(C)C",
+    "formula": "C14H26O2",
+    "weight": 226.35
   },
   {
     "name": "Citronellyl Nitrile",
@@ -3706,6 +4294,18 @@
     "smiles": "CC(CCC=C(C)C)CCOCC=O",
     "formula": "C12H22O2",
     "weight": 198.3
+  },
+  {
+    "name": "Citronellyl Propionate (FEMA-2316)",
+    "cas": "141-14-0",
+    "fema": "2316",
+    "price_thb_g": 4.86,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2642-citronellyl-propionate-fema-2316.html",
+    "cid": 8834,
+    "smiles": "CCC(=O)OCCC(C)CCC=C(C)C",
+    "formula": "C13H24O2",
+    "weight": 212.33
   },
   {
     "name": "Cocoa Aldehyde, Cocoa Hexenal (FEMA 3199)",
@@ -3790,6 +4390,18 @@
     "smiles": "C1=CC=C2C(=C1)C=CC(=O)O2",
     "formula": "C9H6O2",
     "weight": 146.14
+  },
+  {
+    "name": "Cucumber Aldehyde, trans-2-nonenal (FEMA-3213)",
+    "cas": "557-48-2",
+    "fema": "3213",
+    "price_thb_g": 49.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2645-cucumber-aldehyde-trans-2-nonenal-fema-3213.html",
+    "cid": 643731,
+    "smiles": "CCC=CCCC=CC=O",
+    "formula": "C9H14O",
+    "weight": 138.21
   },
   {
     "name": "Cuminaldehyde (FEMA-2341)",
@@ -3912,6 +4524,18 @@
     "weight": 190.28
   },
   {
+    "name": "Damascenone (98%) (FEMA-3420)",
+    "cas": "CID-62775",
+    "fema": "3420",
+    "price_thb_g": 89.9,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/9236-damascenone-98-fema-3420.html",
+    "cid": 62775,
+    "smiles": "CC=CC(=O)C1=C(C=CCC1(C)C)C",
+    "formula": "C13H18O",
+    "weight": 190.28
+  },
+  {
     "name": "Dec-9-enal (FEMA-3912)",
     "cas": "39770-05-3",
     "fema": "3912",
@@ -3936,6 +4560,54 @@
     "weight": 170.25
   },
   {
+    "name": "Decanal, aldehyde C-10 (FEMA-2362)",
+    "cas": "112-31-2",
+    "fema": "2362",
+    "price_thb_g": 1.35,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2455-decanal-aldehyde-c-10-fema-2362.html",
+    "cid": 8175,
+    "smiles": "CCCCCCCCCC=O",
+    "formula": "C10H20O",
+    "weight": 156.26
+  },
+  {
+    "name": "Decanoic Acid, C10, Capric Acid, (FEMA-2364)",
+    "cas": "334-48-5",
+    "fema": "2364",
+    "price_thb_g": 1.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fatty-acids-fatty-alcohols/2434-decanoic-acid-c10-capric-acid-fema-2364.html",
+    "cid": 2969,
+    "smiles": "CCCCCCCCCC(=O)O",
+    "formula": "C10H20O2",
+    "weight": 172.26
+  },
+  {
+    "name": "Decanol (1-Decanol)",
+    "cas": "112-30-1",
+    "fema": "",
+    "price_thb_g": 1.17,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2454-decanol.html",
+    "cid": 8174,
+    "smiles": "CCCCCCCCCCO",
+    "formula": "C10H22O",
+    "weight": 158.28
+  },
+  {
+    "name": "Decanol (Alcohol C-10)",
+    "cas": "112-30-1",
+    "fema": "",
+    "price_thb_g": 4.08,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3AC00014",
+    "cid": 8174,
+    "smiles": "CCCCCCCCCCO",
+    "formula": "C10H22O",
+    "weight": 158.28
+  },
+  {
     "name": "Decatone",
     "cas": "34131-98-1",
     "fema": "",
@@ -3948,6 +4620,18 @@
     "weight": 194.31
   },
   {
+    "name": "Decyl Acetate (FEMA-2367)",
+    "cas": "112-17-4",
+    "fema": "2367",
+    "price_thb_g": 1.566,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2453-decyl-acetate-fema-2367.html",
+    "cid": 8167,
+    "smiles": "CCCCCCCCCCOC(=O)C",
+    "formula": "C12H24O2",
+    "weight": 200.32
+  },
+  {
     "name": "Delta Decalactone",
     "cas": "705-86-2",
     "fema": "",
@@ -3958,6 +4642,18 @@
     "smiles": "CCCCCC1CCCC(=O)O1",
     "formula": "C10H18O2",
     "weight": 170.25
+  },
+  {
+    "name": "Delta-damascone (FEMA-3622)",
+    "cas": "57378-68-4",
+    "fema": "3622",
+    "price_thb_g": 7.5,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/2658-delta-damascone-fema-3622.html",
+    "cid": 5365916,
+    "smiles": "CC=CC(=O)C1C(C=CCC1(C)C)C",
+    "formula": "C13H20O",
+    "weight": 192.3
   },
   {
     "name": "Delta-decalactone (FEMA-2361)",
@@ -4236,6 +4932,30 @@
     "weight": 148.16
   },
   {
+    "name": "Dihydrojasmone (FEMA-3763)",
+    "cas": "1128-08-1",
+    "fema": "3763",
+    "price_thb_g": 10.26,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2670-dihydrojasmone-fema-3763.html",
+    "cid": 62378,
+    "smiles": "CCCCCC1=C(CCC1=O)C",
+    "formula": "C11H18O",
+    "weight": 166.26
+  },
+  {
+    "name": "Dihydrojasmone lactone, gamma-Methyl Decalacton (FEMA 3786)",
+    "cas": "7011-83-8",
+    "fema": "3786",
+    "price_thb_g": 3.45,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/8015-dihydrojasmone-lactone-gamma-methyl-decalacton-fema-3786.html",
+    "cid": 285097,
+    "smiles": "CCCCCCC1(CCC(=O)O1)C",
+    "formula": "C11H20O2",
+    "weight": 184.27
+  },
+  {
     "name": "Dihydrolinalool, Dihydro Linalool",
     "cas": "18479-51-1",
     "fema": "",
@@ -4302,6 +5022,18 @@
     "price_thb_g": 9.18,
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3LL00156",
+    "cid": 7531,
+    "smiles": "CC(C)(CC1=CC=CC=C1)O",
+    "formula": "C10H14O",
+    "weight": 150.22
+  },
+  {
+    "name": "Dimethyl Benzyl Carbinol (2-Methyl-1-phenyl-2-propanol)",
+    "cas": "100-86-7",
+    "fema": "",
+    "price_thb_g": 1.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2684-dimethyl-benzyl-carbinol.html",
     "cid": 7531,
     "smiles": "CC(C)(CC1=CC=CC=C1)O",
     "formula": "C10H14O",
@@ -4464,6 +5196,18 @@
     "weight": 170.21
   },
   {
+    "name": "Dodecanal, aldehyde C-12 Lauric (FEMA-2615)",
+    "cas": "112-54-9",
+    "fema": "2615",
+    "price_thb_g": 2.25,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2460-dodecanal-aldehyde-c-12-lauric-fema-2615-.html",
+    "cid": 8194,
+    "smiles": "CCCCCCCCCCCC=O",
+    "formula": "C12H24O",
+    "weight": 184.32
+  },
+  {
     "name": "Dodecane Nitrile",
     "cas": "2437-25-4",
     "fema": "",
@@ -4495,7 +5239,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4WX07563",
     "cid": 6437266,
-    "smiles": "CC1=CCC(C1(C)C)/C=C\\C(C)C(C)O",
+    "smiles": "CC1=CCC(C1(C)C)C=CC(C)C(C)O",
     "formula": "C14H24O",
     "weight": 208.34
   },
@@ -4519,7 +5263,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/33648-ethyl-e-2-hexenoate.html",
     "cid": 5364778,
-    "smiles": "CCC/C=C/C(=O)OCC",
+    "smiles": "CCCC=CC(=O)OCC",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -4531,7 +5275,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33703-ethyl-e-2-methylbut-2-enoate-fema-2460.html",
     "cid": 108343,
-    "smiles": "CCOC(=O)/C(=C/C)/C",
+    "smiles": "CCOC(=O)C(=CC)C",
     "formula": "C7H12O2",
     "weight": 128.17
   },
@@ -4582,6 +5326,18 @@
     "smiles": "CCOC(=O)C(C)S",
     "formula": "C5H10O2S",
     "weight": 134.2
+  },
+  {
+    "name": "Ethyl 2-methyl Butyrate (FEMA-2443)",
+    "cas": "7452-79-1",
+    "fema": "2443",
+    "price_thb_g": 2.08,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2577-ethyl-2-methyl-butyrate-fema-2443.html",
+    "cid": 24020,
+    "smiles": "CCC(C)C(=O)OCC",
+    "formula": "C7H14O2",
+    "weight": 130.18
   },
   {
     "name": "Ethyl 2-Methylbutyrate",
@@ -4668,6 +5424,18 @@
     "weight": 130.14
   },
   {
+    "name": "Ethyl Acetoacetate (FEMA-2415)",
+    "cas": "141-97-9",
+    "fema": "2415",
+    "price_thb_g": 0.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2586-ethyl-acetoacetate-fema-2415.html",
+    "cid": 8868,
+    "smiles": "CCOC(=O)CC(=O)C",
+    "formula": "C6H10O3",
+    "weight": 130.14
+  },
+  {
     "name": "Ethyl Acrylate (FEMA-2418)",
     "cas": "140-88-5",
     "fema": "2418",
@@ -4698,6 +5466,18 @@
     "price_thb_g": 12.58,
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3NF03984",
+    "cid": 6877,
+    "smiles": "CCOC(=O)C1=CC=CC=C1N",
+    "formula": "C9H11NO2",
+    "weight": 165.19
+  },
+  {
+    "name": "Ethyl Anthranilate (FEMA-2421)",
+    "cas": "87-25-2",
+    "fema": "2421",
+    "price_thb_g": 49.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/3971-ethyl-anthranilatefema-2421.html",
     "cid": 6877,
     "smiles": "CCOC(=O)C1=CC=CC=C1N",
     "formula": "C9H11NO2",
@@ -4740,6 +5520,30 @@
     "weight": 116.16
   },
   {
+    "name": "Ethyl Butyrate (FEMA-2427)",
+    "cas": "105-54-4",
+    "fema": "2427",
+    "price_thb_g": 0.75,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2595-ethyl-butyrate-fema-2427.html",
+    "cid": 7762,
+    "smiles": "CCCC(=O)OCC",
+    "formula": "C6H12O2",
+    "weight": 116.16
+  },
+  {
+    "name": "Ethyl Cinnamate (FEMA-2430)",
+    "cas": "103-36-6",
+    "fema": "2430",
+    "price_thb_g": 1.26,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/frankincense-กำยาน/2751-ethyl-cinnamate-fema-2430.html",
+    "cid": 637758,
+    "smiles": "CCOC(=O)C=CC1=CC=CC=C1",
+    "formula": "C11H12O2",
+    "weight": 176.21
+  },
+  {
     "name": "Ethyl Cyclopentenolone (ECP)",
     "cas": "21835-01-8",
     "fema": "",
@@ -4750,6 +5554,18 @@
     "smiles": "CCC1=C(C(=O)CC1)O",
     "formula": "C7H10O2",
     "weight": 126.15
+  },
+  {
+    "name": "Ethyl Decanoate (FEMA-2432)",
+    "cas": "110-38-3",
+    "fema": "2432",
+    "price_thb_g": 1.08,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2448-ethyl-decanoate-fema-2432.html",
+    "cid": 8048,
+    "smiles": "CCCCCCCCCC(=O)OCC",
+    "formula": "C12H24O2",
+    "weight": 200.32
   },
   {
     "name": "Ethyl Dehydrocyclogeranate",
@@ -4774,6 +5590,18 @@
     "smiles": "CCOC=O",
     "formula": "C3H6O2",
     "weight": 74.08
+  },
+  {
+    "name": "Ethyl Heptanoate (FEMA-2437)",
+    "cas": "106-30-9",
+    "fema": "2437",
+    "price_thb_g": 1.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2590-ethyl-heptanoate-fema-2437.html",
+    "cid": 7797,
+    "smiles": "CCCCCCC(=O)OCC",
+    "formula": "C9H18O2",
+    "weight": 158.24
   },
   {
     "name": "Ethyl Heptylate",
@@ -4812,6 +5640,18 @@
     "weight": 144.21
   },
   {
+    "name": "Ethyl Isobutyrate (FEMA-2428)",
+    "cas": "97-62-1",
+    "fema": "2428",
+    "price_thb_g": 3.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2570-ethyl-isobutyrate-fema-2428.html",
+    "cid": 7342,
+    "smiles": "CCOC(=O)C(C)C",
+    "formula": "C6H12O2",
+    "weight": 116.16
+  },
+  {
     "name": "Ethyl Isovalerate",
     "cas": "108-64-5",
     "fema": "",
@@ -4848,6 +5688,30 @@
     "weight": 118.13
   },
   {
+    "name": "Ethyl Lactate (FEMA-2440)",
+    "cas": "97-64-3",
+    "fema": "2440",
+    "price_thb_g": 0.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2550-ethyl-lactate-fema-2440.html",
+    "cid": 7344,
+    "smiles": "CCOC(=O)C(C)O",
+    "formula": "C5H10O3",
+    "weight": 118.13
+  },
+  {
+    "name": "Ethyl Laurate (FEMA-2441)",
+    "cas": "106-33-2",
+    "fema": "2441",
+    "price_thb_g": 1.11,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2447-ethyl-laurate-fema-2441.html",
+    "cid": 7800,
+    "smiles": "CCCCCCCCCCCC(=O)OCC",
+    "formula": "C14H28O2",
+    "weight": 228.37
+  },
+  {
     "name": "Ethyl Levulinate",
     "cas": "539-88-8",
     "fema": "",
@@ -4867,7 +5731,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2700-ethyl-linalool.html",
     "cid": 6433547,
-    "smiles": "CC/C(=C/CCC(C)(C=C)O)/C",
+    "smiles": "CCC(=CCCC(C)(C=C)O)C",
     "formula": "C11H20O",
     "weight": 168.28
   },
@@ -4879,7 +5743,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4LL11499",
     "cid": 6433547,
-    "smiles": "CC/C(=C/CCC(C)(C=C)O)/C",
+    "smiles": "CCC(=CCCC(C)(C=C)O)C",
     "formula": "C11H20O",
     "weight": 168.28
   },
@@ -4891,7 +5755,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2701-ethyl-linalyl-acetate.html",
     "cid": 43851,
-    "smiles": "CC/C(=C/CCC(C)(C=C)OC(=O)C)/C",
+    "smiles": "CCC(=CCCC(C)(C=C)OC(=O)C)C",
     "formula": "C13H22O2",
     "weight": 210.31
   },
@@ -4944,6 +5808,30 @@
     "weight": 186.29
   },
   {
+    "name": "Ethyl Octanoate (FEMA-2449)",
+    "cas": "106-32-1",
+    "fema": "2449",
+    "price_thb_g": 0.97,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2446-ethyl-octanoate-fema-2449.html",
+    "cid": 7799,
+    "smiles": "CCCCCCCC(=O)OCC",
+    "formula": "C10H20O2",
+    "weight": 172.26
+  },
+  {
+    "name": "Ethyl Palmitate (FEMA-2451)",
+    "cas": "628-97-7",
+    "fema": "2451",
+    "price_thb_g": 0.9,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2438-ethyl-palmitate-fema-2451.html",
+    "cid": 12366,
+    "smiles": "CCCCCCCCCCCCCCCC(=O)OCC",
+    "formula": "C18H36O2",
+    "weight": 284.5
+  },
+  {
     "name": "Ethyl Propionate",
     "cas": "105-37-3",
     "fema": "",
@@ -4954,6 +5842,18 @@
     "smiles": "CCC(=O)OCC",
     "formula": "C5H10O2",
     "weight": 102.13
+  },
+  {
+    "name": "Ethyl Pyruvate (FEMA-2457)",
+    "cas": "617-35-6",
+    "fema": "2457",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/3776-ethyl-pyruvate-fema-2457.html",
+    "cid": 12041,
+    "smiles": "CCOC(=O)C(=O)C",
+    "formula": "C5H8O3",
+    "weight": 116.11
   },
   {
     "name": "Ethyl Safranate",
@@ -5023,7 +5923,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/33677-ethyl-trans-2-butenoate-fema-3486.html",
     "cid": 429065,
-    "smiles": "CCOC(=O)\\C=C\\C",
+    "smiles": "CCOC(=O)C=CC",
     "formula": "C6H10O2",
     "weight": 114.14
   },
@@ -5124,6 +6024,30 @@
     "weight": 164.2
   },
   {
+    "name": "Eugenol (FEMA-2467)",
+    "cas": "97-53-0",
+    "fema": "2467",
+    "price_thb_g": 2.07,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2784-eugenol-fema-2467.html",
+    "cid": 3314,
+    "smiles": "COC1=C(C=CC(=C1)CC=C)O",
+    "formula": "C10H12O2",
+    "weight": 164.2
+  },
+  {
+    "name": "Eugenyl Acetate (FEMA-2469)",
+    "cas": "93-28-7",
+    "fema": "2469",
+    "price_thb_g": 7.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2786-eugenyl-acetate-fema-2469.html",
+    "cid": 7136,
+    "smiles": "CC(=O)OC1=C(C=C(C=C1)CC=C)OC",
+    "formula": "C12H14O3",
+    "weight": 206.24
+  },
+  {
     "name": "Evernyl",
     "cas": "4707-47-5",
     "fema": "",
@@ -5196,6 +6120,18 @@
     "weight": 264.4
   },
   {
+    "name": "Fenchol, Fenchyl Alcohol (FEMA-2480)",
+    "cas": "CID-15406",
+    "fema": "2480",
+    "price_thb_g": 2.47,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/konifer-ต้นสน/2677-fenchol-fenchyl-alcohol-fema-2480.html",
+    "cid": 15406,
+    "smiles": "CC1(C2CCC(C2)(C1O)C)C",
+    "formula": "C10H18O",
+    "weight": 154.25
+  },
+  {
     "name": "Fig Crotonate, Datilat",
     "cas": "68039-69-0",
     "fema": "",
@@ -5203,7 +6139,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3332-fig-crotonate-datilat.html",
     "cid": 107073,
-    "smiles": "C/C=C/C(=O)OC(C)C1CCCCC1",
+    "smiles": "CC=CC(=O)OC(C)C1CCCCC1",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -5227,7 +6163,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2874-firsantol.html",
     "cid": 16063533,
-    "smiles": "CC1(C)C(/C)=C\\CC1C(=C)CC(C)CO",
+    "smiles": "CC1=CCC(C1(C)C)C(=C)CC(C)CO",
     "formula": "C14H24O",
     "weight": 208.34
   },
@@ -5256,6 +6192,18 @@
     "weight": 190.28
   },
   {
+    "name": "Floral Pyran, Rosyrane Super",
+    "cas": "60335-71-9",
+    "fema": "",
+    "price_thb_g": 7.5,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2780-floral-pyran-rosyrane-super.html",
+    "cid": 108443,
+    "smiles": "CC1=CCOC(C1)C2=CC=CC=C2",
+    "formula": "C12H14O",
+    "weight": 174.24
+  },
+  {
     "name": "Floral Pyranol",
     "cas": "63500-71-0",
     "fema": "",
@@ -5275,7 +6223,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3544-floral-undecenone-tetrameran.html",
     "cid": 102604,
-    "smiles": "CC(C)CCCC(C)C/C=C/C(=O)C",
+    "smiles": "CC(CCCC(=O)C)CCC=C(C)C",
     "formula": "C13H24O",
     "weight": 196.33
   },
@@ -5290,6 +6238,18 @@
     "smiles": "CC(C)CC1CC(CCO1)(C)O",
     "formula": "C10H20O2",
     "weight": 172.26
+  },
+  {
+    "name": "Freesia Acetate, Myraldyl Acetate",
+    "cas": "72403-67-9",
+    "fema": "",
+    "price_thb_g": 43.827,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2674-freesia-acetate-myraldyl-acetate.html",
+    "cid": 3085812,
+    "smiles": "CC(=CCCC1=CCCC(C1)COC(=O)C)C",
+    "formula": "C15H24O2",
+    "weight": 236.35
   },
   {
     "name": "Freesia Heptanol, Dimetol (2,6-Dimethyl-2-heptanol)",
@@ -5323,9 +6283,33 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33690-fruity-carboxylate-.html",
     "cid": 157342,
-    "smiles": "CCOC(=O)[C@@]12CCC[C@@H]1[C@H]3CC[C@@H]2C3",
+    "smiles": "CCOC(=O)C12CCCC1C3CCC2C3",
     "formula": "C13H20O2",
     "weight": 208.3
+  },
+  {
+    "name": "Fruity Cyclopentanone, Veloutone",
+    "cas": "65443-14-3",
+    "fema": "",
+    "price_thb_g": 20.7,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2583-fruity-cyclopentanone-veloutone.html",
+    "cid": 103402,
+    "smiles": "CCCCCC1(CCC(C1=O)(C)C)C",
+    "formula": "C13H24O",
+    "weight": 196.33
+  },
+  {
+    "name": "Fruity Ketal, Fructone B, Fraistone (FEMA-4294)",
+    "cas": "6290-17-1",
+    "fema": "4294",
+    "price_thb_g": 2.45,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2584-fruity-ketal-fructone-b-fraistone-fema-4294.html",
+    "cid": 95392,
+    "smiles": "CCOC(=O)CC1(OCC(O1)C)C",
+    "formula": "C9H16O4",
+    "weight": 188.22
   },
   {
     "name": "Furan-2-ylmethyl acetate (FEMA-2490)",
@@ -5424,6 +6408,18 @@
     "weight": 156.2
   },
   {
+    "name": "Furfuryl Thiopropionate (FEMA-3347)",
+    "cas": "59020-85-8",
+    "fema": "3347",
+    "price_thb_g": 41.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/32469-furfuryl-thiopropionate-fema-3347.html",
+    "cid": 62143,
+    "smiles": "CCC(=O)SCC1=CC=CO1",
+    "formula": "C8H10O2S",
+    "weight": 170.23
+  },
+  {
     "name": "Galaxolide, Musk Gx (Pure, HHCB, Hexamethylindanopyran)",
     "cas": "1222-05-5",
     "fema": "",
@@ -5484,6 +6480,18 @@
     "weight": 142.2
   },
   {
+    "name": "Gamma-decalactone (FEMA-2360)",
+    "cas": "706-14-9",
+    "fema": "2360",
+    "price_thb_g": 1.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2578-gamma-decalactone-fema-2360.html",
+    "cid": 12813,
+    "smiles": "CCCCCCC1CCC(=O)O1",
+    "formula": "C10H18O2",
+    "weight": 170.25
+  },
+  {
     "name": "Gamma-heptalactone (FEMA-2539)",
     "cas": "105-21-5",
     "fema": "2539",
@@ -5520,6 +6528,18 @@
     "weight": 142.2
   },
   {
+    "name": "Gamma-terpinene (FEMA-3559)",
+    "cas": "99-85-4",
+    "fema": "3559",
+    "price_thb_g": 1.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/konifer-ต้นสน/2682-gamma-terpinene-fema-3559.html",
+    "cid": 7461,
+    "smiles": "CC1=CCC(=CC1)C(C)C",
+    "formula": "C10H16",
+    "weight": 136.23
+  },
+  {
     "name": "Gamma-undecalactone (aldehyde C-14 (so-called))",
     "cas": "104-67-6",
     "fema": "",
@@ -5530,6 +6550,18 @@
     "smiles": "CCCCCCCC1CCC(=O)O1",
     "formula": "C11H20O2",
     "weight": 184.27
+  },
+  {
+    "name": "Gamma-valerolactone (FEMA-3103)",
+    "cas": "108-29-2",
+    "fema": "3103",
+    "price_thb_g": 7.11,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/herb-สมุนไพร/2650-gamma-valerolactone-fema-3103.html",
+    "cid": 7921,
+    "smiles": "CC1CCC(=O)O1",
+    "formula": "C5H8O2",
+    "weight": 100.12
   },
   {
     "name": "Gardenia Acetal, Floropal",
@@ -5551,7 +6583,19 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RL00204",
     "cid": 637566,
-    "smiles": "CC(=CCC/C(=C/CO)/C)C",
+    "smiles": "CC(=CCCC(=CCO)C)C",
+    "formula": "C10H18O",
+    "weight": 154.25
+  },
+  {
+    "name": "Geraniol (98%) (FEMA-2507)",
+    "cas": "106-24-1",
+    "fema": "2507",
+    "price_thb_g": 2.88,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2767-geraniol-98-fema-2507.html",
+    "cid": 637566,
+    "smiles": "CC(=CCCC(=CCO)C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -5575,7 +6619,19 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RL00206",
     "cid": 1549026,
-    "smiles": "CC(=CCC/C(=C/COC(=O)C)/C)C",
+    "smiles": "CC(=CCCC(=CCOC(=O)C)C)C",
+    "formula": "C12H20O2",
+    "weight": 196.29
+  },
+  {
+    "name": "Geranyl Acetate (FEMA-2509)",
+    "cas": "105-87-3",
+    "fema": "2509",
+    "price_thb_g": 2.376,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2776-geranyl-acetate-fema-2509.html",
+    "cid": 1549026,
+    "smiles": "CC(=CCCC(=CCOC(=O)C)C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -5587,7 +6643,19 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4RD00207",
     "cid": 5355856,
-    "smiles": "CCCC(=O)OC/C=C(\\C)/CCC=C(C)C",
+    "smiles": "CCCC(=O)OCC=C(C)CCC=C(C)C",
+    "formula": "C14H24O2",
+    "weight": 224.34
+  },
+  {
+    "name": "Geranyl Butyrate (FEMA-2512)",
+    "cas": "106-29-6",
+    "fema": "2512",
+    "price_thb_g": 3.96,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2591-geranyl-butyrate-fema-2512.html",
+    "cid": 5355856,
+    "smiles": "CCCC(=O)OCC=C(C)CCC=C(C)C",
     "formula": "C14H24O2",
     "weight": 224.34
   },
@@ -5599,7 +6667,19 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4RW00208",
     "cid": 5282109,
-    "smiles": "CC(=CCC/C(=C/COC=O)/C)C",
+    "smiles": "CC(=CCCC(=CCOC=O)C)C",
+    "formula": "C11H18O2",
+    "weight": 182.26
+  },
+  {
+    "name": "Geranyl Formate (FEMA-2514)",
+    "cas": "105-86-2",
+    "fema": "2514",
+    "price_thb_g": 2.7,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2775-geranyl-formate-fema-2514.html",
+    "cid": 5282109,
+    "smiles": "CC(=CCCC(=CCOC=O)C)C",
     "formula": "C11H18O2",
     "weight": 182.26
   },
@@ -5611,7 +6691,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/3618-geranyl-isobutyrate-fema-2513.html",
     "cid": 6086514,
-    "smiles": "CC(C)C(=O)OC/C=C(\\C)/CCC=C(C)C",
+    "smiles": "CC(C)C(=O)OCC=C(C)CCC=C(C)C",
     "formula": "C14H24O2",
     "weight": 224.34
   },
@@ -5623,7 +6703,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3325-geranyl-isovalerate-fema-2518.html",
     "cid": 5362830,
-    "smiles": "CC(C)CC(=O)OCC/C(=C/CC=C(C)C)/C",
+    "smiles": "CC(C)CC(=O)OCC=C(C)CCC=C(C)C",
     "formula": "C15H26O2",
     "weight": 238.37
   },
@@ -5652,6 +6732,30 @@
     "weight": 272.4
   },
   {
+    "name": "Geranyl Propionate (FEMA-2517)",
+    "cas": "105-90-8",
+    "fema": "2517",
+    "price_thb_g": 3.33,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2593-geranyl-propionate.html",
+    "cid": 5355853,
+    "smiles": "CCC(=O)OCC=C(C)CCC=C(C)C",
+    "formula": "C13H22O2",
+    "weight": 210.31
+  },
+  {
+    "name": "Grapefruit Acetal, Methyl Pamplemousse",
+    "cas": "67674-46-8",
+    "fema": "",
+    "price_thb_g": 8.1,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2579-grapefruit-acetal-methyl-pamplemousse.html",
+    "cid": 106766,
+    "smiles": "CC(=CCC(C)(C)C(OC)OC)C",
+    "formula": "C11H22O2",
+    "weight": 186.29
+  },
+  {
     "name": "Grapefruit Nitrile (Khusinil)",
     "cas": "75490-39-0",
     "fema": "",
@@ -5662,6 +6766,30 @@
     "smiles": "CC(CC(C)(C)C#N)C1=CC=CC=C1",
     "formula": "C13H17N",
     "weight": 187.28
+  },
+  {
+    "name": "Green Acetate, Verdox, Argumex",
+    "cas": "88-41-5",
+    "fema": "",
+    "price_thb_g": 0.75,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2572-2-tert-butylcyclohexylacetate.html",
+    "cid": 62334,
+    "smiles": "CC(=O)OC1CCCCC1C(C)(C)C",
+    "formula": "C12H22O2",
+    "weight": 198.3
+  },
+  {
+    "name": "Green Ether, Anther, Phenyl Ethyl Isoamyl Ether",
+    "cas": "56011-02-0",
+    "fema": "",
+    "price_thb_g": 7.8,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2782-green-ether-anther-phenyl-ethyl-isoamyl-ether.html",
+    "cid": 91978,
+    "smiles": "CC(C)CCOCCC1=CC=CC=C1",
+    "formula": "C13H20O",
+    "weight": 192.3
   },
   {
     "name": "Guaiacol",
@@ -5707,7 +6835,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2894-habanolide.html",
     "cid": 1549778,
-    "smiles": "CC(=CCC/C(=C/CCC(=O)C)/C)C",
+    "smiles": "CC(=CCCC(=CCCC(=O)C)C)C",
     "formula": "C13H22O",
     "weight": 194.31
   },
@@ -5820,6 +6948,18 @@
     "weight": 116.16
   },
   {
+    "name": "Hexanoic Acid, Caproic acid (FEMA-2559)",
+    "cas": "142-62-1",
+    "fema": "2559",
+    "price_thb_g": 1.25,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fatty-acids-fatty-alcohols/2429-hexanoic-acid-caproic-acid-fema-2559.html",
+    "cid": 8892,
+    "smiles": "CCCCCC(=O)O",
+    "formula": "C6H12O2",
+    "weight": 116.16
+  },
+  {
     "name": "Hexanol",
     "cas": "111-27-3",
     "fema": "",
@@ -5851,7 +6991,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2614-hexenol-cis-3.html",
     "cid": 5281167,
-    "smiles": "CC/C=C\\CCO",
+    "smiles": "CCC=CCCO",
     "formula": "C6H12O",
     "weight": 100.16
   },
@@ -5863,7 +7003,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2604-hexenyl-cis-3-acetate.html",
     "cid": 5363388,
-    "smiles": "CC/C=C\\CCOC(=O)C",
+    "smiles": "CCC=CCCOC(=O)C",
     "formula": "C8H14O2",
     "weight": 142.2
   },
@@ -5875,7 +7015,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2610-hexenyl-salicylate-cis-3.html",
     "cid": 6021887,
-    "smiles": "CC/C=C\\CCOC(=O)C1=CC=CC=C1O",
+    "smiles": "CCC=CCCOC(=O)C1=CC=CC=C1O",
     "formula": "C13H16O3",
     "weight": 220.26
   },
@@ -5916,6 +7056,18 @@
     "weight": 144.21
   },
   {
+    "name": "Hexyl Acetate (FEMA-2565)",
+    "cas": "142-92-7",
+    "fema": "2565",
+    "price_thb_g": 1.58,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2565-hexyl-acetate-fema-2565.html",
+    "cid": 8908,
+    "smiles": "CCCCCCOC(=O)C",
+    "formula": "C8H16O2",
+    "weight": 144.21
+  },
+  {
     "name": "Hexyl benzoate (FEMA-3691)",
     "cas": "6789-88-4",
     "fema": "3691",
@@ -5940,6 +7092,18 @@
     "weight": 172.26
   },
   {
+    "name": "Hexyl Cinnamic Aldehyde (HCA)",
+    "cas": "364364-06-7",
+    "fema": "",
+    "price_thb_g": 3.4,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3JJ00217",
+    "cid": 1715135,
+    "smiles": "CCCCCCC(=CC1=CC=CC=C1)C=O",
+    "formula": "C15H20O",
+    "weight": 216.32
+  },
+  {
     "name": "Hexyl Hexanoate (FEMA-2572)",
     "cas": "6378-65-0",
     "fema": "2572",
@@ -5962,6 +7126,18 @@
     "smiles": "CCCCCCOC(=O)CC(C)C",
     "formula": "C11H22O2",
     "weight": 186.29
+  },
+  {
+    "name": "Hexyl Propionate (FEMA-2576)",
+    "cas": "2445-76-3",
+    "fema": "2576",
+    "price_thb_g": 1.746,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2560-hexyl-propionate-fema-2576.html",
+    "cid": 88454,
+    "smiles": "CCCCCCOC(=O)CC",
+    "formula": "C9H18O2",
+    "weight": 158.24
   },
   {
     "name": "Hexyl Salicylate",
@@ -6007,7 +7183,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/3654-hyacinth-acetals.html",
     "cid": 21895,
-    "smiles": "C1C(COC(O1)CC2=CC=CC=C2)O",
+    "smiles": "C1C(OC(O1)CC2=CC=CC=C2)CO",
     "formula": "C11H14O3",
     "weight": 194.23
   },
@@ -6120,6 +7296,18 @@
     "weight": 117.15
   },
   {
+    "name": "Intreleven Aldehyde (Aldehyde C-11 Undecylenic)",
+    "cas": "58296-81-4",
+    "fema": "",
+    "price_thb_g": 4.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2458-intreleven-aldehyde-aldehyde-c-11-undecylenic.html",
+    "cid": 94014,
+    "smiles": "CCC=CCCCCCCC=O",
+    "formula": "C11H20O",
+    "weight": 168.28
+  },
+  {
     "name": "Irotyl",
     "cas": "2983-37-1",
     "fema": "",
@@ -6180,6 +7368,18 @@
     "weight": 88.15
   },
   {
+    "name": "Isoamyl Benzoate (FEMA-2058)",
+    "cas": "94-46-2",
+    "fema": "2058",
+    "price_thb_g": 4.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/frankincense-กำยาน/4009-isoamyl-benzoate-fema-2058.html",
+    "cid": 7193,
+    "smiles": "CC(C)CCOC(=O)C1=CC=CC=C1",
+    "formula": "C12H16O2",
+    "weight": 192.25
+  },
+  {
     "name": "Isoamyl Butyrate",
     "cas": "106-27-4",
     "fema": "",
@@ -6190,6 +7390,30 @@
     "smiles": "CCCC(=O)OCCC(C)C",
     "formula": "C9H18O2",
     "weight": 158.24
+  },
+  {
+    "name": "Isoamyl Butyrate (FEMA-2060)",
+    "cas": "106-27-4",
+    "fema": "2060",
+    "price_thb_g": 0.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2592-isoamyl-butyrate-fema-2060.html",
+    "cid": 7795,
+    "smiles": "CCCC(=O)OCCC(C)C",
+    "formula": "C9H18O2",
+    "weight": 158.24
+  },
+  {
+    "name": "Isoamyl Cinnamate (FEMA-2063)",
+    "cas": "7779-65-9",
+    "fema": "2063",
+    "price_thb_g": 3.78,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2789-isoamyl-cinnamate-fema-2063.html",
+    "cid": 5273467,
+    "smiles": "CC(C)CCOC(=O)C=CC1=CC=CC=C1",
+    "formula": "C14H18O2",
+    "weight": 218.29
   },
   {
     "name": "Isoamyl Formate (FEMA-2069)",
@@ -6228,6 +7452,30 @@
     "weight": 158.24
   },
   {
+    "name": "Isoamyl Isovalerate (FEMA-2085)",
+    "cas": "659-70-1",
+    "fema": "2085",
+    "price_thb_g": 1.67,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2582-isoamyl-isovalerate-fema-2085.html",
+    "cid": 12613,
+    "smiles": "CC(C)CCOC(=O)CC(C)C",
+    "formula": "C10H20O2",
+    "weight": 172.26
+  },
+  {
+    "name": "Isoamyl Octanoate (FEMA-2080)",
+    "cas": "2035-99-6",
+    "fema": "2080",
+    "price_thb_g": 1.53,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2563-isoamyl-octanoate-fema-2080.html",
+    "cid": 16255,
+    "smiles": "CCCCCCCC(=O)OCCC(C)C",
+    "formula": "C13H26O2",
+    "weight": 214.34
+  },
+  {
     "name": "Isoamyl Phenyl Acetate",
     "cas": "102-19-2",
     "fema": "",
@@ -6259,7 +7507,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3KH00065",
     "cid": 637531,
-    "smiles": "CC(=O)O[C@@H]1C[C@@H]2CC[C@@]1(C2(C)C)C",
+    "smiles": "CC(=O)OC1CC2CCC1(C2(C)C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -6271,9 +7519,21 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/frankincense-กำยาน/2743-isobornyl-acetate-fema-2160.html",
     "cid": 637531,
-    "smiles": "CC(=O)O[C@@H]1C[C@@H]2CC[C@@]1(C2(C)C)C",
+    "smiles": "CC(=O)OC1CC2CCC1(C2(C)C)C",
     "formula": "C12H20O2",
     "weight": 196.29
+  },
+  {
+    "name": "Isobornyl Propionate (FEMA-2163)",
+    "cas": "2756-56-1",
+    "fema": "2163",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32351-isobornyl-propionate-fema-2163.html",
+    "cid": 23617864,
+    "smiles": "CCC(=O)OC1CC2CCC1(C2(C)C)C",
+    "formula": "C13H22O2",
+    "weight": 210.31
   },
   {
     "name": "Isobutavan",
@@ -6439,9 +7699,33 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3SP00250",
     "cid": 853433,
-    "smiles": "CC(=C)C1=CC(=C(C=C1)O)OC",
+    "smiles": "CC=CC1=CC(=C(C=C1)O)OC",
     "formula": "C10H12O2",
     "weight": 164.2
+  },
+  {
+    "name": "Isoeugenol (FEMA-2468)",
+    "cas": "97-54-1",
+    "fema": "2468",
+    "price_thb_g": 3.75,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2790-isoeugenol-fema-2468.html",
+    "cid": 853433,
+    "smiles": "CC=CC1=CC(=C(C=C1)O)OC",
+    "formula": "C10H12O2",
+    "weight": 164.2
+  },
+  {
+    "name": "Isoeugenyl Acetate (FEMA-2470)",
+    "cas": "5912-87-8",
+    "fema": "2470",
+    "price_thb_g": 8.1,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2785-isoeugenyl-acetate-fema-2470.html",
+    "cid": 876160,
+    "smiles": "CC=CC1=CC(=C(C=C1)OC(=O)C)OC",
+    "formula": "C12H14O3",
+    "weight": 206.24
   },
   {
     "name": "Isolongifolanone",
@@ -6516,6 +7800,18 @@
     "weight": 242.4
   },
   {
+    "name": "Isopropyl 2-methyl Butyrate (FEMA-3699)",
+    "cas": "66576-71-4",
+    "fema": "3699",
+    "price_thb_g": 5.58,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2581-isopropyl-2-methyl-butyrate-fema-3699.html",
+    "cid": 522214,
+    "smiles": "CCC(C)C(=O)OC(C)C",
+    "formula": "C8H16O2",
+    "weight": 144.21
+  },
+  {
     "name": "Isopropyl myristate (FEMA-3556)",
     "cas": "110-27-0",
     "fema": "3556",
@@ -6528,6 +7824,18 @@
     "weight": 270.5
   },
   {
+    "name": "Isopropyl Palmitate (IPP)",
+    "cas": "142-91-6",
+    "fema": "",
+    "price_thb_g": 3.74,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=0ZZ00240",
+    "cid": 8907,
+    "smiles": "CCCCCCCCCCCCCCCC(=O)OC(C)C",
+    "formula": "C19H38O2",
+    "weight": 298.5
+  },
+  {
     "name": "Isopulegol",
     "cas": "89-79-2",
     "fema": "",
@@ -6535,9 +7843,21 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-ice-cold-เย็น/2469-isopulegol.html",
     "cid": 170833,
-    "smiles": "C[C@H]1CC[C@@H]([C@@H](C1)O)C(=C)C",
+    "smiles": "CC1CCC(C(C1)O)C(=C)C",
     "formula": "C10H18O",
     "weight": 154.25
+  },
+  {
+    "name": "Isovaleraldehyde, FEMA 2692",
+    "cas": "590-86-3",
+    "fema": "2692",
+    "price_thb_g": 1.53,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2437-isovaleraldehyde-fema-2692.html",
+    "cid": 11552,
+    "smiles": "CC(C)CC=O",
+    "formula": "C5H10O",
+    "weight": 86.13
   },
   {
     "name": "Isovaleric Acid (FEMA-3102)",
@@ -6550,6 +7870,42 @@
     "smiles": "CC(C)CC(=O)O",
     "formula": "C5H10O2",
     "weight": 102.13
+  },
+  {
+    "name": "Ivy Carbaldehyde (mixture of 2,4-, 3,5- and 3,6-dimethyl-3-cyclohexenylcarbaldehyde)",
+    "cas": "27939-60-2",
+    "fema": "",
+    "price_thb_g": 1.38,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/3801-ivy-carbaldehyde-mixture-of-24--35-and-36-dimethyl-3-cyclohexenylcarbaldehyde.html",
+    "cid": 3034463,
+    "smiles": "CC1C=CCCC1(C)C=O",
+    "formula": "C9H14O",
+    "weight": 138.21
+  },
+  {
+    "name": "Ivy Dioxolane, Glycolierral",
+    "cas": "94087-23-7",
+    "fema": "",
+    "price_thb_g": 8.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/3827-ivy-dioxolane.html",
+    "cid": 44152860,
+    "smiles": "CC1=CC2C(CC1CC2C(C)C)C3OCCO3",
+    "formula": "C15H24O2",
+    "weight": 236.35
+  },
+  {
+    "name": "Jasmin Cyclopentanone, Jasmatone",
+    "cas": "13074-65-2",
+    "fema": "",
+    "price_thb_g": 61.773,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2673-jasmin-cyclopentanone-jasmatone.html",
+    "cid": 114454,
+    "smiles": "CCCCCCC1CCCC1=O",
+    "formula": "C11H20O",
+    "weight": 168.28
   },
   {
     "name": "Jasmin Lactone",
@@ -6607,7 +7963,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2866-kohinool-amber-carbinol.html",
     "cid": 15219341,
-    "smiles": "CC(C(C)C(C)C(C)(C)C)C(C)O",
+    "smiles": "CC(C(C)C(C)O)C(C)C(C)(C)C",
     "formula": "C12H26O",
     "weight": 186.33
   },
@@ -6631,7 +7987,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/animal-สัตว์/252973-l-ambregrisox.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/animal-สัตว์/2810-ambroxan.html",
     "cid": 10857465,
-    "smiles": "CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C",
+    "smiles": "CC1(CCCC2(C1CCC3(C2CCO3)C)C)C",
     "formula": "C16H28O",
     "weight": 236.39
   },
@@ -6763,7 +8119,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3MA00273",
     "cid": 228987,
-    "smiles": "CC(CC=O)C1=CC=C(C=C1)C(C)(C)C",
+    "smiles": "CC(CC1=CC=C(C=C1)C(C)(C)C)C=O",
     "formula": "C14H20O",
     "weight": 204.31
   },
@@ -6823,7 +8179,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4LL00277",
     "cid": 22310,
-    "smiles": "OC(C1OC(\\C=C)(CC1)C)(C)C",
+    "smiles": "CC1(CCC(O1)C(C)(C)O)C=C",
     "formula": "C10H18O2",
     "weight": 170.25
   },
@@ -6835,7 +8191,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/linalool-ฟรีเซีย/2695-linalool-oxide-fema-3746.html",
     "cid": 22310,
-    "smiles": "OC(C1OC(\\C=C)(CC1)C)(C)C",
+    "smiles": "CC1(CCC(O1)C(C)(C)O)C=C",
     "formula": "C10H18O2",
     "weight": 170.25
   },
@@ -6895,7 +8251,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2841-longifolene.html",
     "cid": 1796220,
-    "smiles": "C=C2[C@H]1CC[C@@H]3[C@H]1C(C)(C)CCC[C@]23C",
+    "smiles": "CC1(CCCC2(C3C1C(C2=C)CC3)C)C",
     "formula": "C15H24",
     "weight": 204.35
   },
@@ -6979,7 +8335,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/citrus-ส้ม-เปรี้ยว-สดชื่น/2500-mandarine-aldehyde-10.html",
     "cid": 5283361,
-    "smiles": "CCCCCCCCC/C=C/C=O",
+    "smiles": "CCCCCCCCCC=CC=O",
     "formula": "C12H22O",
     "weight": 182.3
   },
@@ -7152,6 +8508,18 @@
     "weight": 198.3
   },
   {
+    "name": "Methional (FEMA-2747)",
+    "cas": "3268-49-3",
+    "fema": "2747",
+    "price_thb_g": 4.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/2531-methional-fema-2747.html",
+    "cid": 18635,
+    "smiles": "CSCCC=O",
+    "formula": "C4H8OS",
+    "weight": 104.17
+  },
+  {
     "name": "Methyl (Z)-5-octenoate (FEMA-4165)",
     "cas": "41654-15-3",
     "fema": "4165",
@@ -7159,7 +8527,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33698-methyl-z-5-octenoate-fema-4165.html",
     "cid": 6914062,
-    "smiles": "CC/C=C\\CCCC(=O)OC",
+    "smiles": "CCC=CCCCC(=O)OC",
     "formula": "C9H16O2",
     "weight": 156.22
   },
@@ -7186,6 +8554,18 @@
     "smiles": "CC1C=C(CCC1=CNC2=CC=CC=C2C(=O)OC)C",
     "formula": "C17H21NO2",
     "weight": 271.35
+  },
+  {
+    "name": "Methyl 2-methyl Butyrate (FEMA-2719)",
+    "cas": "868-57-5",
+    "fema": "2719",
+    "price_thb_g": 2.25,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2573-methyl-2-methyl-butyrate-fema-2719.html",
+    "cid": 13357,
+    "smiles": "CCC(C)C(=O)OC",
+    "formula": "C6H12O2",
+    "weight": 116.16
   },
   {
     "name": "Methyl 3-(methyl thio) propionate (FEMA-2720)",
@@ -7284,6 +8664,18 @@
     "weight": 136.15
   },
   {
+    "name": "Methyl Butyrate (FEMA-2693)",
+    "cas": "623-42-7",
+    "fema": "2693",
+    "price_thb_g": 1.296,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2569-methyl-butyrate-fema-2693.html",
+    "cid": 12180,
+    "smiles": "CCCC(=O)OC",
+    "formula": "C5H10O2",
+    "weight": 102.13
+  },
+  {
     "name": "Methyl Caprate",
     "cas": "110-42-9",
     "fema": "",
@@ -7303,7 +8695,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2843-methyl-cedryl-ketone.html",
     "cid": 16220111,
-    "smiles": "C[C@@H]1CC[C@@H]2[C@@]13C[C@H](C2(C)C)C(=C(C3)C(=O)C)C",
+    "smiles": "CC1CCC2C13CC(C2(C)C)C(=C(C3)C(=O)C)C",
     "formula": "C17H26O",
     "weight": 246.4
   },
@@ -7356,12 +8748,36 @@
     "weight": 182.22
   },
   {
+    "name": "Methyl Dihydrojasmonate, Hedione (high Cis)",
+    "cas": "24851-98-7",
+    "fema": "",
+    "price_thb_g": 2.75,
+    "vendors": "MySkinRecipes, PerfumersWorld",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2666-methyl-dihydrojasmonate-hedione.html\nMySkinRecipes: https://www.myskinrecipes.com/shop/th/jasmine-มะลิ/2665-methyl-dihydrojasmonate-hedione.html\nPerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=5JJ21775\nPerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4JJ10013\nPerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3JJ00218",
+    "cid": 102861,
+    "smiles": "CCCCCC1C(CCC1=O)CC(=O)OC",
+    "formula": "C13H22O3",
+    "weight": 226.31
+  },
+  {
     "name": "Methyl Eugenol",
     "cas": "93-15-2",
     "fema": "",
     "price_thb_g": 11.9,
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=9SW00298",
+    "cid": 7127,
+    "smiles": "COC1=C(C=C(C=C1)CC=C)OC",
+    "formula": "C11H14O2",
+    "weight": 178.23
+  },
+  {
+    "name": "Methyl Eugenol (FEMA-2475)",
+    "cas": "93-15-2",
+    "fema": "2475",
+    "price_thb_g": 5.58,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2788-methyl-eugenol-fema-2475.html",
     "cid": 7127,
     "smiles": "COC1=C(C=C(C=C1)CC=C)OC",
     "formula": "C11H14O2",
@@ -7440,6 +8856,18 @@
     "weight": 270.5
   },
   {
+    "name": "Methyl Hexanoate (FEMA-2708)",
+    "cas": "106-70-7",
+    "fema": "2708",
+    "price_thb_g": 1.44,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2589-methyl-hexanoate-fema-2708.html",
+    "cid": 7824,
+    "smiles": "CCCCCC(=O)OC",
+    "formula": "C7H14O2",
+    "weight": 130.18
+  },
+  {
     "name": "Methyl Hexyl Ketone",
     "cas": "111-13-7",
     "fema": "",
@@ -7450,6 +8878,30 @@
     "smiles": "CCCCCCC(=O)C",
     "formula": "C8H16O",
     "weight": 128.21
+  },
+  {
+    "name": "Methyl Ionone Gamma (70%), Isoraldeine 70",
+    "cas": "79-68-5",
+    "fema": "",
+    "price_thb_g": 1.9,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/2660-methyl-ionone-gamma-isoraldeine-70.html",
+    "cid": 56632788,
+    "smiles": "CC1CCC(=C)C(C1(C)C)C=CC(=O)C",
+    "formula": "C14H22O",
+    "weight": 206.32
+  },
+  {
+    "name": "Methyl Ionone Gamma (95%), Isoraldeine 95",
+    "cas": "79-68-5",
+    "fema": "",
+    "price_thb_g": 27.546,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/2661-methyl-ionone-gamma-isoraldeine-95.html",
+    "cid": 56632788,
+    "smiles": "CC1CCC(=C)C(C1(C)C)C=CC(=O)C",
+    "formula": "C14H22O",
+    "weight": 206.32
   },
   {
     "name": "Methyl Isobutyrate (FEMA-2694)",
@@ -7476,6 +8928,18 @@
     "weight": 178.23
   },
   {
+    "name": "Methyl Isoeugenol (FEMA-2476)",
+    "cas": "93-16-3",
+    "fema": "2476",
+    "price_thb_g": 5.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/spice-เผ็ดร้อน/2787-methyl-isoeugenol-fema-2476.html",
+    "cid": 7128,
+    "smiles": "CC=CC1=CC(=C(C=C1)OC)OC",
+    "formula": "C11H14O2",
+    "weight": 178.23
+  },
+  {
     "name": "Methyl Isovalerate",
     "cas": "556-24-1",
     "fema": "",
@@ -7495,7 +8959,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4JN15333",
     "cid": 5281929,
-    "smiles": "CC/C=C\\C[C@@H]1[C@H](CCC1=O)CC(=O)",
+    "smiles": "CCC=CCC1C(CCC1=O)CC(=O)OC",
     "formula": "C13H20O3",
     "weight": 224.3
   },
@@ -7548,6 +9012,18 @@
     "weight": 156.22
   },
   {
+    "name": "Methyl Octanoate, Methyl Caprylate (FEMA-2728)",
+    "cas": "111-11-5",
+    "fema": "2728",
+    "price_thb_g": 1.48,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2450-methyl-octanoate-methyl-caprylate-fema-2728.html",
+    "cid": 8091,
+    "smiles": "CCCCCCCC(=O)OC",
+    "formula": "C9H18O2",
+    "weight": 158.24
+  },
+  {
     "name": "Methyl Octine Carbonate",
     "cas": "111-80-8",
     "fema": "",
@@ -7582,6 +9058,18 @@
     "smiles": "COC(=O)CC1=CC=CC=C1",
     "formula": "C9H10O2",
     "weight": 150.17
+  },
+  {
+    "name": "Methyl Propyl Disulfide       (FEMA-3201)",
+    "cas": "2179-60-4",
+    "fema": "3201",
+    "price_thb_g": 199.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32462-methyl-propyl-disulfide-fema-3201.html",
+    "cid": 16592,
+    "smiles": "CCCSSC",
+    "formula": "C4H10S2",
+    "weight": 122.3
   },
   {
     "name": "Methyl Salicylate",
@@ -7620,6 +9108,18 @@
     "weight": 90.15
   },
   {
+    "name": "Methyl Thiobutyrate (FEMA-3310)",
+    "cas": "2432-51-1",
+    "fema": "3310",
+    "price_thb_g": 39.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/32471-methyl-thiobutyrate-fema-3310.html",
+    "cid": 62444,
+    "smiles": "CCCC(=O)SC",
+    "formula": "C5H10OS",
+    "weight": 118.2
+  },
+  {
     "name": "Methyl-2-Methyl-3-Furyl Disulfide (FEMA-3573)",
     "cas": "65505-17-1",
     "fema": "3573",
@@ -7630,6 +9130,18 @@
     "smiles": "CC1=C(C=CO1)SSC",
     "formula": "C6H8OS2",
     "weight": 160.3
+  },
+  {
+    "name": "Monomenthyl Succinate, Menthyl Succinate (FEMA-3810)",
+    "cas": "77341-67-4",
+    "fema": "3810",
+    "price_thb_g": 120.0,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-ice-cold-เย็น/9239-monomenthyl-succinate-menthyl-succinate-fema-3810.html",
+    "cid": 11219061,
+    "smiles": "CC1CCC(C(C1)OC(=O)CCC(=O)O)C(C)C",
+    "formula": "C14H24O4",
+    "weight": 256.34
   },
   {
     "name": "Muguet Butanol, Muguesia, Dupical",
@@ -7738,6 +9250,18 @@
     "smiles": "CCC(=O)OCC(C)(C)OC(C)C1CCCC(C1)(C)C",
     "formula": "C17H32O3",
     "weight": 284.4
+  },
+  {
+    "name": "Musk Tetralin, Tonalide, Fixolide, Tetralide",
+    "cas": "21145-77-7",
+    "fema": "",
+    "price_thb_g": 2.45,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/musk-มัสก์/2882-musk-tetralin-tonalide-fixolide-tetralide.html",
+    "cid": 89440,
+    "smiles": "CC1CC(C2=C(C1(C)C)C=C(C(=C2)C(=O)C)C)(C)C",
+    "formula": "C18H26O",
+    "weight": 258.4
   },
   {
     "name": "Musk Xylol",
@@ -7891,7 +9415,7 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3CR00317",
     "cid": 643820,
-    "smiles": "CC(=CCC/C(=C\\CO)/C)C",
+    "smiles": "CC(=CCCC(=CCO)C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -7903,7 +9427,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/citrus-ส้ม-เปรี้ยว-สดชื่น/2491-nerol-fema-2770.html",
     "cid": 643820,
-    "smiles": "CC(=CCC/C(=C\\CO)/C)C",
+    "smiles": "CC(=CCCC(=CCO)C)C",
     "formula": "C10H18O",
     "weight": 154.25
   },
@@ -7963,7 +9487,19 @@
     "vendors": "PerfumersWorld",
     "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RF05061",
     "cid": 1549025,
-    "smiles": "CC(=CCC/C(=C\\COC(=O)C)/C)C",
+    "smiles": "CC(=CCCC(=CCOC(=O)C)C)C",
+    "formula": "C12H20O2",
+    "weight": 196.29
+  },
+  {
+    "name": "Neryl Acetate (FEMA-2773)",
+    "cas": "141-12-8",
+    "fema": "2773",
+    "price_thb_g": 3.78,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2759-neryl-acetate-fema-2773.html",
+    "cid": 1549025,
+    "smiles": "CC(=CCCC(=CCOC(=O)C)C)C",
     "formula": "C12H20O2",
     "weight": 196.29
   },
@@ -7978,6 +9514,18 @@
     "smiles": "CCCCCCCCCO",
     "formula": "C9H20O",
     "weight": 144.25
+  },
+  {
+    "name": "Nonanal, aldehyde C-9 (FEMA-2782)",
+    "cas": "124-19-6",
+    "fema": "2782",
+    "price_thb_g": 3.78,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2426-nonanal-aldehyde-c-9-fema-2782.html",
+    "cid": 31289,
+    "smiles": "CCCCCCCCC=O",
+    "formula": "C9H18O",
+    "weight": 142.24
   },
   {
     "name": "Nonanoic Acid",
@@ -8004,6 +9552,18 @@
     "weight": 144.25
   },
   {
+    "name": "Nonyl Acetate (FEMA-2788)",
+    "cas": "205-585-8",
+    "fema": "2788",
+    "price_thb_g": 4.32,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2432-nonyl-acetate-fema-2788.html",
+    "cid": 8918,
+    "smiles": "CCCCCCCCCOC(=O)C",
+    "formula": "C11H22O2",
+    "weight": 186.29
+  },
+  {
     "name": "Nootkatone (FEMA-3166)",
     "cas": "4674-50-4",
     "fema": "3166",
@@ -8011,7 +9571,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/citrus-ส้ม-เปรี้ยว-สดชื่น/3713-nootkatone-fema-3166.html",
     "cid": 1268142,
-    "smiles": "C[C@@H]1CC(=O)C=C2[C@]1(C[C@@H](CC2)C(=C)C)C",
+    "smiles": "CC1CC(=O)C=C2C1(CC(CC2)C(=C)C)C",
     "formula": "C15H22O",
     "weight": 218.33
   },
@@ -8412,6 +9972,18 @@
     "weight": 226.27
   },
   {
+    "name": "Para-cymene (FEMA-2356)",
+    "cas": "99-87-6",
+    "fema": "2356",
+    "price_thb_g": 2.1,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/konifer-ต้นสน/2683-para-cymene-fema-2356.html",
+    "cid": 7463,
+    "smiles": "CC1=CC=C(C=C1)C(C)C",
+    "formula": "C10H14",
+    "weight": 134.22
+  },
+  {
     "name": "Para-dimethyl Hydroquinone",
     "cas": "150-78-7",
     "fema": "",
@@ -8496,6 +10068,30 @@
     "weight": 156.26
   },
   {
+    "name": "Peach Cyclopentanone, Peach Ketone",
+    "cas": "95962-14-4",
+    "fema": "",
+    "price_thb_g": 7.38,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2571-peach-cyclopentanone.html",
+    "cid": 175661,
+    "smiles": "CC1=CCC(CC1)C(C)CC2CCCC2=O",
+    "formula": "C15H24O",
+    "weight": 220.35
+  },
+  {
+    "name": "Pear Valerate, Peranat",
+    "cas": "90397-38-9",
+    "fema": "",
+    "price_thb_g": 10.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3984-pear-valerate-peranat.html",
+    "cid": 163588,
+    "smiles": "CCCC(C)COC(=O)C(C)CCC",
+    "formula": "C12H24O2",
+    "weight": 200.32
+  },
+  {
     "name": "Pentan-2-one (FEMA-2842)",
     "cas": "107-87-9",
     "fema": "2842",
@@ -8515,7 +10111,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/33699-pentanoic-acid-3-methyl-2-oxo--ethyl-ester-fema-4903.html",
     "cid": 13129857,
-    "smiles": "O=C(C(C)CC)C(=O)OCC",
+    "smiles": "CCC(C)C(=O)C(=O)OCC",
     "formula": "C8H14O3",
     "weight": 158.19
   },
@@ -8544,6 +10140,54 @@
     "weight": 214.34
   },
   {
+    "name": "Pentyl Propanoate , Amyl Propionate (FEMA-2082)",
+    "cas": "624-54-4",
+    "fema": "2082",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32349-pentyl-propanoate-amyl-propionate-fema-2082.html",
+    "cid": 12217,
+    "smiles": "CCCCCOC(=O)CC",
+    "formula": "C8H16O2",
+    "weight": 144.21
+  },
+  {
+    "name": "Peony Acetonitrile, Peonile",
+    "cas": "10461-98-0",
+    "fema": "",
+    "price_thb_g": 1.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2773-peony-acetonitrile.html",
+    "cid": 66327,
+    "smiles": "C1CCC(=C(C#N)C2=CC=CC=C2)CC1",
+    "formula": "C14H15N",
+    "weight": 197.27
+  },
+  {
+    "name": "Phenethyl Acetate (FEMA-2857)",
+    "cas": "103-45-7",
+    "fema": "2857",
+    "price_thb_g": 1.35,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2771-phenethyl-acetate-fema-2857.html",
+    "cid": 7654,
+    "smiles": "CC(=O)OCCC1=CC=CC=C1",
+    "formula": "C10H12O2",
+    "weight": 164.2
+  },
+  {
+    "name": "Phenethyl Alcohol, Phenyl Ethyl Alcohol (FEMA-2858)",
+    "cas": "60-12-8",
+    "fema": "2858",
+    "price_thb_g": 1.28,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2765-phenethyl-alcohol-phenyl-ethyl-alcohol-fema-2858.html",
+    "cid": 6054,
+    "smiles": "C1=CC=C(C=C1)CCO",
+    "formula": "C8H10O",
+    "weight": 122.16
+  },
+  {
     "name": "Phenethyl Benzoate",
     "cas": "94-47-3",
     "fema": "",
@@ -8568,6 +10212,18 @@
     "weight": 192.25
   },
   {
+    "name": "Phenethyl Cinnamate (FEMA-2863)",
+    "cas": "103-53-7",
+    "fema": "2863",
+    "price_thb_g": 2.52,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/frankincense-กำยาน/2752-phenethyl-cinnamate-fema-2863.html",
+    "cid": 5369459,
+    "smiles": "C1=CC=C(C=C1)CCOC(=O)C=CC2=CC=CC=C2",
+    "formula": "C17H16O2",
+    "weight": 252.31
+  },
+  {
     "name": "Phenethyl Formate",
     "cas": "104-62-1",
     "fema": "",
@@ -8578,6 +10234,42 @@
     "smiles": "C1=CC=C(C=C1)CCOC=O",
     "formula": "C9H10O2",
     "weight": 150.17
+  },
+  {
+    "name": "Phenethyl Isobutyrate (FEMA-2862)",
+    "cas": "103-48-0",
+    "fema": "2862",
+    "price_thb_g": 1.71,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2772-phenethyl-isobutyrate-fema-2862.html",
+    "cid": 7655,
+    "smiles": "CC(C)C(=O)OCCC1=CC=CC=C1",
+    "formula": "C12H16O2",
+    "weight": 192.25
+  },
+  {
+    "name": "Phenethyl Isovalerate (FEMA-2871)",
+    "cas": "140-26-1",
+    "fema": "2871",
+    "price_thb_g": 1.98,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2588-phenethyl-isovalerate-fema-2871.html",
+    "cid": 8792,
+    "smiles": "CC(C)CC(=O)OCCC1=CC=CC=C1",
+    "formula": "C13H18O2",
+    "weight": 206.28
+  },
+  {
+    "name": "Phenethyl Propionate (FEMA-2867)",
+    "cas": "122-70-3",
+    "fema": "2867",
+    "price_thb_g": 1.53,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/rose-กุหลาบ/2757-phenethyl-propionate-fema-2867.html",
+    "cid": 31225,
+    "smiles": "CCC(=O)OCCC1=CC=CC=C1",
+    "formula": "C11H14O2",
+    "weight": 178.23
   },
   {
     "name": "Phenethyl Salicylate",
@@ -8640,6 +10332,18 @@
     "weight": 166.22
   },
   {
+    "name": "Phenyl Acetaldehyde Dimethyl Acetal (PADMA)",
+    "cas": "101-48-4",
+    "fema": "",
+    "price_thb_g": 8.5,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=4GN00382",
+    "cid": 60995,
+    "smiles": "COC(CC1=CC=CC=C1)OC",
+    "formula": "C10H14O2",
+    "weight": 166.22
+  },
+  {
     "name": "Phenyl Ethyl Acetate",
     "cas": "4346-18-3",
     "fema": "",
@@ -8650,6 +10354,18 @@
     "smiles": "CCCC(=O)OC1=CC=CC=C1",
     "formula": "C10H12O2",
     "weight": 164.2
+  },
+  {
+    "name": "Phenyl Ethyl Alcohol (PEA)",
+    "cas": "60-12-8",
+    "fema": "",
+    "price_thb_g": 2.38,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=3RM00358",
+    "cid": 6054,
+    "smiles": "C1=CC=C(C=C1)CCO",
+    "formula": "C8H10O",
+    "weight": 122.16
   },
   {
     "name": "Phenyl Ethyl Formate",
@@ -8755,7 +10471,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3335-pineapple-heptadienone-pharaone.html",
     "cid": 15897831,
-    "smiles": "O=C(CCC=C)C(=C)C1CCCCC1",
+    "smiles": "C=CCCC(=O)C(=C)C1CCCCC1",
     "formula": "C13H20O",
     "weight": 192.3
   },
@@ -8832,6 +10548,18 @@
     "weight": 178.23
   },
   {
+    "name": "Propionaldehyde (FEMA-2923)",
+    "cas": "123-38-6",
+    "fema": "2923",
+    "price_thb_g": 1.25,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/3316-propionaldehyde-fema-2923.html",
+    "cid": 527,
+    "smiles": "CCC=O",
+    "formula": "C3H6O",
+    "weight": 58.08
+  },
+  {
     "name": "Propionic Acid, Propanoic acid (FEMA -2924)",
     "cas": "79-09-4",
     "fema": "",
@@ -8866,6 +10594,18 @@
     "smiles": "CCCOC(=O)C",
     "formula": "C5H10O2",
     "weight": 102.13
+  },
+  {
+    "name": "Propyl Butyrate (FEMA-2934)",
+    "cas": "105-66-8",
+    "fema": "2934",
+    "price_thb_g": 9.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32352-propyl-butyrate-fema-2934.html",
+    "cid": 7770,
+    "smiles": "CCCC(=O)OCCC",
+    "formula": "C7H14O2",
+    "weight": 130.18
   },
   {
     "name": "Propyl Caproate (FEMA-2949)",
@@ -8976,6 +10716,18 @@
     "weight": 188.3
   },
   {
+    "name": "Propylene Glycol (PG)",
+    "cas": "57-55-6",
+    "fema": "",
+    "price_thb_g": 2.04,
+    "vendors": "PerfumersWorld",
+    "all_links": "PerfumersWorld: https://www.perfumersworld.com/view.php?pro_id=0ZP00365",
+    "cid": 1030,
+    "smiles": "CC(CO)O",
+    "formula": "C3H8O2",
+    "weight": 76.09
+  },
+  {
     "name": "Pyrazine (FEMA-4015)",
     "cas": "290-37-9",
     "fema": "4015",
@@ -8998,6 +10750,18 @@
     "smiles": "C1=CN=C(C=N1)CCS",
     "formula": "C6H8N2S",
     "weight": 140.21
+  },
+  {
+    "name": "Pyridine (FEMA-2966)",
+    "cas": "110-86-1",
+    "fema": "2966",
+    "price_thb_g": 3.87,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/2538-pyridine-fema-2966.html",
+    "cid": 1049,
+    "smiles": "C1=CC=NC=C1",
+    "formula": "C5H5N",
+    "weight": 79.1
   },
   {
     "name": "Pyrrole (FEMA-3386)",
@@ -9180,6 +10944,30 @@
     "weight": 176.25
   },
   {
+    "name": "S-Furfuryl Thioformate (FEMA-3158)",
+    "cas": "59020-90-5",
+    "fema": "3158",
+    "price_thb_g": 139.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/32468-s-furfuryl-thioformate-fema-3158.html",
+    "cid": 62144,
+    "smiles": "C1=COC(=C1)CSC=O",
+    "formula": "C6H6O2S",
+    "weight": 142.18
+  },
+  {
+    "name": "S-Methyl Thiofuroate     (FEMA-3311)",
+    "cas": "13679-61-3",
+    "fema": "3311",
+    "price_thb_g": 59.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ungrouped-aroma-chemicals-for-flavor-and-fragrances/32470-s-methyl-thiofuroate-fema-3311.html",
+    "cid": 61662,
+    "smiles": "CSC(=O)C1=CC=CO1",
+    "formula": "C6H6O2S",
+    "weight": 142.18
+  },
+  {
     "name": "Safraleine",
     "cas": "54440-17-4",
     "fema": "",
@@ -9223,7 +11011,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2847-sandal-pentenol-ebanol.html",
     "cid": 6437266,
-    "smiles": "CC1=CCC(C1(C)C)/C=C\\C(C)C(C)O",
+    "smiles": "CC1=CCC(C1(C)C)C=CC(C)C(C)O",
     "formula": "C14H24O",
     "weight": 208.34
   },
@@ -9259,7 +11047,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2873-santaliff-sandaxol-sandalmysore.html",
     "cid": 119897,
-    "smiles": "CC1=CCC(C1(C)C)C/C=C(\\C)/CO",
+    "smiles": "CC1=CCC(C1(C)C)CC=C(C)CO",
     "formula": "C13H22O",
     "weight": 194.31
   },
@@ -9271,7 +11059,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2855-santalol-fema-3006.html",
     "cid": 12315259,
-    "smiles": "C/C=C/C=C/C=C/C=C/CCCCCCO",
+    "smiles": "CC(=CCCC1(C2CCC(C2)C1=C)C)CO",
     "formula": "C15H24O",
     "weight": 220.35
   },
@@ -9283,7 +11071,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2854-santol-pentenol.html",
     "cid": 15984303,
-    "smiles": "CC1=CCC(C1(C)C)/C=C/C(C)(C)C(C)O",
+    "smiles": "CC1=CCC(C1(C)C)C=CC(C)(C)C(C)O",
     "formula": "C15H26O",
     "weight": 222.37
   },
@@ -9319,7 +11107,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/herb-สมุนไพร/33680-sclareolate-firmenich-.html",
     "cid": 16063805,
-    "smiles": "O=C(OCCC)[C@@H](OC(C)(C)CC)C",
+    "smiles": "CCCOC(=O)C(C)OC(C)(C)CC",
     "formula": "C11H22O3",
     "weight": 202.29
   },
@@ -9540,6 +11328,18 @@
     "weight": 143.21
   },
   {
+    "name": "Sulfurol, 4-Methyl-5-thiazoleethanol (Milk) (FEMA-3204)",
+    "cas": "137-00-8",
+    "fema": "3204",
+    "price_thb_g": 7.55,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/2537-sulfurol-4-methyl-5-thiazoleethanol-milk-fema-3204.html",
+    "cid": 1136,
+    "smiles": "CC1=C(SC=N1)CCO",
+    "formula": "C6H9NOS",
+    "weight": 143.21
+  },
+  {
     "name": "Terpineol",
     "cas": "98-55-5",
     "fema": "",
@@ -9624,6 +11424,18 @@
     "weight": 102.16
   },
   {
+    "name": "Tetramethyl Pyrazine (2,3,5,6)",
+    "cas": "1124-11-4",
+    "fema": "",
+    "price_thb_g": 14.4,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/edible-อาหาร/2540-tetramethyl-pyrazine-2-3-5-6.html",
+    "cid": 14296,
+    "smiles": "CC1=C(N=C(C(=N1)C)C)C",
+    "formula": "C8H12N2",
+    "weight": 136.19
+  },
+  {
     "name": "Theaspirane (FEMA 3774)",
     "cas": "36431-72-8",
     "fema": "3774",
@@ -9655,7 +11467,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/green-พืช-ใบไม้เขียว/2603-thiogeraniol.html",
     "cid": 6365572,
-    "smiles": "CC(=CCC/C(=C/CS)/C)C",
+    "smiles": "CC(=CCCC(=CCS)C)C",
     "formula": "C10H18S",
     "weight": 170.32
   },
@@ -9816,6 +11628,18 @@
     "weight": 222.4
   },
   {
+    "name": "Tropical Ionone, Allyl alpha-ionone, Cetone V",
+    "cas": "79-78-7",
+    "fema": "",
+    "price_thb_g": 25.3,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2574-tropical-ionone-allyl-alpha-ionone-cetone-v.html",
+    "cid": 5365976,
+    "smiles": "CC1=CCCC(C1C=CC(=O)CCC=C)(C)C",
+    "formula": "C16H24O",
+    "weight": 232.36
+  },
+  {
     "name": "Tropical Thiazole",
     "cas": "15679-13-7",
     "fema": "",
@@ -9838,6 +11662,18 @@
     "smiles": "COC(=O)C=C1CCCC1",
     "formula": "C8H12O2",
     "weight": 140.18
+  },
+  {
+    "name": "Undecanal, aldehyde C-11 Undecylic (FEMA-3092)",
+    "cas": "112-44-7",
+    "fema": "3092",
+    "price_thb_g": 3.6,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/ส่วนประกอบน้ำหอม-aldehyde-ไขมัน/2457-undecanal-aldehyde-c-11-undecylic-fema-3092.html",
+    "cid": 8186,
+    "smiles": "CCCCCCCCCCC=O",
+    "formula": "C11H22O",
+    "weight": 170.29
   },
   {
     "name": "Undecavertol",
@@ -9898,6 +11734,18 @@
     "smiles": "COC1=C(C=CC(=C1)C=O)O",
     "formula": "C8H8O3",
     "weight": 152.15
+  },
+  {
+    "name": "Vanillin Propylene Glycol Acetal (FEMA-3905)",
+    "cas": "68527-74-2",
+    "fema": "3905",
+    "price_thb_g": 2.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/vanilla-วานิลลา/8174-vanillin-propylene-glycol-acetal-fema-3905.html",
+    "cid": 109455,
+    "smiles": "CC1COC(O1)C2=CC(=C(C=C2)O)OC",
+    "formula": "C11H14O4",
+    "weight": 210.23
   },
   {
     "name": "Vanillyl Isobutyrate, Isobutavan",
@@ -10075,7 +11923,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/iris-ไอริส/3583-violet-dienyne.html",
     "cid": 6433089,
-    "smiles": "CCCCCC#C/C=C/C=C",
+    "smiles": "CCCCCC#CC=CC=C",
     "formula": "C11H16",
     "weight": 148.24
   },
@@ -10090,6 +11938,18 @@
     "smiles": "CCC=CCCC=CC#N",
     "formula": "C9H13N",
     "weight": 135.21
+  },
+  {
+    "name": "Watermelon Ketone, Calone",
+    "cas": "28940-11-6",
+    "fema": "",
+    "price_thb_g": 21.85,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/fruit-ผลไม้/2557-watermelon-ketone-calone.html",
+    "cid": 120101,
+    "smiles": "CC1=CC2=C(C=C1)OCC(=O)CO2",
+    "formula": "C10H10O3",
+    "weight": 178.18
   },
   {
     "name": "Waxy Nitrile (Ozonil)",
@@ -10123,7 +11983,7 @@
     "vendors": "MySkinRecipes",
     "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/2865-woody-amylene-koavone.html",
     "cid": 20836197,
-    "smiles": "CC(/C(=C(/C)\\C(=O)C)/C)C(C)(C)C",
+    "smiles": "CC(C(=C(C)C(=O)C)C)C(C)(C)C",
     "formula": "C12H22O",
     "weight": 182.3
   },
@@ -10150,6 +12010,18 @@
     "smiles": "CC1COC(O1)(C)C2=CC3=C(C=C2)C(CCC3(C)C)(C)C",
     "formula": "C19H28O2",
     "weight": 288.4
+  },
+  {
+    "name": "Woody epoxide, Cedroxyde",
+    "cas": "CID-94354",
+    "fema": "",
+    "price_thb_g": 39.95,
+    "vendors": "MySkinRecipes",
+    "all_links": "MySkinRecipes: https://www.myskinrecipes.com/shop/th/wood-ไม้-เปลือกไม้/8013-woody-epoxide-cedroxyde.html",
+    "cid": 94354,
+    "smiles": "CC1=CCCC2(C(O2)CCC(=CCC1)C)C",
+    "formula": "C15H24O",
+    "weight": 220.35
   },
   {
     "name": "Woody Furan (Trisamber)",

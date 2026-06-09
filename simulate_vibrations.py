@@ -179,15 +179,49 @@ def main():
         
     print(f"Loaded {len(compounds)} aroma chemicals to simulate.")
     
+    # Load pre-simulated cache from existing OUTPUT_JSON if available
+    sim_cache = {}
+    if os.path.exists(OUTPUT_JSON):
+        try:
+            with open(OUTPUT_JSON, 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+                for item in old_data:
+                    key = item.get("cas") or item.get("name")
+                    if key:
+                        sim_cache[key] = {
+                            "smiles": item.get("smiles"),
+                            "vibrational_frequencies": item.get("vibrational_frequencies"),
+                            "spectrum_curve": item.get("spectrum_curve")
+                        }
+            print(f"Loaded {len(sim_cache)} pre-simulated compounds from cache.")
+        except Exception as e:
+            print(f"Error loading simulation cache: {e}")
+
     grid = get_grid()
     simulated_data = []
     success_count = 0
+    cached_count = 0
     
     for i, c in enumerate(compounds):
         name = c["name"]
         smiles = c["smiles"]
         cas = c["cas"]
         
+        # Check cache
+        cache_key = cas if cas else name
+        cached = sim_cache.get(cache_key)
+        if (cached and cached["smiles"] == smiles and 
+                cached["vibrational_frequencies"] and cached["spectrum_curve"]):
+            c_data = c.copy()
+            c_data.update({
+                "vibrational_frequencies": cached["vibrational_frequencies"],
+                "spectrum_curve": cached["spectrum_curve"]
+            })
+            simulated_data.append(c_data)
+            success_count += 1
+            cached_count += 1
+            continue
+            
         print(f"[{i+1}/{len(compounds)}] Simulating {name} (CAS: {cas})... ", end="", flush=True)
         
         try:
@@ -222,9 +256,6 @@ def main():
             # Generate smoothed spectrum curve
             curve = generate_spectrum_curve(freqs, intensities, grid)
             
-            # Generate coarse 36-bin histogram for compatibility, weighted by intensity
-            hist, _ = np.histogram(freqs, bins=36, range=(400.0, 4000.0), weights=intensities)
-            
             c_data = c.copy()
             c_data.update({
                 "vibrational_frequencies": [round(f, 2) for f in freqs],
@@ -237,11 +268,13 @@ def main():
         except Exception as e:
             print(f"ERROR: {e}")
             
-    # Save simulated vibrations (minified to keep file size small for web performance)
+    # Save simulated vibrations
     with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(simulated_data, f, ensure_ascii=False)
         
     print(f"\nSimulation complete: {success_count}/{len(compounds)} compounds successfully simulated.")
+    print(f"  - Cached: {cached_count}")
+    print(f"  - New Simulations: {success_count - cached_count}")
     print(f"Data saved to {OUTPUT_JSON}")
 
 if __name__ == '__main__':

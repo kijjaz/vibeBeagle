@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlapDesc = document.getElementById('overlap-desc');
     const legendB = document.getElementById('legend-b');
     const legendDelta = document.getElementById('legend-delta');
+    const playSoundABtn = document.getElementById('play-sound-a-btn');
+    const playSoundBBtn = document.getElementById('play-sound-b-btn');
 
     // Molecule A Meta Info
     const molAName = document.getElementById('mol-a-name');
@@ -842,6 +844,10 @@ document.addEventListener('DOMContentLoaded', () => {
         molACid.innerHTML = `<a href="https://pubchem.ncbi.nlm.nih.gov/compound/${comp.cid}" target="_blank" class="val-mono" style="color: var(--gold); text-decoration: none; border-bottom: 1px dotted;">${comp.cid} 🔗</a>`;
         molAPrice.textContent = comp.price_thb_g > 0 ? `${comp.price_thb_g.toFixed(2)} THB/g` : "Not available";
 
+        if (playSoundABtn) {
+            playSoundABtn.classList.remove('hidden');
+        }
+
         // Render Normal Mode Frequency Chips
         modesListContainer.innerHTML = '';
         if (comp.vibrational_frequencies && comp.vibrational_frequencies.length > 0) {
@@ -905,6 +911,10 @@ document.addEventListener('DOMContentLoaded', () => {
         molBCid.innerHTML = `<a href="https://pubchem.ncbi.nlm.nih.gov/compound/${comp.cid}" target="_blank" class="val-mono" style="color: var(--cyan); text-decoration: none; border-bottom: 1px dotted;">${comp.cid} 🔗</a>`;
         molBPrice.textContent = comp.price_thb_g > 0 ? `${comp.price_thb_g.toFixed(2)} THB/g` : "Not available";
 
+        if (playSoundBBtn) {
+            playSoundBBtn.classList.remove('hidden');
+        }
+
         if (clearBBtn) {
             clearBBtn.classList.remove('hidden');
         }
@@ -945,6 +955,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (clearBBtn) {
             clearBBtn.classList.add('hidden');
+        }
+
+        if (playSoundBBtn) {
+            playSoundBBtn.classList.add('hidden');
         }
         
         legendB.classList.add('hidden');
@@ -1112,7 +1126,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const bridgeCandidates = [];
-        const maxDist = 120.0; // Distance threshold in spatial coordinates
+        const offsetSlider = document.getElementById('bridge-max-offset');
+        const maxDist = offsetSlider ? parseFloat(offsetSlider.value) : 80.0;
 
         compoundsData.forEach(comp => {
             // Exclude Molecule A and Molecule B
@@ -1230,6 +1245,72 @@ document.addEventListener('DOMContentLoaded', () => {
         const bridgeCard = document.getElementById('bridge-finder-card');
         if (bridgeCard) {
             bridgeCard.classList.add('hidden');
+        }
+    }
+
+    // Sonification of Vibrations using Web Audio API Additive Synthesis
+    let audioCtx = null;
+    function getAudioContext() {
+        if (!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+        return audioCtx;
+    }
+
+    function playMoleculeSound(comp) {
+        if (!comp || !comp.vibrational_frequencies || comp.vibrational_frequencies.length === 0) return;
+        
+        try {
+            const ctx = getAudioContext();
+            const now = ctx.currentTime;
+            
+            // Master gain node for overall volume limit at -18 dBFS (0.1259 linear amplitude)
+            const masterGain = ctx.createGain();
+            masterGain.gain.setValueAtTime(0.1259, now);
+            masterGain.connect(ctx.destination);
+            
+            const freqs = comp.vibrational_frequencies;
+            
+            // Map frequencies from [400, 4000] cm^-1 to [100, 15000] Hz
+            const mappedModes = freqs.map(wavenumber => {
+                const clamped = Math.max(400, Math.min(4000, wavenumber));
+                const audioFreq = 100 + (clamped - 400) * (15000 - 100) / (4000 - 400);
+                return audioFreq;
+            });
+            
+            // Limit to top 25 modes to avoid Web Audio thread congestion
+            const maxModes = 25;
+            const modesToPlay = mappedModes.slice(0, maxModes);
+            
+            modesToPlay.forEach(f => {
+                const osc = ctx.createOscillator();
+                const gainNode = ctx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(f, now);
+                
+                // Distribute gain among active modes
+                const componentGain = 1.0 / modesToPlay.length;
+                
+                gainNode.gain.setValueAtTime(0.001, now);
+                // Short organic attack envelope (50ms)
+                gainNode.gain.linearRampToValueAtTime(componentGain, now + 0.05);
+                
+                // Exponential decay envelope (higher frequencies damp/decay faster)
+                const decayConst = 0.3 + ((15000 - f) / 15000) * 0.7; // 0.3s to 1.0s decay rate
+                gainNode.gain.exponentialRampToValueAtTime(0.0001, now + decayConst * 4);
+                
+                osc.connect(gainNode);
+                gainNode.connect(masterGain);
+                
+                osc.start(now);
+                osc.stop(now + decayConst * 4);
+            });
+        } catch (err) {
+            console.error("Audio playback error: ", err);
         }
     }
 
@@ -1478,10 +1559,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (t > 0.0 && t < 1.0) {
                             const projX = xA + t * vx;
                             const projY = yA + t * vy;
-                            const d = Math.sqrt((comp.x - projX) * (comp.x - projX) + (comp.y - projY) * (comp.y - projY));
-                            if (d <= 120.0) {
-                                onBridge = true;
-                            }
+                             const d = Math.sqrt((comp.x - projX) * (comp.x - projX) + (comp.y - projY) * (comp.y - projY));
+                             const offsetSlider = document.getElementById('bridge-max-offset');
+                             const maxDist = offsetSlider ? parseFloat(offsetSlider.value) : 80.0;
+                             if (d <= maxDist) {
+                                 onBridge = true;
+                             }
                         }
                     }
                 }
@@ -1686,10 +1769,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 150);
     });
 
+    // Bridge Max Offset Slider listener
+    const bridgeMaxOffsetSlider = document.getElementById('bridge-max-offset');
+    const bridgeMaxOffsetVal = document.getElementById('bridge-max-offset-val');
+    if (bridgeMaxOffsetSlider) {
+        bridgeMaxOffsetSlider.addEventListener('input', (e) => {
+            if (bridgeMaxOffsetVal) {
+                bridgeMaxOffsetVal.textContent = `${e.target.value} px`;
+            }
+            calculateScentBridge();
+            // Also redraw network map to update active bridge highlights
+            if (activeTab === 'network') {
+                renderVisNetwork();
+            }
+        });
+    }
+
     if (similarityLimitSelect) {
         similarityLimitSelect.addEventListener('change', () => {
             if (selectedMolA) {
                 renderSimilarityHub(selectedMolA.cas);
+            }
+        });
+    }
+
+    // Play Sound button event listeners
+    if (playSoundABtn) {
+        playSoundABtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (selectedMolA) {
+                playMoleculeSound(selectedMolA);
+            }
+        });
+    }
+
+    if (playSoundBBtn) {
+        playSoundBBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (selectedMolB) {
+                playMoleculeSound(selectedMolB);
             }
         });
     }
