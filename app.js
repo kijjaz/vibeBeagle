@@ -1152,39 +1152,38 @@ document.addEventListener('DOMContentLoaded', () => {
         if (bridgeCandidates.length === 0) {
             bridgeList.innerHTML = '<div style="color: var(--text-secondary); padding: 12px; font-size: 0.9rem;">No bridging aroma chemicals found close to this transition path. Try selecting different molecules.</div>';
         } else {
-            bridgeCandidates.forEach(cand => {
+            bridgeCandidates.forEach((cand, idx) => {
                 const comp = cand.compound;
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.style.cssText = 'padding: 12px; width: 190px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255, 255, 255, 0.04); background: #121212; position: relative;';
+                
+                // Create compact bridge pill step
+                const step = document.createElement('div');
+                step.className = 'bridge-step';
+                step.title = `${comp.name}\nCAS: ${comp.cas}\nOffset: ${Math.round(cand.d)}px`;
 
-                const title = document.createElement('h4');
-                title.textContent = comp.name.length > 25 ? comp.name.substring(0, 22) + '...' : comp.name;
-                title.style.cssText = 'margin: 0 0 6px 0; font-family: Outfit; font-size: 0.9rem; color: #f0f0f0;';
+                const prog = document.createElement('span');
+                prog.className = 'step-progress';
+                prog.textContent = `${Math.round(cand.t * 100)}%`;
 
-                const meta = document.createElement('div');
-                meta.style.cssText = 'font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 8px;';
-                meta.innerHTML = `
-                    <div style="font-family: Share Tech Mono; opacity: 0.8;">CAS: ${comp.cas}</div>
-                    <div style="margin-top: 2px;">Path Progress: <strong style="color: var(--gold);">${Math.round(cand.t * 100)}%</strong></div>
-                    <div style="margin-top: 2px; opacity: 0.6;">Offset: ${Math.round(cand.d)} px</div>
-                `;
+                const nameSpan = document.createElement('span');
+                nameSpan.className = 'step-name';
+                nameSpan.textContent = comp.name;
 
-                // Select buttons
                 const btnGroup = document.createElement('div');
-                btnGroup.style.cssText = 'display: flex; gap: 6px; margin-top: auto;';
+                btnGroup.className = 'step-actions';
 
                 const btnA = document.createElement('button');
-                btnA.textContent = 'Set A';
-                btnA.style.cssText = 'flex: 1; padding: 4px; font-size: 0.75rem; background: var(--gold-dim); border: none; color: #000; cursor: pointer; border-radius: 3px; font-weight: bold;';
+                btnA.className = 'step-btn a-btn';
+                btnA.textContent = 'A';
+                btnA.title = 'Set as Molecule A';
                 btnA.addEventListener('click', (e) => {
                     e.stopPropagation();
                     selectMoleculeA(comp);
                 });
 
                 const btnB = document.createElement('button');
-                btnB.textContent = 'Set B';
-                btnB.style.cssText = 'flex: 1; padding: 4px; font-size: 0.75rem; background: #008b8b; border: none; color: #fff; cursor: pointer; border-radius: 3px; font-weight: bold;';
+                btnB.className = 'step-btn b-btn';
+                btnB.textContent = 'B';
+                btnB.title = 'Set as Molecule B';
                 btnB.addEventListener('click', (e) => {
                     e.stopPropagation();
                     selectMoleculeB(comp);
@@ -1192,17 +1191,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 btnGroup.appendChild(btnA);
                 btnGroup.appendChild(btnB);
-                card.appendChild(title);
-                card.appendChild(meta);
-                card.appendChild(btnGroup);
                 
-                // Allow card click to trigger main inspection
-                card.style.cursor = 'pointer';
-                card.addEventListener('click', () => {
+                step.appendChild(prog);
+                step.appendChild(nameSpan);
+                step.appendChild(btnGroup);
+
+                // Allow step click to trigger main inspection
+                step.style.cursor = 'pointer';
+                step.addEventListener('click', () => {
                     selectMoleculeA(comp);
                 });
 
-                bridgeList.appendChild(card);
+                bridgeList.appendChild(step);
+
+                // Add connecting arrow between steps (except the last one)
+                if (idx < bridgeCandidates.length - 1) {
+                    const arrow = document.createElement('span');
+                    arrow.className = 'bridge-arrow';
+                    arrow.textContent = '→';
+                    bridgeList.appendChild(arrow);
+                }
             });
         }
 
