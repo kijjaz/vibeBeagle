@@ -998,9 +998,31 @@ document.addEventListener('DOMContentLoaded', () => {
             li.className = 'match-item';
             const scoreClass = item.similarity > 0.7 ? 'score-high' : '';
             li.innerHTML = `
-                <span class="match-name" title="${item.name}">${item.name}</span>
-                <span class="match-score ${scoreClass}">${(item.similarity * 100).toFixed(1)}%</span>
+                <div class="match-info">
+                    <span class="match-name" title="${item.name}">${item.name}</span>
+                    <span class="match-score ${scoreClass}">${(item.similarity * 100).toFixed(1)}%</span>
+                </div>
+                <div class="match-actions">
+                    <button class="match-btn a-btn" title="Set as Molecule A">A</button>
+                    <button class="match-btn b-btn" title="Set as Molecule B">B</button>
+                </div>
             `;
+            
+            const btnA = li.querySelector('.match-btn.a-btn');
+            const btnB = li.querySelector('.match-btn.b-btn');
+            const comp = compoundsData.find(c => c.cas === item.cas);
+
+            if (comp) {
+                btnA.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectMoleculeA(comp);
+                });
+                btnB.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectMoleculeB(comp);
+                });
+            }
+
             li.addEventListener('click', () => {
                 const compB = compoundsData.find(c => c.cas === item.cas);
                 if (compB) {
@@ -1017,9 +1039,31 @@ document.addEventListener('DOMContentLoaded', () => {
             li.className = 'match-item';
             const scoreClass = item.similarity < 0.2 ? 'score-low' : '';
             li.innerHTML = `
-                <span class="match-name" title="${item.name}">${item.name}</span>
-                <span class="match-score ${scoreClass}">${(item.similarity * 100).toFixed(1)}%</span>
+                <div class="match-info">
+                    <span class="match-name" title="${item.name}">${item.name}</span>
+                    <span class="match-score ${scoreClass}">${(item.similarity * 100).toFixed(1)}%</span>
+                </div>
+                <div class="match-actions">
+                    <button class="match-btn a-btn" title="Set as Molecule A">A</button>
+                    <button class="match-btn b-btn" title="Set as Molecule B">B</button>
+                </div>
             `;
+            
+            const btnA = li.querySelector('.match-btn.a-btn');
+            const btnB = li.querySelector('.match-btn.b-btn');
+            const comp = compoundsData.find(c => c.cas === item.cas);
+
+            if (comp) {
+                btnA.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectMoleculeA(comp);
+                });
+                btnB.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectMoleculeB(comp);
+                });
+            }
+
             li.addEventListener('click', () => {
                 const compB = compoundsData.find(c => c.cas === item.cas);
                 if (compB) {

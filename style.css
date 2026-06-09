@@ -681,7 +681,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 10px;
+    padding: 6px 8px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 6px;
@@ -696,18 +696,66 @@ body {
     transform: translateX(2px);
 }
 
+.match-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+    margin-right: 8px;
+}
+
 .match-item .match-name {
     font-weight: 500;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 110px;
+    flex: 1;
+    min-width: 0;
+    margin-right: 8px;
 }
 
 .match-item .match-score {
     font-family: var(--font-mono);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.match-actions {
+    display: flex;
+    gap: 4px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+}
+
+.match-item:hover .match-actions {
+    opacity: 1;
+}
+
+.match-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #bbb;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    transition: all 0.15s ease;
+}
+
+.match-btn.a-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.match-btn.b-btn:hover {
+    background: rgba(0, 242, 254, 0.2);
+    border-color: var(--cyan);
+    color: var(--cyan);
 }
 
 .score-high {
