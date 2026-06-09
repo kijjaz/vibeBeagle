@@ -937,6 +937,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedMolB) {
             calculateAndDisplayOverlap();
             updateSharedPeaks();
+            calculateScentBridge();
+        } else {
+            hideScentBridge();
         }
 
         // Update Plots
@@ -980,6 +983,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update overlap gauge and shared peaks
         calculateAndDisplayOverlap();
         updateSharedPeaks();
+        calculateScentBridge();
         
         // Update plots
         updateChart();
@@ -1010,6 +1014,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         resetOverlapGauge();
         sharedPeaksDisplay.classList.add('hidden');
+        hideScentBridge();
         
         // Update plots
         updateChart();
@@ -1136,6 +1141,142 @@ document.addEventListener('DOMContentLoaded', () => {
         overlapCircle.style.stroke = "var(--gold)";
         overlapText.textContent = `0%`;
         overlapDesc.textContent = "Select Molecule B to calculate similarity";
+    }
+
+    function calculateScentBridge() {
+        const bridgeCard = document.getElementById('bridge-finder-card');
+        const bridgeList = document.getElementById('bridge-list');
+        
+        if (!selectedMolA || !selectedMolB || !bridgeCard || !bridgeList) {
+            hideScentBridge();
+            return;
+        }
+
+        const xA = selectedMolA.x;
+        const yA = selectedMolA.y;
+        const xB = selectedMolB.x;
+        const yB = selectedMolB.y;
+
+        // Verify that A and B have valid coordinates
+        if (xA === undefined || yA === undefined || xB === undefined || yB === undefined) {
+            hideScentBridge();
+            return;
+        }
+
+        // Calculate line segment vector from A to B
+        const vx = xB - xA;
+        const vy = yB - yA;
+        const lenSq = vx * vx + vy * vy;
+
+        if (lenSq === 0) {
+            hideScentBridge();
+            return;
+        }
+
+        const bridgeCandidates = [];
+        const maxDist = 120.0; // Distance threshold in spatial coordinates
+
+        compoundsData.forEach(comp => {
+            // Exclude Molecule A and Molecule B
+            if (comp.cas === selectedMolA.cas || comp.cas === selectedMolB.cas) return;
+            if (comp.x === undefined || comp.y === undefined) return;
+
+            const cx = comp.x;
+            const cy = comp.y;
+
+            // Projection factor t
+            const t = ((cx - xA) * vx + (cy - yA) * vy) / lenSq;
+
+            // Only keep compounds that are physically between A and B
+            if (t > 0.0 && t < 1.0) {
+                // Project coordinate
+                const projX = xA + t * vx;
+                const projY = yA + t * vy;
+
+                // Perpendicular distance d
+                const d = Math.sqrt((cx - projX) * (cx - projX) + (cy - projY) * (cy - projY));
+
+                if (d <= maxDist) {
+                    bridgeCandidates.push({
+                        compound: comp,
+                        t: t,
+                        d: d
+                    });
+                }
+            }
+        });
+
+        // Sort candidates by t ascending (from A to B)
+        bridgeCandidates.sort((a, b) => a.t - b.t);
+
+        // Render Bridge UI
+        bridgeList.innerHTML = '';
+        if (bridgeCandidates.length === 0) {
+            bridgeList.innerHTML = '<div style="color: var(--text-secondary); padding: 12px; font-size: 0.9rem;">No bridging aroma chemicals found close to this transition path. Try selecting different molecules.</div>';
+        } else {
+            bridgeCandidates.forEach(cand => {
+                const comp = cand.compound;
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.cssText = 'padding: 12px; width: 190px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255, 255, 255, 0.04); background: #121212; position: relative;';
+
+                const title = document.createElement('h4');
+                title.textContent = comp.name.length > 25 ? comp.name.substring(0, 22) + '...' : comp.name;
+                title.style.cssText = 'margin: 0 0 6px 0; font-family: Outfit; font-size: 0.9rem; color: #f0f0f0;';
+
+                const meta = document.createElement('div');
+                meta.style.cssText = 'font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 8px;';
+                meta.innerHTML = `
+                    <div style="font-family: Share Tech Mono; opacity: 0.8;">CAS: ${comp.cas}</div>
+                    <div style="margin-top: 2px;">Path Progress: <strong style="color: var(--gold);">${Math.round(cand.t * 100)}%</strong></div>
+                    <div style="margin-top: 2px; opacity: 0.6;">Offset: ${Math.round(cand.d)} px</div>
+                `;
+
+                // Select buttons
+                const btnGroup = document.createElement('div');
+                btnGroup.style.cssText = 'display: flex; gap: 6px; margin-top: auto;';
+
+                const btnA = document.createElement('button');
+                btnA.textContent = 'Set A';
+                btnA.style.cssText = 'flex: 1; padding: 4px; font-size: 0.75rem; background: var(--gold-dim); border: none; color: #000; cursor: pointer; border-radius: 3px; font-weight: bold;';
+                btnA.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectMoleculeA(comp);
+                });
+
+                const btnB = document.createElement('button');
+                btnB.textContent = 'Set B';
+                btnB.style.cssText = 'flex: 1; padding: 4px; font-size: 0.75rem; background: #008b8b; border: none; color: #fff; cursor: pointer; border-radius: 3px; font-weight: bold;';
+                btnB.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectMoleculeB(comp);
+                });
+
+                btnGroup.appendChild(btnA);
+                btnGroup.appendChild(btnB);
+                card.appendChild(title);
+                card.appendChild(meta);
+                card.appendChild(btnGroup);
+                
+                // Allow card click to trigger main inspection
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', () => {
+                    selectMoleculeA(comp);
+                });
+
+                bridgeList.appendChild(card);
+            });
+        }
+
+        // Show the panel
+        bridgeCard.classList.remove('hidden');
+    }
+
+    function hideScentBridge() {
+        const bridgeCard = document.getElementById('bridge-finder-card');
+        if (bridgeCard) {
+            bridgeCard.classList.add('hidden');
+        }
     }
 
     // Redraw spectrum curves in Chart.js
@@ -1356,6 +1497,69 @@ document.addEventListener('DOMContentLoaded', () => {
                         border: 'var(--gold)'
                     }
                 };
+            } else if (selectedMolA && selectedMolB && comp.cas === selectedMolB.cas) {
+                // Highlight Molecule B in cyan
+                nodeColor = {
+                    background: '#0a363d',
+                    border: 'var(--cyan)',
+                    highlight: {
+                        background: '#0a363d',
+                        border: 'var(--cyan)'
+                    }
+                };
+            } else if (selectedMolA && selectedMolB) {
+                // Check if this node lies on the bridge between A and B
+                const xA = selectedMolA.x;
+                const yA = selectedMolA.y;
+                const xB = selectedMolB.x;
+                const yB = selectedMolB.y;
+                
+                let onBridge = false;
+                if (xA !== undefined && yA !== undefined && xB !== undefined && yB !== undefined && comp.x !== undefined && comp.y !== undefined) {
+                    const vx = xB - xA;
+                    const vy = yB - yA;
+                    const lenSq = vx * vx + vy * vy;
+                    if (lenSq > 0) {
+                        const t = ((comp.x - xA) * vx + (comp.y - yA) * vy) / lenSq;
+                        if (t > 0.0 && t < 1.0) {
+                            const projX = xA + t * vx;
+                            const projY = yA + t * vy;
+                            const d = Math.sqrt((comp.x - projX) * (comp.x - projX) + (comp.y - projY) * (comp.y - projY));
+                            if (d <= 120.0) {
+                                onBridge = true;
+                            }
+                        }
+                    }
+                }
+                
+                if (onBridge) {
+                    nodeColor = {
+                        background: '#3d280a', // Dark warm gold/orange
+                        border: '#ff9f1c',     // Glowing orange
+                        highlight: { background: '#4d320c', border: '#ff9f1c' }
+                    };
+                } else {
+                    // Regular similarity highlights
+                    const report = similarityData[selectedMolA.cas];
+                    if (report) {
+                        const match = report.closest.find(m => m.cas === comp.cas);
+                        if (match) {
+                            if (match.similarity >= 0.8) {
+                                nodeColor = {
+                                    background: '#0b2416',
+                                    border: '#39e09b',
+                                    highlight: { background: '#0f361f', border: '#39e09b' }
+                                };
+                            } else if (match.similarity >= 0.6) {
+                                nodeColor = {
+                                    background: '#061c24',
+                                    border: 'var(--cyan)',
+                                    highlight: { background: '#0a2a36', border: 'var(--cyan)' }
+                                };
+                            }
+                        }
+                    }
+                }
             } else if (selectedMolA) {
                 // Style matches relative to selectedMolA
                 const report = similarityData[selectedMolA.cas];
