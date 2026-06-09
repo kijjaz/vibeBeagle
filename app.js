@@ -108,6 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
             tabContentAnalyzer.classList.remove('active');
             tabContentNetwork.classList.remove('active');
             activeTab = 'theory';
+            
+            // Trigger MathJax typeset to compile LaTeX math equations
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
         });
     }
 
@@ -420,83 +425,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSearchSuggestions(query, filtered);
     }
 
-    // Render Autocomplete Dropdown Suggestions
+    // Render Autocomplete Dropdown Suggestions (disabled to prevent overlapping lists since directory filters in real-time)
     function updateSearchSuggestions(query, filtered) {
-        if (!searchSuggestions) return;
-        
-        if (!query) {
+        if (searchSuggestions) {
             searchSuggestions.innerHTML = '';
             searchSuggestions.classList.add('hidden');
-            return;
         }
-
-        // Only show top 8 matches in dropdown
-        const suggestions = filtered.slice(0, 8);
-        
-        if (suggestions.length === 0) {
-            searchSuggestions.innerHTML = '<div class="empty-state" style="padding: 12px; font-size: 0.75rem;">No matching compounds</div>';
-            searchSuggestions.classList.remove('hidden');
-            return;
-        }
-
-        searchSuggestions.innerHTML = '';
-        suggestions.forEach(comp => {
-            const item = document.createElement('div');
-            item.className = 'suggestion-item';
-            
-            // Style the selection background indicator in the dropdown
-            let selectionClass = '';
-            if (selectedMolA && selectedMolA.cas === comp.cas) selectionClass = 'selected-a';
-            if (selectedMolB && selectedMolB.cas === comp.cas) selectionClass = 'selected-b';
-            if (selectedMolA && selectedMolA.cas === comp.cas && selectedMolB && selectedMolB.cas === comp.cas) selectionClass = 'selected-a selected-b';
-            
-            if (selectionClass) {
-                item.className += ' ' + selectionClass;
-            }
-
-            item.innerHTML = `
-                <div class="suggestion-info" title="${comp.name}">
-                    <span class="suggestion-name">${comp.name}</span>
-                    <div class="suggestion-meta">
-                        <span>${comp.cas}</span> | <span>${comp.formula}</span>
-                    </div>
-                </div>
-                <div class="suggestion-actions">
-                    <button class="suggest-btn a-btn" title="Set as Molecule A (Gold)">+ A</button>
-                    <button class="suggest-btn b-btn" title="Set as Molecule B (Cyan)">+ B</button>
-                </div>
-            `;
-            
-            // Action button events
-            item.querySelector('.a-btn').addEventListener('click', (e) => {
-                e.stopPropagation();
-                selectMoleculeA(comp);
-                clearSearchInputAndSuggestions();
-            });
-            
-            item.querySelector('.b-btn').addEventListener('click', (e) => {
-                e.stopPropagation();
-                selectMoleculeB(comp);
-                clearSearchInputAndSuggestions();
-            });
-
-            // Clicking the info part selects Molecule A (default)
-            item.querySelector('.suggestion-info').addEventListener('click', (e) => {
-                e.stopPropagation();
-                selectMoleculeA(comp);
-                clearSearchInputAndSuggestions();
-            });
-
-            // Clicking the whole item selects Molecule A (default)
-            item.addEventListener('click', () => {
-                selectMoleculeA(comp);
-                clearSearchInputAndSuggestions();
-            });
-
-            searchSuggestions.appendChild(item);
-        });
-
-        searchSuggestions.classList.remove('hidden');
+        return;
     }
 
     function clearSearchInputAndSuggestions() {

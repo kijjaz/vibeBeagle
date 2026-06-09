@@ -14,6 +14,21 @@
     <script src="chart.js"></script>
     <!-- Local Vis.js Network for offline-first spatial graph -->
     <script src="vis-network.min.js"></script>
+    <!-- MathJax for Latex-style Math equations in web -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
@@ -338,8 +353,13 @@
                             <p style="line-height: 1.6; color: var(--text-primary); margin-bottom: 12px; margin-top: 0;">
                                 Conventional olfaction science suggests a <strong>"lock-and-key" shape model</strong> (odotope theory), where olfactory receptors recognize the geometric shapes of molecules. However, this model struggles to explain why molecules with identical shapes can smell completely different, or why molecules with totally different shapes (like sulfur compounds and boranes) can both smell strongly of rotten eggs.
                             </p>
+                            <p style="line-height: 1.6; color: var(--text-primary); margin-bottom: 12px;">
+                                The <strong>Vibration Theory of Olfaction</strong>, championed by biophysicist Luca Turin, proposes that olfactory receptors behave like miniature spectrometers. Receptors utilize <strong>Inelastic Electron Tunneling Spectroscopy (IETS)</strong> to measure the vibrational frequencies of chemical bonds (molecular vibrations) when an odorant is docked.
+                            </p>
                             <p style="line-height: 1.6; color: var(--text-primary); margin-bottom: 0;">
-                                The <strong>Vibration Theory of Olfaction</strong>, championed by biophysicist Luca Turin, proposes that olfactory receptors behave like miniature spectrometers. Receptors utilize <strong>Inelastic Electron Tunneling Spectroscopy (IETS)</strong> to measure the vibrational frequencies of chemical bonds (molecular vibrations) when an odorant is docked. When the molecule's vibration matches a receptor's resonant frequency, it acts as a bridge, allowing an electron to tunnel across the gap, triggering the neural impulse that our brain perceives as a specific scent.
+                                Specifically, when an odorant molecule docks inside the receptor's binding pocket, it acts as a bridge for an electron to tunnel across a potential gap. Tunneling is only possible (or highly amplified) when the energy of the electron matches a quantum of molecular vibration:
+                                $$eV = \hbar \omega = h \nu$$
+                                where $V$ is the bias voltage across the receptor, $e$ is the charge of an electron, $\hbar$ is the reduced Planck constant, and $\omega = 2\pi\nu$ is the molecular normal mode frequency. This inelastic tunneling event triggers an intracellular G-protein cascade, sending a signal to the olfactory bulb.
                             </p>
                         </div>
 
@@ -360,25 +380,34 @@
                                 <div style="border-left: 3px solid var(--gold); padding-left: 16px;">
                                     <h4 style="color: var(--gold); font-family: 'Outfit'; margin-bottom: 4px; margin-top: 0; font-size: 1.05rem;">2. Geometry Optimization (UFF)</h4>
                                     <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin: 0;">
-                                        We use the Universal Force Field (UFF) to minimize the molecule's potential energy, relaxing the bond lengths and angles to their physical equilibrium state.
+                                        We use the Universal Force Field (UFF) to minimize the molecule's potential energy $V(\mathbf{R})$, relaxing the bond lengths and angles to their physical equilibrium state where forces $\mathbf{F}_i = -\nabla_i V = 0$.
                                     </p>
                                 </div>
                                 <div style="border-left: 3px solid var(--gold); padding-left: 16px;">
                                     <h4 style="color: var(--gold); font-family: 'Outfit'; margin-bottom: 4px; margin-top: 0; font-size: 1.05rem;">3. Numerical Hessian & Normal Modes</h4>
                                     <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin: 0;">
-                                        The second derivatives of potential energy are computed numerically by displacing each atom's coordinates by a tiny step ($\pm 0.005$ Å) and measuring force gradient changes. The resulting mass-weighted Hessian matrix is diagonalized to yield the molecule's collective <strong>Normal Modes</strong> (eigenvectors) and resonant wavenumbers (eigenvalues).
+                                        The second derivatives of potential energy are computed numerically by displacing each atom's coordinates by a tiny step ($\delta = \pm 0.005$ Å) and measuring force gradient changes. The resulting mass-weighted Hessian matrix $H_{ij}$ is defined as:
+                                        $$H_{ij} = \frac{1}{\sqrt{m_i m_j}} \frac{\partial^2 V}{\partial x_i \partial x_j}$$
+                                        Diagonalization of $H$ yields eigenvalues $\lambda_k = \omega_k^2$, which are converted to wavenumbers:
+                                        $$\tilde{\nu}_k = \frac{\omega_k}{2\pi c} = \frac{1}{2\pi c} \sqrt{\lambda_k}$$
                                     </p>
                                 </div>
                                 <div style="border-left: 3px solid var(--gold); padding-left: 16px;">
                                     <h4 style="color: var(--gold); font-family: 'Outfit'; margin-bottom: 4px; margin-top: 0; font-size: 1.05rem;">4. IR Intensity Estimation</h4>
                                     <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin: 0;">
-                                        Gasteiger partial charges are calculated for each atom. For each normal mode, the transition dipole derivative is computed by summing the displacement-charge products. The vibrational intensity is proportional to the square of this dipole derivative. Extremely symmetric modes cancel out and receive zero intensity, representing physical selection rules.
+                                        Gasteiger partial charges $q_i$ are calculated for each atom. For each normal mode $k$ with displacements $\mathbf{u}_i^k$, the transition dipole derivative is computed by summing displacement-charge products:
+                                        $$\frac{\partial \boldsymbol{\mu}}{\partial Q_k} = \sum_{i} q_i \mathbf{u}_i^k$$
+                                        The vibrational intensity $I_k$ is proportional to the square of this transition dipole derivative:
+                                        $$I_k \propto \left\| \frac{\partial \boldsymbol{\mu}}{\partial Q_k} \right\|^2$$
+                                        Extremely symmetric modes cancel out and receive zero intensity, representing physical selection rules.
                                     </p>
                                 </div>
                                 <div style="border-left: 3px solid var(--gold); padding-left: 16px;">
                                     <h4 style="color: var(--gold); font-family: 'Outfit'; margin-bottom: 4px; margin-top: 0; font-size: 1.05rem;">5. Gaussian Broadening & Grid Mapping</h4>
                                     <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin: 0;">
-                                        The discrete modes are broadened into a continuous curve using a Gaussian kernel with $\sigma = 25 \text{ cm}^{-1}$ over a 361-point grid from $400$ to $4000 \text{ cm}^{-1}$ (step $10 \text{ cm}^{-1}$). The final curve is normalized to a peak height of 1.0.
+                                        The discrete modes are broadened into a continuous curve using a Gaussian kernel with $\sigma = 25 \text{ cm}^{-1}$ over a 361-point grid from $400$ to $4000 \text{ cm}^{-1}$ (step $10 \text{ cm}^{-1}$):
+                                        $$I(\tilde{\nu}) = \sum_{k} I_k \exp\left( -\frac{(\tilde{\nu} - \tilde{\nu}_k)^2}{2\sigma^2} \right)$$
+                                        The final curve is normalized to a peak height of 1.0.
                                     </p>
                                 </div>
                             </div>
@@ -391,71 +420,100 @@
                                 Standard cosine similarity treats all wavenumbers with equal weight. However, organic molecules are dominated by aliphatic $\text{C-H}$ stretches around $2800\text{-}3000 \text{ cm}^{-1}$. This "structural scaffold noise" dilutes the presence of rare, odor-active functional groups in similarity calculations.
                             </p>
                             <p style="line-height: 1.6; margin-bottom: 16px; margin-top: 0;">
-                                To resolve this, we optimized a **band-weighting profile** to maximize the clustering of known scent categories (e.g. musk, fruit, wood, spice) in coordinate space. This results in the following operational scaling weights:
+                                To resolve this, we optimized a **band-weighting profile** to maximize the clustering of known scent categories (e.g. musk, fruit, wood, spice) in coordinate space. For two vibration vectors $\vec{x}$ and $\vec{y}$, the similarity $S$ is calculated using the weighted cosine coefficient:
+                                $$S(\vec{x}, \vec{y}) = \frac{\sum_{i} w_i x_i y_i}{\sqrt{\sum_{i} w_i x_i^2} \sqrt{\sum_{i} w_i y_i^2}}$$
+                                where $w_i$ is the weight of the band corresponding to frequency bin $i$:
                             </p>
                             
                             <div style="overflow-x: auto;">
-                                <table class="theory-table" style="width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem;">
+                                <table class="theory-table">
                                     <thead>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); text-align: left;">
-                                            <th style="padding: 10px 8px; color: var(--gold);">Band</th>
-                                            <th style="padding: 10px 8px; color: var(--gold);">Range (cm⁻¹)</th>
-                                            <th style="padding: 10px 8px; color: var(--gold);">Weight</th>
-                                            <th style="padding: 10px 8px; color: var(--gold);">Odor Relevance</th>
+                                        <tr>
+                                            <th>Band</th>
+                                            <th>Range (cm⁻¹)</th>
+                                            <th>Weight</th>
+                                            <th>Odor Relevance</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500;">Fingerprint</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">400 - 1400</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">1.1924</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary);">Skeletal vibrations, essential for shape-specific details.</td>
+                                        <tr>
+                                            <td style="font-weight: 500;">Fingerprint</td>
+                                            <td class="val-mono">400 - 1400</td>
+                                            <td class="val-mono">1.1924</td>
+                                            <td style="color: var(--text-secondary);">Skeletal vibrations, essential for shape-specific details.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500;">Aromatic / Double Bonds</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">1400 - 1650</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">1.0231</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary);">Aromatic rings, conjugated double bonds.</td>
+                                        <tr>
+                                            <td style="font-weight: 500;">Aromatic / Double Bonds</td>
+                                            <td class="val-mono">1400 - 1650</td>
+                                            <td class="val-mono">1.0231</td>
+                                            <td style="color: var(--text-secondary);">Aromatic rings, conjugated double bonds.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500; color: #ff9f1c;">Carbonyl (C=O)</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">1650 - 1800</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">1.5616</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary);">Key marker in esters (fruity), ketones, and aldehydes. Up-weighted by 56%.</td>
+                                        <tr>
+                                            <td style="font-weight: 500; color: #ff9f1c;">Carbonyl (C=O)</td>
+                                            <td class="val-mono">1650 - 1800</td>
+                                            <td class="val-mono">1.5616</td>
+                                            <td style="color: var(--text-secondary);">Key marker in esters (fruity), ketones, and aldehydes. Up-weighted by 56%.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500; color: #00f2fe;">Triple Bonds / Nitriles</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">2100 - 2260</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">15.0000</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary);">Nitriles (citrus/green). Very rare and highly potent; heavily prioritized.</td>
+                                        <tr>
+                                            <td style="font-weight: 500; color: #00f2fe;">Triple Bonds / Nitriles</td>
+                                            <td class="val-mono">2100 - 2260</td>
+                                            <td class="val-mono">15.0000</td>
+                                            <td style="color: var(--text-secondary);">Nitriles (citrus/green). Very rare and highly potent; heavily prioritized.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500;">Thiols (S-H)</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">2500 - 2600</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">0.1898</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary);">Sulfides/thiols. Distinctly sharp; down-weighted to prevent overriding.</td>
+                                        <tr>
+                                            <td style="font-weight: 500;">Thiols (S-H)</td>
+                                            <td class="val-mono">2500 - 2600</td>
+                                            <td class="val-mono">0.1898</td>
+                                            <td style="color: var(--text-secondary);">Sulfides/thiols. Distinctly sharp; down-weighted to prevent overriding.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500; text-decoration: line-through; opacity: 0.5;">Aliphatic C-H</td>
-                                            <td style="padding: 10px 8px; opacity: 0.5;" class="val-mono">2800 - 3000</td>
-                                            <td style="padding: 10px 8px; opacity: 0.5;" class="val-mono">0.3528</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary); opacity: 0.8;">Generic organic paraffinic stretch. Down-weighted by 65% to ignore noise.</td>
+                                        <tr>
+                                            <td style="font-weight: 500; text-decoration: line-through; opacity: 0.5;">Aliphatic C-H</td>
+                                            <td class="val-mono" style="opacity: 0.5;">2800 - 3000</td>
+                                            <td class="val-mono" style="opacity: 0.5;">0.3528</td>
+                                            <td style="color: var(--text-secondary); opacity: 0.8;">Generic organic paraffinic stretch. Down-weighted by 65% to ignore noise.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500;">Aromatic C-H</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">3000 - 3150</td>
-                                            <td style="padding: 10px 8px;" class="val-mono">0.7438</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary);">Benzene ring/alkenyl hydrogens.</td>
+                                        <tr>
+                                            <td style="font-weight: 500;">Aromatic C-H</td>
+                                            <td class="val-mono">3000 - 3150</td>
+                                            <td class="val-mono">0.7438</td>
+                                            <td style="color: var(--text-secondary);">Benzene ring/alkenyl hydrogens.</td>
                                         </tr>
-                                        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
-                                            <td style="padding: 10px 8px; font-weight: 500; text-decoration: line-through; opacity: 0.5;">Hydroxyl (O-H)</td>
-                                            <td style="padding: 10px 8px; opacity: 0.5;" class="val-mono">3150 - 3650</td>
-                                            <td style="padding: 10px 8px; opacity: 0.5;" class="val-mono">0.0425</td>
-                                            <td style="padding: 10px 8px; color: var(--text-secondary); opacity: 0.8;">Alcohols/phenols. Ignored to avoid hydrogen-bonding shifts and humidity noise.</td>
+                                        <tr>
+                                            <td style="font-weight: 500; text-decoration: line-through; opacity: 0.5;">Hydroxyl (O-H)</td>
+                                            <td class="val-mono" style="opacity: 0.5;">3150 - 3650</td>
+                                            <td class="val-mono" style="opacity: 0.5;">0.0425</td>
+                                            <td style="color: var(--text-secondary); opacity: 0.8;">Alcohols/phenols. Ignored to avoid hydrogen-bonding shifts and humidity noise.</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+
+                        <!-- Scent Bridge Finder Mathematics Card -->
+                        <div class="card" style="padding: 24px;">
+                            <h2 style="font-family: 'Outfit'; color: var(--gold); margin-bottom: 12px; font-size: 1.4rem; margin-top: 0;">Scent Bridge Finder Projection Mathematics</h2>
+                            <p style="line-height: 1.6; margin-bottom: 16px; margin-top: 0;">
+                                When two endpoints—<strong>Molecule A</strong> ($P_A$) and <strong>Molecule B</strong> ($P_B$)—are selected, we calculate a virtual transition line between them in the 2D MDS coordinate space:
+                            </p>
+                            <p style="line-height: 1.6; margin-bottom: 16px;">
+                                1. Let $P_A = (x_A, y_A)$ and $P_B = (x_B, y_B)$ be the coordinates. We define the line segment vector from A to B as:
+                                $$\vec{v} = P_B - P_A = (x_B - x_A, y_B - y_A)$$
+                                The squared length of the segment is:
+                                $$L^2 = \|\vec{v}\|^2 = (x_B - x_A)^2 + (y_B - y_A)^2$$
+                            </p>
+                            <p style="line-height: 1.6; margin-bottom: 16px;">
+                                2. For any other compound $P_C = (x_C, y_C)$ in our database, we project it onto the line vector $\vec{v}$ to find its projection factor $t$ (representing progress along the path from A to B):
+                                $$t = \frac{(P_C - P_A) \cdot \vec{v}}{L^2} = \frac{(x_C - x_A)(x_B - x_A) + (y_C - y_A)(y_B - y_A)}{(x_B - x_A)^2 + (y_B - y_A)^2}$$
+                            </p>
+                            <p style="line-height: 1.6; margin-bottom: 16px;">
+                                3. We filter for compounds where $0 < t < 1$, which places them physically between the two selected endpoints. The coordinates of the projected point on the line segment are:
+                                $$P_{\text{proj}} = P_A + t \vec{v} = (x_A + t v_x, y_A + t v_y)$$
+                            </p>
+                            <p style="line-height: 1.6; margin-bottom: 0;">
+                                4. We compute the perpendicular offset distance $d$ representing how close the candidate lies to the straight transition path:
+                                $$d = \|P_C - P_{\text{proj}}\| = \sqrt{(x_C - x_{\text{proj}})^2 + (y_C - y_{\text{proj}})^2}$$
+                                Compounds with $d \le 120.0$ are classified as <strong>Bridge Candidates</strong>, showing perfumers the olfactory transition compounds that can "bridge" Molecule A and Molecule B.
+                            </p>
                         </div>
                     </div>
                 </div>

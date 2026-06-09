@@ -739,6 +739,42 @@ body {
     margin-bottom: 4px;
 }
 
+/* Theory Table styling */
+.theory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.theory-table th {
+    background: rgba(212, 175, 55, 0.06);
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.theory-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+}
+
+.theory-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.theory-table tr:last-child td {
+    border-bottom: none;
+}
+
 .theory-content {
     display: flex;
     flex-direction: column;
