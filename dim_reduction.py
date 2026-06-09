@@ -15,7 +15,10 @@ INPUT_JSON = 'aroma_vibrations.json'
 
 # Optimal band weights for scent category separation
 BANDS = [
-    ("Fingerprint", 400.0, 1400.0, 1.1924),
+    ("Skeletal_Bends", 400.0, 700.0, 1.25),
+    ("Alkene_OOP", 700.0, 1000.0, 1.35),
+    ("C_O_Stretches", 1000.0, 1300.0, 1.60),
+    ("Alkyl_Deforms", 1300.0, 1400.0, 0.65),
     ("Aromatic_Double", 1400.0, 1650.0, 1.0231),
     ("Carbonyl", 1650.0, 1800.0, 1.5616),
     ("Triple_Nitrile", 2100.0, 2260.0, 15.0000),

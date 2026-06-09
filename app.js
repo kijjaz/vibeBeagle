@@ -290,7 +290,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Generate global weights vector for weighted cosine similarity
             const BANDS = [
-                { name: "Fingerprint", start: 400.0, end: 1400.0, weight: 1.1924 },
+                { name: "Skeletal_Bends", start: 400.0, end: 700.0, weight: 1.25 },
+                { name: "Alkene_OOP", start: 700.0, end: 1000.0, weight: 1.35 },
+                { name: "C_O_Stretches", start: 1000.0, end: 1300.0, weight: 1.60 },
+                { name: "Alkyl_Deforms", start: 1300.0, end: 1400.0, weight: 0.65 },
                 { name: "Aromatic_Double", start: 1400.0, end: 1650.0, weight: 1.0231 },
                 { name: "Carbonyl", start: 1650.0, end: 1800.0, weight: 1.5616 },
                 { name: "Triple_Nitrile", start: 2100.0, end: 2260.0, weight: 15.0000 },
