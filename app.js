@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedNetNode = null;
     let activeTab = 'analyzer';
     let currentThreshold = 0.75;
+    let activeBridgeCasses = new Set();
 
     // DOM Elements - Analyzer
     const compoundList = document.getElementById('compound-list');
@@ -1104,68 +1105,78 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const xA = selectedMolA.x;
-        const yA = selectedMolA.y;
-        const xB = selectedMolB.x;
-        const yB = selectedMolB.y;
+        const yA = selectedMolA.spectrum_curve;
+        const yB = selectedMolB.spectrum_curve;
 
-        // Verify that A and B have valid coordinates
-        if (xA === undefined || yA === undefined || xB === undefined || yB === undefined) {
+        if (!yA || !yB || yA.length !== yB.length || globalWeights.length !== yA.length) {
             hideScentBridge();
             return;
         }
 
-        // Calculate line segment vector from A to B
-        const vx = xB - xA;
-        const vy = yB - yA;
-        const lenSq = vx * vx + vy * vy;
-
-        if (lenSq === 0) {
-            hideScentBridge();
-            return;
-        }
-
-        const bridgeCandidates = [];
         const offsetSlider = document.getElementById('bridge-max-offset');
-        const maxDist = offsetSlider ? parseFloat(offsetSlider.value) : 80.0;
+        const minSimilarity = offsetSlider ? parseFloat(offsetSlider.value) / 100.0 : 0.75;
 
-        compoundsData.forEach(comp => {
-            // Exclude Molecule A and Molecule B
-            if (comp.cas === selectedMolA.cas || comp.cas === selectedMolB.cas) return;
-            if (comp.x === undefined || comp.y === undefined) return;
+        // Morphing steps t representing blends from 15% to 85%
+        const steps = [0.15, 0.325, 0.50, 0.675, 0.85];
+        const bridgeCandidates = [];
+        activeBridgeCasses.clear();
 
-            const cx = comp.x;
-            const cy = comp.y;
+        steps.forEach(t => {
+            // Generate interpolated target spectrum curve in 361 dimensions
+            const yTarget = [];
+            for (let i = 0; i < yA.length; i++) {
+                yTarget.push((1 - t) * yA[i] + t * yB[i]);
+            }
 
-            // Projection factor t
-            const t = ((cx - xA) * vx + (cy - yA) * vy) / lenSq;
+            // Find the compound with the highest weighted cosine similarity to this target
+            let bestComp = null;
+            let bestSim = -1.0;
 
-            // Only keep compounds that are physically between A and B
-            if (t > 0.0 && t < 1.0) {
-                // Project coordinate
-                const projX = xA + t * vx;
-                const projY = yA + t * vy;
+            compoundsData.forEach(comp => {
+                // Exclude Molecule A, Molecule B, and already chosen intermediate compounds
+                if (comp.cas === selectedMolA.cas || comp.cas === selectedMolB.cas) return;
+                if (activeBridgeCasses.has(comp.cas)) return;
 
-                // Perpendicular distance d
-                const d = Math.sqrt((cx - projX) * (cx - projX) + (cy - projY) * (cy - projY));
+                const yC = comp.spectrum_curve;
+                if (!yC || yC.length !== yTarget.length) return;
 
-                if (d <= maxDist) {
-                    bridgeCandidates.push({
-                        compound: comp,
-                        t: t,
-                        d: d
-                    });
+                // Weighted cosine similarity calculation
+                let dotProduct = 0;
+                let normTargetSq = 0;
+                let normCSq = 0;
+                for (let i = 0; i < yC.length; i++) {
+                    const w = globalWeights[i];
+                    const valTarget = yTarget[i] * w;
+                    const valC = yC[i] * w;
+                    dotProduct += valTarget * valC;
+                    normTargetSq += valTarget * valTarget;
+                    normCSq += valC * valC;
                 }
+
+                if (normTargetSq > 0 && normCSq > 0) {
+                    const sim = dotProduct / (Math.sqrt(normTargetSq) * Math.sqrt(normCSq));
+                    if (sim > bestSim) {
+                        bestSim = sim;
+                        bestComp = comp;
+                    }
+                }
+            });
+
+            // If a compound meets the Min Match Accuracy threshold, add it to candidates
+            if (bestComp && bestSim >= minSimilarity) {
+                activeBridgeCasses.add(bestComp.cas);
+                bridgeCandidates.push({
+                    compound: bestComp,
+                    t: t,
+                    similarity: bestSim
+                });
             }
         });
-
-        // Sort candidates by t ascending (from A to B)
-        bridgeCandidates.sort((a, b) => a.t - b.t);
 
         // Render Bridge UI
         bridgeList.innerHTML = '';
         if (bridgeCandidates.length === 0) {
-            bridgeList.innerHTML = '<div style="color: var(--text-secondary); padding: 12px; font-size: 0.9rem;">No bridging aroma chemicals found close to this transition path. Try selecting different molecules.</div>';
+            bridgeList.innerHTML = '<div style="color: var(--text-secondary); padding: 12px; font-size: 0.9rem;">No bridging aroma chemicals found matching the target intermediate blends. Try decreasing the Min Match Accuracy threshold.</div>';
         } else {
             bridgeCandidates.forEach((cand, idx) => {
                 const comp = cand.compound;
@@ -1194,11 +1205,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const casSpan = document.createElement('span');
                 casSpan.textContent = `CAS: ${comp.cas || 'N/A'}`;
 
-                const offsetSpan = document.createElement('span');
-                offsetSpan.textContent = `Offset: ${Math.round(cand.d)}px`;
+                const matchSpan = document.createElement('span');
+                matchSpan.textContent = `Match: ${Math.round(cand.similarity * 100)}%`;
 
                 metaDiv.appendChild(casSpan);
-                metaDiv.appendChild(offsetSpan);
+                metaDiv.appendChild(matchSpan);
 
                 const btnGroup = document.createElement('div');
                 btnGroup.className = 'bridge-item-actions';
@@ -1543,31 +1554,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 };
             } else if (selectedMolA && selectedMolB) {
-                // Check if this node lies on the bridge between A and B
-                const xA = selectedMolA.x;
-                const yA = selectedMolA.y;
-                const xB = selectedMolB.x;
-                const yB = selectedMolB.y;
-                
-                let onBridge = false;
-                if (xA !== undefined && yA !== undefined && xB !== undefined && yB !== undefined && comp.x !== undefined && comp.y !== undefined) {
-                    const vx = xB - xA;
-                    const vy = yB - yA;
-                    const lenSq = vx * vx + vy * vy;
-                    if (lenSq > 0) {
-                        const t = ((comp.x - xA) * vx + (comp.y - yA) * vy) / lenSq;
-                        if (t > 0.0 && t < 1.0) {
-                            const projX = xA + t * vx;
-                            const projY = yA + t * vy;
-                             const d = Math.sqrt((comp.x - projX) * (comp.x - projX) + (comp.y - projY) * (comp.y - projY));
-                             const offsetSlider = document.getElementById('bridge-max-offset');
-                             const maxDist = offsetSlider ? parseFloat(offsetSlider.value) : 80.0;
-                             if (d <= maxDist) {
-                                 onBridge = true;
-                             }
-                        }
-                    }
-                }
+                // Check if this node lies on the bridge between A and B using spectral similarity mapping
+                const onBridge = activeBridgeCasses.has(comp.cas);
                 
                 if (onBridge) {
                     nodeColor = {
@@ -1769,13 +1757,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 150);
     });
 
-    // Bridge Max Offset Slider listener
+    // Bridge Max Offset Slider listener (acting as Min Match Accuracy threshold)
     const bridgeMaxOffsetSlider = document.getElementById('bridge-max-offset');
     const bridgeMaxOffsetVal = document.getElementById('bridge-max-offset-val');
     if (bridgeMaxOffsetSlider) {
         bridgeMaxOffsetSlider.addEventListener('input', (e) => {
             if (bridgeMaxOffsetVal) {
-                bridgeMaxOffsetVal.textContent = `${e.target.value} px`;
+                bridgeMaxOffsetVal.textContent = `${e.target.value}%`;
             }
             calculateScentBridge();
             // Also redraw network map to update active bridge highlights
