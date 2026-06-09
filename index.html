@@ -531,28 +531,24 @@
 
                         <!-- Scent Bridge Finder Mathematics Card -->
                         <div class="card" style="padding: 24px;">
-                            <h2 style="font-family: 'Outfit'; color: var(--gold); margin-bottom: 12px; font-size: 1.4rem; margin-top: 0;">Scent Bridge Finder Projection Mathematics</h2>
+                            <h2 style="font-family: 'Outfit'; color: var(--gold); margin-bottom: 12px; font-size: 1.4rem; margin-top: 0;">Scent Bridge Finder Spectral Morphing Mathematics</h2>
                             <p style="line-height: 1.6; margin-bottom: 16px; margin-top: 0;">
-                                When two endpoints—<strong>Molecule A</strong> ($P_A$) and <strong>Molecule B</strong> ($P_B$)—are selected, we calculate a virtual transition line between them in the 2D MDS coordinate space:
+                                Instead of calculating distances in a lossy 2D projection space (which suffers from dimensionality reduction stress), the Scent Bridge Finder operates directly in the full 361-dimensional vibrational spectrum space:
                             </p>
                             <p style="line-height: 1.6; margin-bottom: 16px;">
-                                1. Let $P_A = (x_A, y_A)$ and $P_B = (x_B, y_B)$ be the coordinates. We define the line segment vector from A to B as:
-                                $$\vec{v} = P_B - P_A = (x_B - x_A, y_B - y_A)$$
-                                The squared length of the segment is:
-                                $$L^2 = \|\vec{v}\|^2 = (x_B - x_A)^2 + (y_B - y_A)^2$$
+                                1. **Target Spectrum Interpolation**:
+                                Let $S_A$ and $S_B$ be the 361-point spectrum curves of Molecule A and Molecule B. We generate intermediate target blends at steps $t \in \{0.15, 0.325, 0.50, 0.675, 0.85\}$, representing progress along the morphing path:
+                                $$S_{\text{target}}(t) = (1 - t) \cdot S_A + t \cdot S_B$$
                             </p>
                             <p style="line-height: 1.6; margin-bottom: 16px;">
-                                2. For any other compound $P_C = (x_C, y_C)$ in our database, we project it onto the line vector $\vec{v}$ to find its projection factor $t$ (representing progress along the path from A to B):
-                                $$t = \frac{(P_C - P_A) \cdot \vec{v}}{L^2} = \frac{(x_C - x_A)(x_B - x_A) + (y_C - y_A)(y_B - y_A)}{(x_B - x_A)^2 + (y_B - y_A)^2}$$
-                            </p>
-                            <p style="line-height: 1.6; margin-bottom: 16px;">
-                                3. We filter for compounds where $0 < t < 1$, which places them physically between the two selected endpoints. The coordinates of the projected point on the line segment are:
-                                $$P_{\text{proj}} = P_A + t \vec{v} = (x_A + t v_x, y_A + t v_y)$$
+                                2. **Weighted Cosine Similarity Search**:
+                                For each intermediate step $t$, we scan the database to find the compound $C$ with the highest olfactory-weighted cosine similarity to the morphed target spectrum $S_{\text{target}}(t)$:
+                                $$\text{Similarity}(C, S_{\text{target}}(t)) = \frac{\sum_{i=1}^{361} (y_C[i] \cdot w[i]) \cdot (y_{\text{target}}[i] \cdot w[i])}{\sqrt{\sum_{i=1}^{361} (y_C[i] \cdot w[i])^2} \cdot \sqrt{\sum_{i=1}^{361} (y_{\text{target}}[i] \cdot w[i])^2}}$$
+                                where $w[i]$ is the global band relevance weight vector (from the table above) and $y_C, y_{\text{target}}$ are the raw spectral vectors.
                             </p>
                             <p style="line-height: 1.6; margin-bottom: 0;">
-                                4. We compute the perpendicular offset distance $d$ representing how close the candidate lies to the straight transition path:
-                                $$d = \|P_C - P_{\text{proj}}\| = \sqrt{(x_C - x_{\text{proj}})^2 + (y_C - y_{\text{proj}})^2}$$
-                                Compounds with $d \le 120.0$ are classified as <strong>Bridge Candidates</strong>, showing perfumers the olfactory transition compounds that can "bridge" Molecule A and Molecule B.
+                                3. **Deduplication and Thresholding**:
+                                Candidates must exceed the **Min Match Accuracy** threshold (e.g., $\text{Similarity} \ge 0.75$) to be recommended. If a compound is the best match for multiple steps, it is assigned only to the step where it has the highest similarity. This ensures that every suggested bridging molecule represents a legitimate chemical transition point.
                             </p>
                         </div>
                     </div>
