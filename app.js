@@ -195,6 +195,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     duration: 400,
                     easing: 'easeInOutQuad'
                 },
+                onClick: (event, elements) => {
+                    if (spectrumChart) {
+                        const activePoints = spectrumChart.getElementsAtEventForMode(event, 'nearest', { intersect: false }, true);
+                        if (activePoints.length > 0) {
+                            const index = activePoints[0].index;
+                            const labels = spectrumChart.data.labels;
+                            if (labels && labels[index] !== undefined) {
+                                applyPeakFilter(labels[index], index);
+                            }
+                        }
+                    }
+                },
                 plugins: {
                     legend: {
                         display: false // We use custom legends in HTML
@@ -627,6 +639,67 @@ document.addEventListener('DOMContentLoaded', () => {
         sharedPeaksDisplay.classList.remove('hidden');
     }
 
+    function playPeakSound(wavenumber) {
+        try {
+            const ctx = getAudioContext();
+            const sampleRate = ctx.sampleRate;
+            const now = ctx.currentTime;
+            
+            // Map the wavenumber [400, 4000] to audio [80, 8000] Hz logarithmically
+            const ratio = (wavenumber - 400) / (4000 - 400);
+            const freq = 80 * Math.pow(8000 / 80, ratio);
+            
+            const duration = 0.8;
+            const totalSamples = Math.floor(duration * sampleRate);
+            const outputData = new Float32Array(totalSamples);
+            
+            // Generate a clean decaying sine wave using coupled form oscillator
+            const omega = (2 * Math.PI * freq) / sampleRate;
+            const decayPerSample = Math.exp(-1.0 / (0.25 * sampleRate)); // 0.25s decay constant
+            
+            let s = 0.0;
+            let c = 1.0;
+            const cosD = Math.cos(omega);
+            const sinD = Math.sin(omega);
+            let amp = 0.15; // Safe volume level for isolated sine wave
+            
+            for (let n = 0; n < totalSamples; n++) {
+                outputData[n] = amp * s;
+                
+                // Update coupled form
+                const next_s = s * cosD + c * sinD;
+                const next_c = c * cosD - s * sinD;
+                s = next_s;
+                c = next_c;
+                
+                amp *= decayPerSample;
+            }
+            
+            // Smooth attack and release envelope to prevent clicks
+            const fadeIn = Math.floor(sampleRate * 0.015); // 15ms fade in
+            const fadeOut = Math.floor(sampleRate * 0.15); // 150ms fade out
+            for (let n = 0; n < totalSamples; n++) {
+                let env = 1.0;
+                if (n < fadeIn) {
+                    env = n / fadeIn;
+                } else if (n > totalSamples - fadeOut) {
+                    env = (totalSamples - n) / fadeOut;
+                }
+                outputData[n] *= env;
+            }
+            
+            const buffer = ctx.createBuffer(1, totalSamples, sampleRate);
+            buffer.copyToChannel(outputData, 0);
+            
+            const source = ctx.createBufferSource();
+            source.buffer = buffer;
+            source.connect(ctx.destination);
+            source.start(now);
+        } catch (err) {
+            console.error("Peak sound playback error: ", err);
+        }
+    }
+
     function applyPeakFilter(frequency, indexInGrid) {
         activePeakFilter = { frequency, index: indexInGrid };
         
@@ -643,6 +716,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Show detailed chemical and olfactory explanation card
         showPeakExplanation(frequency);
+
+        // Play isolated peak resonance sound
+        playPeakSound(frequency);
 
         // Filter the list
         runScentSearch();
