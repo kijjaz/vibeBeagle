@@ -1667,6 +1667,12 @@ body {
     color: var(--cyan);
 }
 
+@media (max-width: 1200px) {
+    .columns-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 /* ==========================================================================
    Mobile & Tablet Responsiveness Enhancements (v1.1)
    ========================================================================== */
