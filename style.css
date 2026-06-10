@@ -903,6 +903,9 @@ body {
     margin-bottom: 16px;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
 .tab-btn {
@@ -1660,4 +1663,91 @@ body {
     background: rgba(0, 242, 254, 0.15);
     border-color: var(--cyan);
     color: var(--cyan);
+}
+
+/* ==========================================================================
+   Mobile & Tablet Responsiveness Enhancements (v1.1)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 8px;
+    }
+    
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .logo-area {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+    
+    .app-header .subtitle {
+        border-left: none;
+        padding-left: 0;
+    }
+    
+    .header-metadata {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .columns-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+    
+    .similarity-hub-content {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+    
+    .network-layout {
+        grid-template-columns: 1fr !important;
+        height: auto;
+    }
+    
+    .lissajous-layout {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .lissajous-canvas-wrapper {
+        width: 100%;
+        height: 140px;
+    }
+    
+    #lissajousCanvas {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    .bridge-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+    
+    .bridge-item-meta {
+        margin-right: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .bridge-item-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .bridge-controls {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 10px;
+    }
 }
