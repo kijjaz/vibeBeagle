@@ -605,8 +605,14 @@ body {
 /* Dual Column Layout */
 .columns-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     gap: 16px;
+}
+
+@media (min-width: 1500px) {
+    .columns-grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
 }
 
 .column-card {
@@ -1665,12 +1671,6 @@ body {
     background: rgba(0, 242, 254, 0.15);
     border-color: var(--cyan);
     color: var(--cyan);
-}
-
-@media (max-width: 1200px) {
-    .columns-grid {
-        grid-template-columns: 1fr !important;
-    }
 }
 
 /* ==========================================================================
